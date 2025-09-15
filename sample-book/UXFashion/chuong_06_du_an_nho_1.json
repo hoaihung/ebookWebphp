@@ -1,0 +1,133 @@
+{
+  "chapterNumber": 6,
+  "chapterTitle": "DỰ ÁN NHỎ #1: \"Kiểm toán\" Trải nghiệm một Bộ đồ bạn Yêu và Ghét",
+  "coverImage": {
+    "url": null,
+    "alt": "Hình ảnh một người đang cầm trên tay hai bộ trang phục, một bộ trông rất thoải mái và một bộ trông có vẻ phức tạp, với kính lúp soi vào chúng."
+  },
+  "readingTimeInMinutes": 15,
+  "difficulty": "Trung bình",
+  "learningObjectives": {
+    "title": "1. Mục tiêu Chương",
+    "objectives": [
+      "Áp dụng một cách có hệ thống các kiến thức đã học (Affordance, Feedback, Cognitive Load, Consistency) vào thực tế.",
+      "Học cách 'giải mã' cảm xúc của mình với quần áo, biến những cảm nhận mơ hồ thành các lý do rõ ràng, có thể phân tích được.",
+      "Phát triển kỹ năng 'nhìn' trang phục qua lăng kính của một nhà thiết kế trải nghiệm, một kỹ năng sẽ thay đổi cách bạn mua sắm mãi mãi."
+    ]
+  },
+  "mainContent": {
+    "title": "3. Nội dung chính",
+    "blocks": [
+      {
+        "type": "quote",
+        "content": "Kiến thức thực sự không đến từ việc nghe, mà đến từ việc làm. Lý thuyết chỉ trở nên sống động khi nó chạm vào thực tế.",
+        "author": "Khuyết danh"
+      },
+      {
+        "type": "paragraph",
+        "content": "Chào mừng bạn đến với dự án thực hành đầu tiên! Đây là thời điểm quan trọng nhất trong Giai đoạn 1, là lúc chúng ta biến những khái niệm có vẻ trừu tượng thành hành động cụ thể. Bạn sẽ tạm thời cất vai trò độc giả sang một bên và khoác lên mình chiếc áo choàng của một 'Kiểm toán viên Trải nghiệm Trang phục'."
+      },
+      {
+        "type": "paragraph",
+        "content": "Nhiệm vụ của bạn rất rõ ràng: Hãy tiến đến tủ đồ và chọn ra hai 'nhân vật' đối lập nhau. Đầu tiên là **Người hùng (The Hero)** - một bộ đồ hoặc món đồ bạn cực kỳ yêu thích, món đồ mà bạn luôn tìm đến khi muốn cảm thấy thoải mái và tự tin nhất. Tiếp theo là **Kẻ phản diện (The Villain)** - một món đồ trông thì có vẻ ổn, thậm chí là đẹp, nhưng vì một lý do nào đó, bạn rất ít khi mặc nó, hoặc mỗi lần mặc là một lần cảm thấy có gì đó 'sai sai'. Chúng ta sẽ đặt cả hai dưới kính hiển vi UX để tìm ra sự thật."
+      },
+      {
+        "type": "alert",
+        "level": "info",
+        "content": "**Mục tiêu của bài tập này không phải để phán xét tủ đồ của bạn.** Hoàn toàn không! Mục tiêu là để thực hành 'lắng nghe' và 'thấu cảm' với chính những trải nghiệm của bạn. Đây là một bài tập khám phá, không có câu trả lời đúng hay sai."
+      }
+    ]
+  },
+  "mindsetCorner": {
+    "title": "5. Góc nhìn của Người sành sỏi",
+    "insight": "Bài tập này sẽ thay đổi cách bạn mua sắm mãi mãi. Sau khi hoàn thành, bạn sẽ không thể 'nhìn như cũ' nữa. Thay vì chỉ nhìn vào giá cả và kiểu dáng, mắt bạn sẽ tự động quét các 'dấu hiệu', tay bạn sẽ tự động 'cảm nhận' phản hồi, và não bạn sẽ tự động 'tính toán' tải nhận thức. Bạn đang trang bị cho mình một bộ lọc UX hoàn toàn mới."
+  },
+  "projectExercise": {
+    "title": "7. Bài tập: 'Kiểm toán' Trải nghiệm Trang phục",
+    "description": "Hãy chọn ra 2 ứng viên của bạn: Người hùng và Kẻ phản diện. Sau đó, hãy trả lời các câu hỏi kiểm toán dưới đây cho CẢ HAI món đồ để có sự so sánh trực quan nhất. Hãy ghi chú lại câu trả lời của bạn vào một cuốn sổ hoặc một tệp văn bản.",
+    "instruction": null,
+    "resources": [
+      {
+        "name": "Tải về Phiếu Kiểm toán Trải nghiệm (PDF)",
+        "url": "/downloads/fashion-ux-audit-worksheet.pdf"
+      }
+    ],
+    "blocks": [
+      {
+        "type": "subheading",
+        "content": "PHẦN 1: KIỂM TOÁN VỀ SIGNIFIERS & AFFORDANCE (Dấu hiệu & Khả năng)"
+      },
+      {
+        "type": "questionList",
+        "title": "Câu hỏi cần trả lời:",
+        "questions": [
+          "Các chi tiết như khuy, khóa kéo, dây buộc (Signifiers) có rõ ràng và dễ hiểu không? Chúng có 'mời gọi' bạn tương tác không?",
+          "Món đồ này có 'dấu hiệu giả' (False Signifier) nào không? (Ví dụ: túi giả, khuy trang trí gây nhầm lẫn)",
+          "Việc sử dụng các tính năng của nó có trực quan không, hay bạn phải dừng lại để suy nghĩ?"
+        ]
+      },
+      {
+        "type": "subheading",
+        "content": "PHẦN 2: KIỂM TOÁN VỀ FEEDBACK (Phản hồi)"
+      },
+      {
+        "type": "questionList",
+        "title": "Câu hỏi cần trả lời:",
+        "questions": [
+          "Hãy nhắm mắt và sờ vào chất liệu. Nó cho bạn cảm giác (Feedback xúc giác) gì? Mềm, ngứa, bí, trơn, hay thô ráp?",
+          "Khi di chuyển, nó có tạo ra âm thanh (Feedback thính giác) nào không? Âm thanh đó dễ chịu hay khó chịu?",
+          "Sau khi mặc một lúc, nó có để lại bất kỳ phản hồi tiêu cực nào trên cơ thể bạn không (vết hằn, cảm giác siết chặt, sự cọ xát...)?",
+          "Nó trông như thế nào sau khi bạn mặc và hoạt động? (Feedback thị giác: có dễ nhăn không, có giữ phom không?)"
+        ]
+      },
+      {
+        "type": "subheading",
+        "content": "PHẦN 3: KIỂM TOÁN VỀ COGNITIVE LOAD (Tải nhận thức)"
+      },
+      {
+        "type": "questionList",
+        "title": "Câu hỏi cần trả lời:",
+        "questions": [
+          "Bạn có thể mặc nó vào một cách nhanh chóng và dễ dàng không, hay nó đòi hỏi nhiều bước và sự tập trung?",
+          "Khi mặc, bạn có phải liên tục lo lắng hay để tâm đến nó không (ví dụ: lo sợ váy bị tốc, cổ áo bị hở, dây áo bị tuột...)?",
+          "Việc bảo quản nó (giặt, ủi, cất giữ) có đơn giản không? Cái nhãn giặt có dễ hiểu không?"
+        ]
+      },
+      {
+        "type": "subheading",
+        "content": "PHẦN 4: KIỂM TOÁN VỀ CONSISTENCY (Tính nhất quán)"
+      },
+      {
+        "type": "questionList",
+        "title": "Câu hỏi cần trả lời:",
+        "questions": [
+          "Cách hoạt động của nó (khóa kéo, khuy cài) có giống với những món đồ tương tự khác mà bạn sở hữu không (Nhất quán bên ngoài)?",
+          "Nếu nó đến từ một thương hiệu bạn hay mua, phom dáng và kích cỡ của nó có nhất quán với các sản phẩm khác của họ không (Nhất quán nội bộ)?"
+        ]
+      },
+      {
+        "type": "subheading",
+        "content": "VÍ DỤ KIỂM TOÁN THỰC TẾ"
+      },
+      {
+        "type": "alert",
+        "level": "info",
+        "content": "**NGƯỜI HÙNG: Áo hoodie nỉ của Uniqlo**\n- **Signifiers:** Khóa kéo to, chắc chắn, dễ cầm. Miệng túi kangaroo rộng, mời gọi. Dây rút mũ thật, có thể sử dụng. Rất rõ ràng.\n- **Feedback:** Vải nỉ bên trong siêu mềm và ấm. Khóa kéo trơn tru, phát ra tiếng 'roẹt' dứt khoát. Giữ phom tốt sau khi giặt.\n- **Cognitive Load:** Cực thấp. Mặc trong 5 giây. Không bao giờ phải lo lắng về nó.\n- **Consistency:** Size M luôn vừa vặn. Giống hệt mọi chiếc hoodie khác về cách hoạt động.\n\n**KẺ PHẢN DIỆN: Váy wrap lụa nhân tạo**\n- **Signifiers:** Có dây buộc nhưng lỗ luồn dây quá nhỏ và khó tìm, phải loay hoay mới thấy. Dấu hiệu yếu.\n- **Feedback:** Vải lụa nhân tạo ban đầu thì mát, nhưng mặc lâu thì bí. Dây buộc luôn có cảm giác siết vào eo gây khó chịu. Rất dễ nhăn.\n- **Cognitive Load:** Rất cao. Phải tốn thời gian buộc đi buộc lại cho đẹp. Suốt buổi tiệc luôn phải lo lắng 'liệu nơ váy có bị tuột không?'. Nhãn ghi 'giặt tay' rất phiền phức.\n- **Consistency:** Khác với các loại váy khóa kéo, phải học một cách mặc riêng biệt."
+      }
+    ]
+  },
+  "summary": {
+    "title": "8. Tóm tắt & Key Takeaways",
+    "takeaways": [
+      "Bạn đã hoàn thành dự án đầu tiên, áp dụng thành công lý thuyết UX vào tủ đồ của chính mình.",
+      "Bạn đã học cách 'lý giải' cảm xúc của mình với quần áo một cách logic, không còn cảm thấy mơ hồ.",
+      "Thường thì, những món đồ 'Người hùng' là những nhà vô địch về trải nghiệm tốt: tải nhận thức thấp, phản hồi tích cực và thiết kế trực quan.",
+      "Ngược lại, những món đồ 'Kẻ phản diện' thường thất bại ở một hoặc nhiều khía cạnh UX quan trọng, dù vẻ ngoài có thể rất hấp dẫn."
+    ]
+  },
+  "teaser": "Xuất sắc! Bạn đã tốt nghiệp Giai đoạn 1 và chính thức trở thành một nhà phân tích trải nghiệm. Nhưng phân tích chỉ là bước đầu. Ở giai đoạn tiếp theo, chúng ta sẽ đi sâu hơn vào 'cơ thể' của một bộ trang phục để tìm hiểu cách tạo ra trải nghiệm tốt ngay từ đầu. Hãy sẵn sàng để khám phá 'Ergonomics' - nghệ thuật và khoa học giúp quần áo chuyển động hài hòa cùng cơ thể bạn.",
+  "navigation": {
+    "previousChapter": 5,
+    "nextChapter": 7
+  }
+}

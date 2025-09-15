@@ -1,0 +1,123 @@
+{
+  "chapterNumber": 4,
+  "chapterTitle": "Cognitive Load: Mặc một chiếc áo phông so với \"đánh vật\" cùng váy dạ hội",
+  "coverImage": {
+    "url": null,
+    "alt": "Một người đang bối rối với một chiếc váy wrap có quá nhiều dây buộc, trông rất phức tạp."
+  },
+  "readingTimeInMinutes": 17,
+  "difficulty": "Trung bình",
+  "learningObjectives": {
+    "title": "1. Mục tiêu Chương",
+    "objectives": [
+      "Hiểu khái niệm 'Cognitive Load' (Tải nhận thức) - gánh nặng tinh thần vô hình khi sử dụng một món đồ.",
+      "Phân biệt trang phục có 'Tải nhận thức thấp' (dễ mặc, dễ dùng) và 'Tải nhận thức cao' (phức tạp, đòi hỏi suy nghĩ).",
+      "Nhận ra rằng một thiết kế tốt sẽ giải phóng tâm trí, chứ không phải bắt nó phải làm việc vất vả hơn."
+    ]
+  },
+  "mainContent": {
+    "title": "3. Nội dung chính",
+    "blocks": [
+      {
+        "type": "quote",
+        "content": "Đừng bắt tôi phải suy nghĩ.",
+        "author": "Steve Krug (Tác giả sách kinh điển về tính khả dụng của web)"
+      },
+      {
+        "type": "paragraph",
+        "content": "Lời khuyên đanh thép của Steve Krug, dù dành cho thế giới web, lại vang vọng một cách đáng ngạc nhiên trong không gian tĩnh lặng của những tủ quần áo. Hãy tưởng tượng bộ não của bạn mỗi ngày có một 'ngân sách năng lượng' hữu hạn. Mỗi quyết định bạn đưa ra, từ việc chọn ăn gì cho bữa sáng đến giải quyết một vấn đề phức tạp trong công việc, đều tiêu tốn một phần ngân sách đó. Và bạn có biết không? Việc mặc quần áo cũng là một khoản chi tiêu."
+      },
+      {
+        "type": "paragraph",
+        "content": "Đây chính là lúc khái niệm **Cognitive Load (Tải nhận thức)** bước ra sân khấu. Nó là lượng tài nguyên não bộ, hay 'năng lượng tinh thần', mà bạn phải bỏ ra để hoàn thành một nhiệm vụ. Một bộ trang phục được thiết kế tốt sẽ giống như một giao dịch 'miễn phí', không tốn chút năng lượng nào. Ngược lại, một bộ đồ thiết kế tồi có thể là một khoản chi tiêu 'cắt cổ', khiến bạn mệt mỏi trước cả khi bước ra khỏi nhà."
+      },
+      {
+        "type": "subheading",
+        "content": "Tải nhận thức thấp: Sự thanh lịch của việc không cần nghĩ"
+      },
+      {
+        "type": "paragraph",
+        "content": "Đây là những người hùng thầm lặng trong tủ đồ của bạn. Chúng là những món đồ 'cắm-và-chạy' (plug-and-play). Bạn không cần đọc hướng dẫn, không cần một khoảnh khắc dừng lại để 'giải mã'. Chúng đơn giản, trực quan và giải phóng tâm trí bạn cho những việc quan trọng hơn."
+      },
+      {
+        "type": "checklist",
+        "title": "Chân dung những nhà vô địch 'Tải thấp':",
+        "items": [
+          "**Áo phông chui đầu:** Ông hoàng của sự đơn giản. Bạn không thể mặc sai được.",
+          "**Quần thun lưng chun:** Không có khuy, không có khóa kéo, chỉ có sự dễ dàng.",
+          "**Giày lười (slip-on):** Xỏ chân vào và đi. Tên gọi của nó đã nói lên tất cả.",
+          "**Váy suông không khóa kéo:** Một lựa chọn duy nhất cho cả bộ đồ. Não bạn gần như không phải làm việc."
+        ]
+      },
+      {
+        "type": "paragraph",
+        "content": "Sự kỳ diệu của những món đồ này nằm ở chỗ chúng gần như 'vô hình' về mặt nhận thức. Chúng không đòi hỏi, không yêu sách. Chúng chỉ đơn giản là ở đó, phục vụ bạn một cách âm thầm, trả lại cho bạn từng chút năng lượng tinh thần quý giá."
+      },
+      {
+        "type": "subheading",
+        "content": "Tải nhận thức cao: Khi mặc đồ là một trận chiến trí tuệ"
+      },
+      {
+        "type": "paragraph",
+        "content": "Và rồi, chúng ta có những món đồ 'đỏng đảnh'. Chúng đẹp, chúng lộng lẫy, nhưng chúng đòi hỏi sự chú ý. Chúng biến hành động mặc đồ đơn thuần thành một câu đố logic, một bài kiểm tra sự kiên nhẫn, và đôi khi là một màn trình diễn của sự dẻo dai."
+      },
+      {
+        "type": "table",
+        "headers": ["'Kẻ rút cạn' năng lượng", "Tại sao Tải nhận thức lại cao?"],
+        "rows": [
+          ["Váy quấn (Wrap dress)", "Não bạn phải xử lý một chuỗi thuật toán: *'Dây nào luồn vào lỗ nào trước? Phải quấn sang trái hay phải? Thắt nơ ở bên hông hay sau lưng? Làm sao để nơ không bị tuột giữa chừng?'*"],
+          ["Áo/Váy có khóa kéo sau lưng", "Một bài toán về hình học và sự dẻo dai. Não bạn phải tính toán góc tay, vị trí của con trượt, và cuối cùng thường đi đến kết luận: *'Cần một biến số bên ngoài'*, tức là một người trợ giúp."],
+          ["Sơ mi có khuy cài cổ tay kiểu Pháp", "Nó không chỉ là 'cài khuy'. Nó là một quy trình đa bước: *'Tìm măng sét (cufflinks) -> Luồn măng sét qua 4 lớp vải -> Xoay chốt để khóa lại'*. Một sự phức tạp không cần thiết cho cuộc sống hàng ngày."],
+          ["Bộ Jumpsuit", "Đây là 'trùm cuối' của tải nhận thức. Nó không chỉ gây khó khăn lúc mặc, mà còn tạo ra một 'gánh nặng thường trực' trong tâm trí suốt cả ngày: *'Mình uống bao nhiêu nước rồi? Nhà vệ sinh công cộng tiếp theo ở đâu? Liệu mình có đủ thời gian để cởi hết ra không?'*"]
+        ]
+      },
+      {
+        "type": "alert",
+        "level": "info",
+        "content": "**Khoảnh khắc 'À há!' thứ tư:** Tải nhận thức không chỉ tồn tại trong 1 phút bạn mặc đồ. Nó là một đám mây lo lắng lơ lửng trên đầu bạn. Cái dây áo ngực cứ chực tuột, cái váy ngắn cứ chực co lên, cái cổ áo khoét sâu cứ chực hớ hênh... tất cả những suy nghĩ 'phòng thủ' đó đều đang âm thầm tiêu tốn 'RAM' của não bạn, khiến bạn kém tập trung và ít tận hưởng cuộc sống hơn."
+      }
+    ]
+  },
+  "marketersToolkit": {
+    "title": "4. Marketer's Toolkit",
+    "tools": [
+      {
+        "term": "Cognitive Load (Tải nhận thức)",
+        "definition": "Gánh nặng tinh thần hay lượng năng lượng não bộ mà một người phải chịu khi cố gắng hiểu và tương tác với một sản phẩm thời trang."
+      },
+      {
+        "term": "Mental Model (Mô hình tư duy)",
+        "definition": "Là những giả định sẵn có trong đầu người dùng về cách một thứ gì đó hoạt động. Một chiếc áo phông có mô hình tư duy đơn giản. Một chiếc váy quấn có mô hình tư duy phức tạp hơn. Thiết kế tốt sẽ khớp với mô hình tư duy của người dùng."
+      },
+      {
+        "term": "Intuitive Design (Thiết kế trực quan)",
+        "definition": "Một thiết kế trang phục mà người mặc có thể sử dụng một cách tự nhiên, không cần hướng dẫn hay suy nghĩ nhiều, vì nó phù hợp với mô hình tư duy sẵn có của họ."
+      }
+    ]
+  },
+  "mindsetCorner": {
+    "title": "5. Góc nhìn của Người sành sỏi",
+    "insight": "Hãy coi năng lượng tinh thần của bạn là một tài sản quý giá, giống như tiền trong ví vậy. Trước khi 'mua' một món đồ phức tạp, hãy tự hỏi: 'Vẻ đẹp và sự độc đáo của nó có xứng đáng với cái giá là sự mệt mỏi và lo lắng mà mình phải trả không?' Đôi khi câu trả lời là có, nhưng hãy đưa ra quyết định đó một cách có ý thức."
+  },
+  "projectExercise": {
+    "title": "7. Bài tập 'Tủ Đồ Tỉnh Thức'",
+    "description": "Đo lường 'gánh nặng' của tủ đồ bạn.",
+    "instruction": "Hãy tìm món đồ 'phức tạp' nhất trong tủ quần áo của bạn. Thử mặc nó vào một cách hoàn chỉnh và tự mô tả lại toàn bộ quá trình suy nghĩ của bạn. Có bước nào khiến bạn phải dừng lại để suy nghĩ không? Có khoảnh khắc nào bạn cảm thấy bối rối hay bực bội không? Hãy ghi lại những 'tiếng nói trong đầu' đó.",
+    "example": "Món đồ: Áo sơ mi cài sau lưng. \n*Tiếng nói trong đầu:* 'Ok, bắt đầu nào... tay nào trước nhỉ? Khoan, cái cổ áo này hình như bị ngược. À không, đúng rồi. Giờ đến phần khuy... cái khuy đầu tiên ở đâu? Ôi trời, nó ở tít trên gáy. Sao mình với tới được đây? Thôi được rồi, thử cài từ dưới lên xem sao. Một cái... hai cái... cái thứ ba sao khó thế này? Xong! À chưa, còn cái khuy ở cổ tay nữa chứ...'",
+    "resources": []
+  },
+  "summary": {
+    "title": "8. Tóm tắt & Key Takeaways",
+    "takeaways": [
+      "Cognitive Load là gánh nặng tinh thần vô hình khi mặc và sử dụng trang phục.",
+      "Áo phông có tải nhận thức thấp, trong khi váy quấn, jumpsuit, hay đồ có khóa kéo sau lưng có tải nhận thức cao.",
+      "Tải nhận thức không chỉ là sự phức tạp lúc mặc, mà còn là sự lo lắng thường trực trong suốt quá trình sử dụng.",
+      "Một thiết kế thời trang thực sự xuất sắc sẽ giải phóng tâm trí, giúp bạn tiết kiệm năng lượng tinh thần cho những điều quan trọng hơn."
+    ]
+  },
+  "teaser": "Sự phức tạp có thể gây mệt mỏi, nhưng sự thiếu nhất quán còn gây bối rối hơn. Tại sao hầu hết các khóa kéo đều kéo lên để đóng? Tại sao hàng khuy trên áo sơ mi nam và nữ lại nằm ở hai bên khác nhau? Chương tiếp theo, chúng ta sẽ khám phá 'Consistency' - sức mạnh của sự quen thuộc và những quy ước bất thành văn trong thế giới thời trang.",
+  "navigation": {
+    "previousChapter": 3,
+    "nextChapter": 5
+  }
+}

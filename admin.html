@@ -1,0 +1,373 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quản trị EbookLib</title>
+    <link rel="stylesheet" href="assets/css/style.css">
+    <!-- Bootstrap 5 for improved admin UI -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css">
+    <style>
+        /* Additional simple styles for admin tables and forms */
+        /* Override table styles for admin tables */
+        table.admin-table th, table.admin-table td {
+            vertical-align: middle;
+        }
+        /* Hide elements via class when necessary */
+        .hidden { display: none !important; }
+    </style>
+</head>
+<body>
+    <header class="site-header">
+        <div class="container">
+            <h1><a href="index.html">EbookLib</a> &mdash; Trang quản trị</h1>
+        </div>
+    </header>
+    <main class="container-fluid py-3" id="admin-container">
+        <h1 class="mb-3">Trang quản trị</h1>
+        <div class="row">
+            <!-- Sidebar navigation -->
+            <nav class="col-md-3 col-lg-2 mb-3" id="admin-sidebar">
+                <ul class="nav nav-pills flex-column" role="tablist">
+                    <li class="nav-item">
+                        <button class="nav-link active" data-section="books-section" type="button">Sách</button>
+                    </li>
+                    <li class="nav-item">
+                        <button class="nav-link" data-section="users-section" type="button">Người dùng</button>
+                    </li>
+                    <li class="nav-item">
+                        <button class="nav-link" data-section="packages-section" type="button">Gói</button>
+                    </li>
+                    <li class="nav-item">
+                        <button class="nav-link" data-section="notifications-section" type="button">Thông báo</button>
+                    </li>
+                </ul>
+            </nav>
+            <!-- Content area -->
+            <div class="col-md-9 col-lg-10" id="admin-content-area">
+                <!-- Books section -->
+                <div id="books-section" class="admin-section">
+                <div class="mb-3 d-flex justify-content-between align-items-center">
+                    <h2>Quản lý sách</h2>
+                    <button id="load-books-btn" class="btn btn-primary">Tải danh sách sách</button>
+                </div>
+                <div class="table-responsive">
+                    <table id="books-table" class="table table-striped table-hover admin-table">
+                        <thead class="table-light">
+                            <tr>
+                                <th>ID</th><th>Tiêu đề</th><th>Tác giả</th><th>Cấp truy cập</th><th>Giá</th><th>Xuất bản</th><th>Hành động</th>
+                            </tr>
+                        </thead>
+                        <tbody></tbody>
+                    </table>
+                </div>
+                <h3 class="mt-4">Thêm / Cập nhật sách</h3>
+                <form id="book-form" class="row g-3">
+                    <input type="hidden" id="book-id">
+                    <div class="col-md-6">
+                        <label for="book-title" class="form-label">Tiêu đề</label>
+                        <input type="text" id="book-title" class="form-control" required>
+                    </div>
+                    <div class="col-md-6">
+                        <label for="book-author" class="form-label">Tác giả</label>
+                        <input type="text" id="book-author" class="form-control">
+                    </div>
+                    <div class="col-md-12">
+                        <label for="book-description" class="form-label">Mô tả</label>
+                        <textarea id="book-description" class="form-control" rows="3"></textarea>
+                    </div>
+                    <div class="col-md-6">
+                        <label for="book-template" class="form-label">Mẫu template (để trống dùng mặc định)</label>
+                        <input type="text" id="book-template" class="form-control">
+                    </div>
+                    <div class="col-md-6">
+                        <label for="book-access-level" class="form-label">Cấp truy cập</label>
+                        <select id="book-access-level" class="form-select">
+                            <option value="free">Miễn phí</option>
+                            <option value="paid">Trả phí</option>
+                        </select>
+                    </div>
+                    <div class="col-md-4">
+                        <label for="book-price" class="form-label">Giá (VNĐ)</label>
+                        <input type="number" step="0.01" id="book-price" class="form-control">
+                    </div>
+                    <div class="col-md-4 form-check align-self-end">
+                        <input type="checkbox" id="book-published" class="form-check-input">
+                        <label for="book-published" class="form-check-label">Xuất bản</label>
+                    </div>
+                    <div class="col-md-4" id="book-folder-container">
+                        <label for="book-folder" class="form-label">Thư mục import</label>
+                        <input type="text" id="book-folder" class="form-control" placeholder="sample-book/InsightToMoney">
+                    </div>
+                    <div class="col-md-4 form-check">
+                        <input type="checkbox" id="book-send-notification" class="form-check-input">
+                        <label for="book-send-notification" class="form-check-label">Gửi thông báo</label>
+                    </div>
+                    <!-- New: TOC upload and chapter import fields (optional) -->
+                    <div class="col-md-6">
+                        <label for="book-toc-file" class="form-label">Tập tin TOC (JSON)</label>
+                        <input type="file" id="book-toc-file" accept=".json" class="form-control">
+                        <div class="form-text">Tải lên file toc.json để cập nhật mục lục cho sách (tuỳ chọn).</div>
+                    </div>
+                    <div class="col-md-6" id="chapter-import-container">
+                        <label for="chapter-import-folder" class="form-label">Import chương từ thư mục</label>
+                        <div class="input-group">
+                            <input type="text" id="chapter-import-folder" class="form-control" placeholder="Đường dẫn thư mục (vd: sample-book/BookName)">
+                            <button type="button" id="import-chapters-btn" class="btn btn-outline-secondary">Import</button>
+                        </div>
+                        <div class="form-text">Chỉ sử dụng khi đang chỉnh sửa sách hiện có.</div>
+                    </div>
+                        <div class="col-md-4">
+                        <label for="book-cover" class="form-label">Ảnh bìa</label>
+                        <input type="file" id="book-cover" accept="image/*" class="form-control">
+                        <!-- Hidden field to store uploaded cover URL -->
+                        <input type="hidden" id="book-cover-url">
+                        <!-- Preview and remove for current cover -->
+                        <div id="book-cover-current" class="mt-2">
+                            <img id="book-cover-preview" src="" style="max-width:100%; max-height:200px; display:none;" class="mb-1" alt="Ảnh bìa hiện tại">
+                            <button type="button" id="book-cover-remove" class="btn btn-sm btn-danger" style="display:none;">Xoá ảnh bìa</button>
+                        </div>
+                    </div>
+                    <div class="col-12 mt-3">
+                        <button type="submit" class="btn btn-success me-2">Lưu sách</button>
+                        <button type="button" id="book-form-reset" class="btn btn-secondary">Xoá form</button>
+                    </div>
+                </form>
+            </div>
+            <!-- Users section -->
+            <div id="users-section" class="admin-section hidden">
+                <div class="mb-3 d-flex justify-content-between align-items-center">
+                    <h2>Quản lý người dùng</h2>
+                    <button id="load-users-btn" class="btn btn-primary">Tải danh sách người dùng</button>
+                </div>
+                <div class="table-responsive">
+                    <table id="users-table" class="table table-striped table-hover admin-table">
+                        <thead class="table-light">
+                            <tr>
+                                <th>ID</th>
+                                <th>Email</th>
+                                <th>Vai trò</th>
+                                <th>Sở hữu</th>
+                                <th>Gán sách</th>
+                                <th>Gán gói</th>
+                                <th>Hành động</th>
+                            </tr>
+                        </thead>
+                        <tbody></tbody>
+                    </table>
+                </div>
+                <h3 class="mt-4">Thêm / Cập nhật người dùng</h3>
+                <form id="user-form" class="row g-3">
+                    <input type="hidden" id="user-id">
+                    <div class="col-md-4">
+                        <label for="user-email" class="form-label">Email</label>
+                        <input type="email" id="user-email" class="form-control" required>
+                    </div>
+                    <div class="col-md-4">
+                        <label for="user-role" class="form-label">Vai trò</label>
+                        <select id="user-role" class="form-select">
+                            <option value="user">user</option>
+                            <option value="admin">admin</option>
+                        </select>
+                    </div>
+                    <div class="col-md-4">
+                        <label for="user-password" class="form-label">Mật khẩu (để trống giữ nguyên)</label>
+                        <input type="password" id="user-password" class="form-control">
+                    </div>
+                    <div class="col-12 mt-3">
+                        <button type="submit" class="btn btn-success me-2">Lưu người dùng</button>
+                        <button type="button" id="user-form-reset" class="btn btn-secondary">Xoá form</button>
+                    </div>
+                </form>
+            </div>
+            <!-- Packages section -->
+            <div id="packages-section" class="admin-section hidden">
+                <div class="mb-3 d-flex justify-content-between align-items-center">
+                    <h2>Quản lý gói</h2>
+                    <button id="load-packages-btn" class="btn btn-primary">Tải danh sách gói</button>
+                </div>
+                <div class="table-responsive">
+                    <table id="packages-table" class="table table-striped table-hover admin-table">
+                        <thead class="table-light">
+                            <tr><th>ID</th><th>Tên gói</th><th>Mô tả</th><th>Loại truy cập</th><th>Tổng slot</th><th>Đã dùng</th><th>Kích hoạt</th><th>Giá</th><th>Hành động</th></tr>
+                        </thead>
+                        <tbody></tbody>
+                    </table>
+                </div>
+                <h3 class="mt-4">Thêm / Cập nhật gói</h3>
+                <form id="package-form" class="row g-3">
+                    <input type="hidden" id="package-id">
+                    <div class="col-md-4">
+                        <label for="package-name" class="form-label">Tên gói</label>
+                        <input type="text" id="package-name" class="form-control" required>
+                    </div>
+                    <div class="col-md-4">
+                        <label for="package-access-type" class="form-label">Loại truy cập</label>
+                        <input type="text" id="package-access-type" class="form-control" required>
+                    </div>
+                    <div class="col-md-4">
+                        <label for="package-price" class="form-label">Giá (VNĐ)</label>
+                        <input type="number" step="0.01" id="package-price" class="form-control" value="0">
+                    </div>
+                    <div class="col-md-4">
+                        <label for="package-total-slots" class="form-label">Tổng slot</label>
+                        <input type="number" id="package-total-slots" class="form-control" value="0">
+                    </div>
+                    <div class="col-md-4 form-check align-self-end">
+                        <input type="checkbox" id="package-is-active" class="form-check-input" checked>
+                        <label for="package-is-active" class="form-check-label">Kích hoạt</label>
+                    </div>
+                    <div class="col-md-12">
+                        <label for="package-description" class="form-label">Mô tả</label>
+                        <textarea id="package-description" class="form-control" rows="3"></textarea>
+                    </div>
+                    <div class="col-12 mt-3">
+                        <button type="submit" class="btn btn-success me-2">Lưu gói</button>
+                        <button type="button" id="package-form-reset" class="btn btn-secondary">Xoá form</button>
+                    </div>
+                </form>
+            </div>
+            <!-- Notifications section -->
+            <div id="notifications-section" class="admin-section hidden">
+                <div class="mb-3 d-flex justify-content-between align-items-center">
+                    <h2>Quản lý thông báo</h2>
+                    <button id="load-notifs-btn" class="btn btn-primary">Tải thông báo</button>
+                </div>
+                <div class="table-responsive">
+                    <table id="notifs-table" class="table table-striped table-hover admin-table">
+                        <thead class="table-light">
+                            <tr><th>ID</th><th>Người nhận</th><th>Tiêu đề</th><th>Nội dung</th><th>Ngày gửi</th></tr>
+                        </thead>
+                        <tbody></tbody>
+                    </table>
+                </div>
+                <h3 class="mt-4">Gửi thông báo</h3>
+                <form id="notif-form" class="row g-3">
+                    <div class="col-md-6">
+                        <label for="notif-title" class="form-label">Tiêu đề</label>
+                        <input type="text" id="notif-title" class="form-control" required>
+                    </div>
+                    <div class="col-md-6">
+                        <label for="notif-user-id" class="form-label">ID người nhận (để trống để gửi cho tất cả)</label>
+                        <input type="number" id="notif-user-id" class="form-control">
+                    </div>
+                    <div class="col-md-12">
+                        <label for="notif-message" class="form-label">Nội dung</label>
+                        <textarea id="notif-message" class="form-control" rows="3" required></textarea>
+                    </div>
+                    <div class="col-md-12">
+                        <label for="notif-link" class="form-label">Link (URL)</label>
+                        <input type="text" id="notif-link" class="form-control">
+                    </div>
+                    <div class="col-12 mt-3">
+                        <button type="submit" class="btn btn-success me-2">Gửi thông báo</button>
+                        <button type="button" id="notif-form-reset" class="btn btn-secondary">Xoá form</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+        <!-- Chapters management (separate overlay outside tab panes) -->
+        <div id="chapters-section" class="mt-4 hidden row">
+            <div class="offset-md-3 offset-lg-2 col-md-9 col-lg-10">
+                <h2>Chương của sách: <span id="chapters-book-title"></span></h2>
+                <!-- Alert area for warnings related to chapters import/add -->
+                <div id="chapters-warning" class="alert alert-warning d-none" role="alert"></div>
+                <div class="d-flex mb-2 gap-2 align-items-center">
+                    <button type="button" id="back-to-books" class="btn btn-secondary">← Quay lại danh sách sách</button>
+                    <button type="button" id="add-chapter-btn" class="btn btn-primary">+ Thêm chương</button>
+                    <!-- Button to save new chapter order and edit TOC -->
+                    <div class="ms-auto d-flex gap-2">
+                        <button type="button" id="save-order-btn" class="btn btn-outline-primary">Lưu thứ tự</button>
+                        <button type="button" id="edit-toc-btn" class="btn btn-outline-secondary">Chỉnh TOC</button>
+                    </div>
+                </div>
+                <div class="table-responsive">
+                    <table id="chapters-table" class="table table-striped table-hover admin-table">
+                        <thead class="table-light">
+                            <tr>
+                                <th style="width:60px;">Di chuyển</th>
+                                <th>ID</th>
+                                <th>Thứ tự</th>
+                                <th>Tiêu đề</th>
+                                <th>Hành động</th>
+                            </tr>
+                        </thead>
+                        <tbody></tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+        <!-- Chapter editor overlay -->
+        <div id="chapter-editor" class="mt-4 hidden row">
+            <div class="offset-md-3 offset-lg-2 col-md-9 col-lg-10">
+                <h2 id="chapter-editor-heading">Chỉnh sửa chương</h2>
+                <p class="text-muted">Nội dung chương hiện được lưu ở định dạng JSON theo cấu trúc cũ. Bạn có thể dán JSON, chỉnh sửa và lưu lại. Trong tương lai sẽ hỗ trợ định dạng Markdown. Xem tài liệu cấu trúc trong thư mục <code>doc/chapter-format.md</code>.</p>
+                <input type="hidden" id="chapter-id">
+                <!-- New: chapter number and sort key inputs -->
+                <div class="mb-3">
+                    <label for="chapter-number" class="form-label">Số chương (Chapter number)</label>
+                    <input type="number" id="chapter-number" class="form-control" placeholder="Nhập số chương cụ thể hoặc để trống để tự động">
+                    <div class="form-text">Nếu trùng số với chương khác, hệ thống sẽ tự động gán số khác.</div>
+                </div>
+                <div class="mb-3">
+                    <label for="chapter-sort" class="form-label">Sort key (tuỳ chọn)</label>
+                    <input type="text" id="chapter-sort" class="form-control" placeholder="Sắp xếp tuỳ chỉnh (không bắt buộc)">
+                    <div class="form-text">Sort key sẽ được lưu vào metadata, không dùng trực tiếp để hiển thị.</div>
+                </div>
+                <div class="mb-3">
+                    <label for="chapter-title" class="form-label">Tiêu đề chương</label>
+                    <input type="text" id="chapter-title" class="form-control" placeholder="Nhập tiêu đề chương">
+                </div>
+                <!-- Choose format (JSON or Markdown) -->
+                <div class="mb-3">
+                    <label for="chapter-format" class="form-label">Định dạng nội dung</label>
+                    <select id="chapter-format" class="form-select">
+                        <option value="json" selected>JSON (legacy)</option>
+                        <option value="markdown">Markdown</option>
+                    </select>
+                </div>
+                <div class="mb-3" id="chapter-json-container">
+                    <label for="chapter-content" class="form-label">Nội dung chương (JSON)</label>
+                    <textarea id="chapter-content" class="form-control font-monospace" style="min-height: 400px; white-space: pre;" placeholder='{"type":"paragraph","text":"..."}'></textarea>
+                    <div class="form-text">Dán nội dung chương theo cấu trúc JSON cũ.</div>
+                </div>
+                <div class="mb-3 hidden" id="chapter-md-container">
+                    <label for="chapter-md-content" class="form-label">Nội dung chương (Markdown)</label>
+                    <textarea id="chapter-md-content" class="form-control font-monospace" style="min-height: 400px; white-space: pre;" placeholder="# Tiêu đề chương\nNội dung chương..."></textarea>
+                    <div class="form-text">Nhập nội dung chương bằng cú pháp Markdown. Dòng đầu tiên bắt đầu bằng '# ' sẽ được lấy làm tiêu đề nếu để trống ô Tiêu đề chương.</div>
+                </div>
+                <div class="mb-3">
+                    <button type="button" id="save-chapter-btn" class="btn btn-success me-2">Lưu chương</button>
+                    <button type="button" id="cancel-chapter-btn" class="btn btn-secondary">Huỷ</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- TOC editor overlay -->
+        <div id="toc-editor" class="mt-4 hidden row">
+            <div class="offset-md-3 offset-lg-2 col-md-9 col-lg-10">
+                <h2>Chỉnh sửa Mục lục (TOC)</h2>
+                <p class="text-muted">Bạn có thể xem và chỉnh sửa JSON của toc cho sách này. Hãy đảm bảo cấu trúc hợp lệ trước khi lưu.</p>
+                <textarea id="toc-json-editor" class="form-control font-monospace" style="min-height: 400px; white-space: pre;"></textarea>
+                <div class="form-text mb-2">Dán hoặc sửa JSON theo định dạng toc. Nội dung sẽ ghi đè lên mục lục hiện tại.</div>
+                <div class="mb-3">
+                    <button type="button" id="save-toc-btn" class="btn btn-success me-2">Lưu TOC</button>
+                    <button type="button" id="cancel-toc-btn" class="btn btn-secondary">Huỷ</button>
+                </div>
+            </div>
+        </div>
+    </main>
+    <!-- Notification modal for admin (replaces alert) -->
+    <div id="admin-notice" class="admin-notice" style="display:none">
+        <div class="admin-notice__panel">
+            <div class="admin-notice__icon" id="admin-notice-icon">ℹ️</div>
+            <div class="admin-notice__content">
+                <h4 id="admin-notice-title">Thông báo</h4>
+                <p id="admin-notice-message"></p>
+            </div>
+            <button id="admin-notice-close" class="btn btn-sm">Đóng</button>
+        </div>
+    </div>
+    <script type="module" src="assets/js/admin.js"></script>
+</body>
+</html>

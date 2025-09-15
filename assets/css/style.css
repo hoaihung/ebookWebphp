@@ -1,0 +1,1814 @@
+/* file: /assets/css/style.css (VERSION 2.0 - FULL) */
+
+/* ==========================================================================
+   1. THEME & VARIABLES
+   ========================================================================== */
+:root {
+    /*
+     * Colour palette for the default (light) theme. These colours are chosen
+     * to provide a calm, professional appearance suitable for long reading
+     * sessions. Shades of blue and warm tan are used for primary and accent
+     * colours respectively. Backgrounds are slightly off‑white to reduce eye
+     * strain and text colours provide sufficient contrast.
+     */
+    --color-primary: #3b5b7e;      /* Main colour for titles, buttons, links */
+    --color-primary-dark: #2e4a64; /* Hover state for buttons */
+    --color-accent: #d8a36e;       /* Accent for highlights, borders */
+    --color-bg: #f5f7fa;           /* Main background (very light grey) */
+    --color-bg-secondary: #eceff4; /* Secondary backgrounds (cards, toolbars) */
+    --color-surface: #ffffff;      /* Surfaces for cards, containers */
+    --color-text: #333333;         /* Main text colour (dark grey) */
+    --color-text-muted: #666666;   /* Secondary text (muted) */
+    --color-border: #d4d9e2;       /* Border colour (light grey) */
+    --color-error: #d9534f;        /* Error messages */
+
+    /*
+     * Font families. We define separate variables for sans, serif and mono
+     * families to enable quick switching at runtime via JavaScript. Default
+     * reader fonts are sans‑serif for body and serif for headings.
+     */
+    --font-sans: 'Be Vietnam Pro', 'Noto Sans', sans-serif;
+    --font-serif: 'Noto Serif', serif;
+    --font-mono: 'Courier Prime', monospace;
+    --font-heading: var(--font-serif);
+    --font-body: var(--font-sans);
+
+    --container-width: 1100px;
+    --border-radius: 8px;
+}
+
+/* Dark Mode Theme (Ví dụ) */
+body.dark-mode {
+    /* Colour palette for dark mode. Deep blues and muted teals provide
+       a comfortable contrast without being harsh on the eyes. */
+    --color-primary: #669bbc;
+    --color-accent: #e6af5c;
+    --color-bg: #1f2937;
+    --color-bg-secondary: #273143;
+    --color-surface: #2f3a53;
+    --color-text: #e5e5e5;
+    --color-text-muted: #b0b0b0;
+    --color-border: #3c4a63;
+    --color-primary-dark: #517ca3;
+}
+
+/* Sepia theme variables. Sepia tones reduce contrast and emulate the look of
+   aged paper for a softer reading experience. */
+body.sepia-mode {
+    --color-primary: #795548;
+    --color-accent: #d8b384;
+    --color-bg: #f5ecd8;
+    --color-bg-secondary: #ede3c7;
+    --color-surface: #fdf6e3;
+    --color-text: #4e342e;
+    --color-text-muted: #7b5e57;
+    --color-border: #e1d1b5;
+    --color-primary-dark: #5e3f33;
+}
+
+/* ==========================================================================
+   2. GLOBAL STYLES & RESETS
+   ========================================================================== */
+/* Import fonts for improved Vietnamese support. We include Be Vietnam Pro for sans-serif,
+   Noto Serif for serif combinations and Courier Prime for monospace reading. */
+@import url('https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;500;700&family=Noto+Sans:wght@400;700&family=Noto+Serif:wght@400;700&family=Courier+Prime:wght@400;700&display=swap');
+
+* { box-sizing: border-box; }
+body {
+    font-family: var(--font-body);
+    background-color: var(--color-bg);
+    color: var(--color-text);
+    line-height: 1.6;
+    margin: 0;
+}
+.container {
+    max-width: var(--container-width);
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* ==========================================================================
+   3. AUTH & LIBRARY PAGE STYLES
+   ========================================================================== */
+/* ... CSS cho trang login & library như cũ ... */
+.book-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 30px;
+    /* Ensure child elements stretch uniformly and do not overlap. */
+    align-items: stretch;
+}
+.book-card {
+    background-color: var(--color-surface);
+    border-radius: var(--border-radius);
+    overflow: hidden;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+    transition: transform 0.2s ease-in-out;
+    text-decoration: none;
+    color: var(--color-text);
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 20px; /* Add spacing below cards to prevent sticking together */
+}
+.book-card:hover { transform: translateY(-5px); }
+.book-card__cover img { width: 100%; height: 350px; object-fit: cover; }
+.book-card__info { padding: 15px; flex-grow: 1; }
+.book-card__title { font-family: var(--font-heading); font-size: 1.1em; margin: 0 0 5px 0; }
+.book-card__author { font-size: 0.9em; color: var(--color-text-muted); }
+.book-card__status { padding: 5px 15px; background-color: var(--color-bg); text-align: center; font-weight: 500; }
+.book-card__status--free { color: var(--color-primary); }
+.book-card__status--paid { color: var(--color-text-muted); }
+.book-card__status--owned { background-color: var(--color-primary); color: white; }
+
+/* Quick action buttons overlay on book cards */
+.book-card {
+    position: relative;
+}
+.book-card__actions {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    display: flex;
+    gap: 8px;
+    opacity: 0;
+    transition: opacity 0.2s ease;
+    /* Raise z-index so overlay stays above book cover */
+    z-index: 3;
+    pointer-events: none; /* allow underlying clicks when hidden */
+}
+.book-card:hover .book-card__actions {
+    opacity: 1;
+    pointer-events: auto; /* enable buttons when visible */
+}
+.book-card__actions .action-btn {
+    background: rgba(255, 255, 255, 0.8);
+    border: none;
+    border-radius: 50%;
+    width: 32px;
+    height: 32px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+    transition: background-color 0.2s ease;
+}
+.book-card__actions .action-btn:hover {
+    background: rgba(255,255,255,1);
+}
+.book-card__actions .action-btn i {
+    color: var(--color-primary);
+    font-size: 0.85em;
+}
+
+/* Drag-and-drop handle and row styles for chapters reorder */
+.drag-cell {
+    width: 42px;
+    text-align: center;
+}
+.drag-handle {
+    cursor: grab;
+    user-select: none;
+    padding: 4px 6px;
+    display: inline-block;
+}
+tr.dragging {
+    opacity: 0.6;
+}
+.drag-placeholder {
+    outline: 2px dashed var(--color-border);
+    background: rgba(255, 255, 255, 0.04);
+}
+
+/* Move up/down buttons cell for chapters reorder */
+.move-cell {
+    width: 60px;
+    text-align: center;
+}
+
+/* Frontend toast notifications */
+.notice-container {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 11000;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+.notice {
+    padding: 10px 15px;
+    border-radius: 6px;
+    color: #fff;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+    font-size: 0.9em;
+    animation: fadeInOut 3.5s forwards;
+}
+.notice-info { background-color: #5a98de; }
+.notice-success { background-color: #28a745; }
+.notice-error { background-color: #dc3545; }
+.notice-warning { background-color: #ffc107; color: #333; }
+
+@keyframes fadeInOut {
+    0% { opacity: 0; transform: translateY(20px); }
+    10% { opacity: 1; transform: translateY(0); }
+    90% { opacity: 1; }
+    100% { opacity: 0; transform: translateY(-20px); }
+}
+
+/* Inline quick actions under book title */
+.book-card__actions-inline {
+    display: flex;
+    gap: 8px;
+    margin-top: 10px;
+    flex-wrap: wrap;
+}
+/* Quick action buttons inside card. Use accent colours and pill shape for
+   improved visibility. White text ensures legibility on coloured backgrounds. */
+.book-card__actions-inline .action-btn {
+    background-color: var(--color-accent);
+    border: none;
+    border-radius: 20px;
+    padding: 6px 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+    font-size: 0.85em;
+    color: #fff;
+    transition: background-color 0.25s ease;
+}
+.book-card__actions-inline .action-btn i {
+    margin-right: 4px;
+    color: #fff;
+}
+.book-card__actions-inline .action-btn:hover {
+    background-color: var(--color-primary);
+}
+
+/* Admin notice modal styling */
+.admin-notice {
+    position: fixed;
+    inset: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: rgba(0,0,0,0.35);
+    z-index: 10000;
+}
+.admin-notice__panel {
+    background: var(--color-surface, #fff);
+    border: 1px solid var(--color-border, #ccc);
+    border-radius: 12px;
+    padding: 16px 18px;
+    min-width: 280px;
+    max-width: 480px;
+    display: flex;
+    gap: 12px;
+    align-items: flex-start;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+}
+.admin-notice__icon {
+    font-size: 22px;
+    line-height: 1;
+}
+.admin-notice__content h4 {
+    margin-top: 0;
+    margin-bottom: 6px;
+}
+
+/* Details modal styles */
+#details-modal .modal-content {
+    max-width: 480px;
+    padding: 20px;
+    background-color: var(--color-surface);
+    border-radius: var(--border-radius);
+    box-shadow: 0 2px 10px rgba(0,0,0,0.15);
+}
+.book-details-header {
+    display: flex;
+    gap: 15px;
+    margin-bottom: 15px;
+}
+.book-details-header .details-cover {
+    width: 100px;
+    height: 140px;
+    object-fit: cover;
+    border-radius: var(--border-radius);
+    box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+}
+.details-author {
+    color: var(--color-text-muted);
+    margin: 0 0 5px 0;
+    font-size: 0.9em;
+}
+.details-price {
+    font-weight: bold;
+    color: var(--color-primary);
+    margin: 0;
+}
+.book-details-body p {
+    margin: 10px 0;
+    line-height: 1.5;
+}
+#details-modal .modal-actions {
+    margin-top: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+/* ==================== Custom Additions for Version 3.6 ==================== */
+
+/* Quick filter chips */
+#quick-filter-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+}
+.filter-chip {
+    background-color: var(--color-bg-secondary);
+    border: 1px solid var(--color-border);
+    border-radius: 16px;
+    padding: 6px 12px;
+    font-size: 0.9em;
+    cursor: pointer;
+    color: var(--color-text);
+    transition: background-color 0.2s ease, color 0.2s ease;
+    user-select: none;
+}
+.filter-chip.active,
+.filter-chip:hover {
+    background-color: var(--color-primary);
+    color: #fff;
+    border-color: var(--color-primary);
+}
+
+/* Continue Reading section */
+.continue-reading-section {
+    padding: 40px 0;
+    background-color: var(--color-bg);
+}
+.continue-reading-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+    gap: 20px;
+}
+.continue-card {
+    display: flex;
+    flex-direction: column;
+    text-decoration: none;
+    color: var(--color-text);
+    background-color: var(--color-surface);
+    border-radius: var(--border-radius);
+    overflow: hidden;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+    transition: transform 0.2s ease;
+}
+.continue-card:hover {
+    transform: translateY(-4px);
+}
+.continue-card__cover img {
+    width: 100%;
+    height: 160px;
+    object-fit: cover;
+}
+.continue-card__info {
+    padding: 10px;
+}
+.continue-card__info h4 {
+    margin: 0;
+    font-size: 1em;
+    font-family: var(--font-heading);
+}
+.continue-card__info p {
+    margin: 4px 0 0;
+    font-size: 0.85em;
+    color: var(--color-text-muted);
+}
+
+/* Book card progress bar */
+.book-card__progress {
+    margin-top: 8px;
+}
+
+/* Spacing adjustments for search and filter controls on the library page */
+.filter-controls .row {
+    row-gap: 10px;
+}
+.filter-controls input[type="text"] {
+    margin-bottom: 0;
+}
+.book-card__progress .progress-bar {
+    height: 4px;
+    border-radius: 2px;
+    background-color: var(--color-primary);
+}
+.book-card__progress span {
+    display: block;
+    font-size: 0.75em;
+    color: var(--color-text-muted);
+    margin-top: 2px;
+}
+
+/* Search bar within filter-controls on library page */
+.filter-controls input[type="text"] {
+    width: 100%;
+    padding: 8px 12px;
+    border: 1px solid var(--color-border);
+    border-radius: var(--border-radius);
+    background-color: var(--color-surface);
+    color: var(--color-text);
+    font-size: 0.95em;
+}
+
+/* ==========================================================================
+   4.a. DARK MODE TOGGLE
+   ========================================================================== */
+/* Style for the dark mode toggle button in the header */
+.dark-mode-toggle {
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-size: 1.2em;
+    color: var(--color-text-muted);
+    margin-left: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 5px;
+    border-radius: 50%;
+    transition: background-color 0.2s ease, color 0.2s ease;
+}
+.dark-mode-toggle:hover {
+    background-color: var(--color-bg-secondary);
+    color: var(--color-primary);
+}
+
+/* Make sure the icon scales appropriately */
+.dark-mode-toggle i {
+    pointer-events: none;
+}
+
+/* ==========================================================================
+   4. READER PAGE LAYOUT & TOC
+   ========================================================================== */
+.reader-layout {
+    display: grid;
+    /* Provide a third column for notes. The default width of the notes column is 0. */
+    grid-template-columns: 300px 1fr 0;
+    height: 100vh;
+    overflow: hidden;
+}
+
+/* When notes panel is open, allocate space for it */
+body.notes-open .reader-layout {
+    grid-template-columns: 300px 1fr 300px;
+}
+.reader-sidebar { background-color: var(--color-surface); border-right: 1px solid var(--color-border); display: flex; flex-direction: column; height: 100vh; }
+
+/* Notes sidebar inherits most styles from reader-sidebar but uses border-left */
+/* Notes sidebar is hidden by default on desktop and becomes visible when body has .notes-open */
+#reader-notes-sidebar {
+    border-right: none;
+    border-left: 1px solid var(--color-border);
+    display: none;
+}
+
+body.notes-open #reader-notes-sidebar {
+    display: flex;
+}
+
+/* Additional styling for notes panel */
+.notes-header {
+    padding: 20px;
+    border-bottom: 1px solid var(--color-border);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.notes-header h3 {
+    margin: 0;
+    font-size: 1.1em;
+}
+.close-notes {
+    background: none;
+    border: none;
+    color: var(--color-text-muted);
+    font-size: 1.2em;
+    cursor: pointer;
+}
+.notes-content {
+    padding: 15px;
+    overflow-y: auto;
+    flex-grow: 1;
+    font-size: 0.9em;
+    color: var(--color-text);
+}
+
+.sidebar-header { padding: 20px; border-bottom: 1px solid var(--color-border); }
+.back-to-library { display: inline-block; margin-bottom: 15px; color: var(--color-text-muted); text-decoration: none; }
+.sidebar-header h3 { margin: 0; font-size: 1.2em; }
+.sidebar-header .dark-mode-toggle {
+    margin-left: auto;
+}
+.sidebar-content { overflow-y: auto; flex-grow: 1; padding: 10px 0; }
+.reader-main { overflow-y: auto; height: 100vh; }
+.chapter-container { max-width: 720px; margin: 60px auto; padding: 0; }
+.chapter-body p { line-height: 1.7; font-size: 1.05em; }
+
+/* ==========================================================================
+   5.a. CHAPTER TOOLBAR (Search & Font Size Controls)
+   ========================================================================== */
+.chapter-toolbar {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    gap: 15px;
+    background-color: var(--color-bg-secondary);
+    border-bottom: 1px solid var(--color-border);
+    padding: 10px 20px;
+    position: sticky;
+    top: 0;
+    z-index: 998;
+}
+
+/* Style for the font combo selector on the chapter toolbar */
+.chapter-toolbar select.font-combo-select {
+    background-color: var(--color-surface);
+    color: var(--color-text);
+    border: 1px solid var(--color-border);
+    border-radius: var(--border-radius);
+    padding: 6px 18px 6px 8px;
+    font-size: 0.9em;
+    cursor: pointer;
+    appearance: none;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='10' height='10' viewBox='0 0 20 20'%3E%3Cpolygon points='0,0 20,0 10,10' fill='%23666666'/%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-position: right 6px center;
+}
+
+.chapter-toolbar select.font-combo-select:hover {
+    background-color: var(--color-bg);
+}
+.chapter-toolbar .chapter-search {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    flex-grow: 1;
+}
+.chapter-toolbar .chapter-search input {
+    flex-grow: 1;
+    padding: 6px 10px;
+    border: 1px solid var(--color-border);
+    border-radius: var(--border-radius);
+    background-color: var(--color-surface);
+    color: var(--color-text);
+    font-size: 0.95em;
+}
+.chapter-toolbar .chapter-search button {
+    background-color: var(--color-surface);
+    border: 1px solid var(--color-border);
+    border-radius: var(--border-radius);
+    padding: 6px 8px;
+    cursor: pointer;
+    color: var(--color-text);
+    font-size: 0.9em;
+    transition: background-color 0.2s ease;
+}
+.chapter-toolbar .chapter-search button:hover {
+    background-color: var(--color-bg);
+}
+.chapter-toolbar .search-result-count {
+    font-size: 0.85em;
+    color: var(--color-text-muted);
+    min-width: 40px;
+}
+.chapter-toolbar .font-size-controls {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+.chapter-toolbar .font-size-controls button {
+    background-color: var(--color-surface);
+    border: 1px solid var(--color-border);
+    border-radius: var(--border-radius);
+    padding: 6px 10px;
+    cursor: pointer;
+    font-size: 0.95em;
+    transition: background-color 0.2s ease;
+}
+.chapter-toolbar .font-size-controls button:hover {
+    background-color: var(--color-bg);
+}
+
+/*
+ * The chapter toolbar now also displays book and chapter titles and groups
+ * the reader controls (font size buttons and dark mode toggle) on the right.
+ */
+.chapter-toolbar .chapter-info {
+    flex: 1;
+    min-width: 0; /* allow ellipsis on long titles */
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+}
+.chapter-toolbar .chapter-info .book-title {
+    font-weight: 600;
+    font-size: 1.1em;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+.chapter-toolbar .chapter-info .chapter-title {
+    font-size: 0.95em;
+    color: var(--color-text-muted);
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+.chapter-toolbar .reader-controls {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+.chapter-toolbar .reader-controls button {
+    background-color: var(--color-surface);
+    border: 1px solid var(--color-border);
+    border-radius: var(--border-radius);
+    padding: 6px 10px;
+    cursor: pointer;
+    font-size: 0.95em;
+    transition: background-color 0.2s ease;
+}
+.chapter-toolbar .reader-controls button:hover {
+    background-color: var(--color-bg);
+}
+.chapter-toolbar .reader-controls .dark-mode-toggle {
+    font-size: 1.2em;
+    padding: 6px;
+}
+
+/* Jump to top button appears in the bottom right corner of the reader page */
+#jump-to-top {
+    position: fixed;
+    right: 30px;
+    bottom: 30px;
+    width: 45px;
+    height: 45px;
+    display: none;
+    border-radius: 50%;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    background-color: var(--color-primary);
+    color: #fff;
+    z-index: 997;
+}
+#jump-to-top.show {
+    display: flex;
+}
+
+/* Highlighted search results */
+mark.search-highlight {
+    background-color: #fff3a3;
+    color: inherit;
+    padding: 0;
+}
+mark.search-highlight.active-highlight {
+    background-color: #ffdd57;
+    border-bottom: 2px solid var(--color-primary);
+}
+
+/* TOC Styles */
+.toc-phase-group { border-bottom: 1px solid var(--color-border); }
+.toc-phase-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 20px;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+.toc-phase-header:hover { background-color: var(--color-bg-secondary); }
+.toc-phase-title { margin: 0; font-size: 0.9em; font-weight: 700; text-transform: uppercase; color: var(--color-text-muted); }
+.toc-phase-toggle { transition: transform 0.3s ease; }
+.toc-phase-group.open .toc-phase-toggle { transform: rotate(90deg); }
+.toc-chapter-list { 
+    list-style: none; padding: 0; margin: 0;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.4s ease-in-out;
+}
+.toc-phase-group.open .toc-chapter-list {
+    max-height: 6000px; /* Một giá trị đủ lớn */
+}
+.toc-chapter-item a { display: flex; align-items: center; gap: 10px; padding: 12px 20px; text-decoration: none; color: var(--color-text); border-left: 4px solid transparent; }
+.toc-chapter-item a:hover { background-color: var(--color-bg-secondary); }
+.toc-chapter-item.active a { background-color: #eaf3e2; border-left-color: var(--color-primary); font-weight: 700; }
+.toc-chapter-item .chapter-icon { font-size: 1.1em; width: 20px; text-align: center; color: var(--color-text-muted); }
+.toc-chapter-item.active .chapter-icon { color: var(--color-primary); }
+
+/* ==========================================================================
+   5. READER PAGE CONTENT STYLES
+   ========================================================================== */
+
+/* Header chương */
+.chapter-header { text-align: center; margin-bottom: 50px; }
+.chapter-cover-image { width: 100%; max-height: 350px; object-fit: cover; border-radius: var(--border-radius); margin-bottom: 20px; }
+.chapter-title { font-size: 1.8em; margin: 0 0 10px 0; color: var(--color-primary-dark); font-family: var(--font-heading); }
+.chapter-meta { color: var(--color-text-muted); }
+
+/* --- Phân cấp Block --- */
+/* Giải quyết vấn đề \n */
+.paragraph-content, .toolkit-definition, .role-body, .instruction, .step-list li {
+    white-space: pre-wrap;
+}
+/* Cấp 1: Nội dung chính */
+.main-content-block { border: none; background: none; padding: 0; margin: 0; }
+.main-content-block > .block-title { display: none; } /* Ẩn tiêu đề "Nội dung chính" */
+.main-content-block h2.subheading { font-family: var(--font-heading); font-size: 2em; margin: 2.5em 0 1em 0; padding-bottom: 10px; border-bottom: 2px solid var(--color-border); color: var(--color-text); }
+.main-content-block > div {
+    margin: 2.5em 0; /* Khoảng cách đồng đều giữa các block */
+}
+.main-content-block > div > h4 { /* Tiêu đề con của các block */
+    font-family: var(--font-heading);
+    font-size: 1.2em;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 1em;
+    color: var(--color-text);
+}
+.quote-block { border-left: 4px solid var(--color-accent); padding-left: 20px; margin: 2em 0; font-style: italic; color: var(--color-text-muted); }
+.quote-block .author { display: block; text-align: right; font-weight: bold; font-style: normal; margin-top: 10px; }
+.analogy-block { margin: 2em 0; }
+.analogy-block h4 { font-family: var(--font-heading); }
+.analogy-block dt { font-weight: 700; margin-top: 1em; }
+.analogy-block dd { margin-left: 0; padding-left: 20px; border-left: 2px solid var(--color-border); }
+
+/* Cấp 2: Block Chú giải (Nền nhạt, không viền đậm) */
+.content-block.annotation-block { padding: 25px; margin: 30px 0; border-radius: var(--border-radius); background-color: var(--color-bg-secondary); border: 1px solid var(--color-border); }
+.objectives-block ul, .summary-block .takeaways-list { list-style: none; padding-left: 0; }
+.objectives-block li, .summary-block .takeaways-list li { display: flex; align-items: flex-start; gap: 10px; margin-bottom: 12px; }
+.objectives-block i, .summary-block .takeaways-list i { color: var(--color-primary); margin-top: 5px; }
+/* Marketer's Toolkit (Thiết kế lại) */
+.marketers-toolkit-block .toolkit-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 15px;
+}
+.marketers-toolkit-block .toolkit-card {
+    padding: 20px;
+    border: 1px solid var(--color-border);
+    border-radius: var(--border-radius);
+    background-color: var(--color-surface);
+}
+.marketers-toolkit-block .toolkit-term {
+    font-weight: 700;
+    margin: 0 0 8px 0;
+    font-family: var(--font-heading);
+}
+.marketers-toolkit-block .toolkit-definition {
+    margin: 0;
+    font-size: 0.95em;
+    color: var(--color-text-muted);
+}
+.insight-text { font-family: var(--font-heading); font-style: italic; font-size: 1.1em; text-align: center; }
+/* Question List */
+.question-list-block ul {
+    list-style: none;
+    padding-left: 0;
+}
+.question-list-block li {
+    background: var(--color-bg-secondary);
+    padding: 15px;
+    border-radius: var(--border-radius);
+    border-left: 3px solid var(--color-accent);
+    margin-bottom: 10px;
+}
+
+/* Role Description */
+.role-description-block .role-card {
+    border: 1px solid var(--color-border);
+    border-radius: var(--border-radius);
+    overflow: hidden;
+    margin-bottom: 15px;
+}
+.role-description-block .role-header {
+    background-color: var(--color-bg-secondary);
+    padding: 10px 15px;
+    font-family: var(--font-heading);
+}
+.role-description-block .role-body {
+    padding: 15px;
+}
+
+/* Table */
+.table-container {
+    overflow-x: auto; /* Cho phép cuộn ngang trên mobile */
+    border: 1px solid var(--color-border);
+    border-radius: var(--border-radius);
+}
+.table-container table {
+    width: 100%;
+    border-collapse: collapse;
+}
+.table-container th, .table-container td {
+    padding: 12px 15px;
+    text-align: left;
+    border-bottom: 1px solid var(--color-border);
+}
+.table-container th {
+    background-color: var(--color-bg-secondary);
+    font-weight: 600;
+}
+.table-container tbody tr:last-child td {
+    border-bottom: none;
+}
+.table-container tbody tr:hover {
+    background-color: #fcfcfc;
+}
+
+/* Checklist */
+.checklist-block ul {
+    list-style: none;
+    padding: 0;
+}
+.checklist-block li {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 1.05em;
+    padding: 8px 0;
+}
+.checklist-block li i {
+    color: var(--color-primary);
+}
+
+/* Step-by-Step */
+.step-by-step-block .step-list {
+    list-style: none;
+    padding-left: 0;
+    counter-reset: step-counter;
+}
+.step-by-step-block .step-list li {
+    display: flex;
+    align-items: flex-start;
+    gap: 15px;
+    margin-bottom: 15px;
+    position: relative;
+    padding-left: 45px;
+}
+.step-by-step-block .step-list li::before {
+    counter-increment: step-counter;
+    content: counter(step-counter);
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    background-color: var(--color-primary);
+    color: white;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Code Block */
+/* Bạn cần thêm thư viện highlight.js để phần này đẹp */
+/* Ví dụ: <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/11.7.0/styles/default.min.css"> */
+/* Và <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/11.7.0/highlight.min.js"></script> */
+.code-block-container {
+    border-radius: var(--border-radius);
+    border: 1px solid var(--color-border);
+    overflow: hidden;
+    background-color: #2d2d2d;
+}
+.code-block-header {
+    background-color: #444;
+    color: #eee;
+    padding: 8px 15px;
+    font-family: monospace;
+    text-transform: uppercase;
+}
+.code-block-container pre { margin: 0; }
+.code-block-container pre code { padding: 20px !important; }
+
+/* Formula Block */
+/* Bạn cần thêm thư viện MathJax hoặc KaTeX để render công thức */
+.formula-block {
+    text-align: center;
+    padding: 20px;
+    background: var(--color-bg-secondary);
+    border-radius: var(--border-radius);
+    font-size: 1.2em;
+}
+.formula-name {
+    font-style: italic;
+    color: var(--color-text-muted);
+    margin-bottom: 10px;
+}
+
+/* Cấp 3: Block Hành động & Cảnh báo (Nền màu + Viền đậm) */
+.content-block.action-alert-block, .alert-block { padding: 25px; margin: 30px 0; border-radius: var(--border-radius); border-left-width: 5px; border-left-style: solid; border-top: 1px; border-right: 1px; border-bottom: 1px; }
+.mythbuster-block { background-color: #fff5f5; border-color: #e53e3e; }
+.exercise-block { background-color: #f0fff4; border-color: #38a169; }
+.alert-block-info { background-color: #ebf8ff; border-color: #3182ce; }
+.alert-block-warning { background-color: #fff3cd; border-color: #ffeeba; }
+
+/* Block Teaser mới */
+.teaser-block {
+    padding: 25px 30px; /* Padding nhỏ hơn */
+    margin: 50px 0 30px 0;
+    border-radius: var(--border-radius);
+    background-color: transparent; /* Nền trong suốt */
+    border-top: 2px solid var(--color-border); /* Chỉ có một đường kẻ ngang phía trên */
+    border-bottom: 2px solid var(--color-border); /* Và một đường kẻ ngang phía dưới */
+    border-left: none; /* Bỏ viền trái */
+    border-right: none;
+    text-align: center; /* Căn giữa */
+}
+
+.teaser-block p {
+    font-style: italic; /* In nghiêng để tạo sự khác biệt */
+    font-size: 1.1em; /* Cỡ chữ to hơn một chút */
+    color: var(--color-text-muted); /* Màu chữ mờ hơn */
+    line-height: 1.7;
+    margin: 0; /* Bỏ margin mặc định của thẻ p */
+}
+
+/* Block chung */
+.block-title { display: flex; align-items: center; gap: 12px; font-family: var(--font-heading); margin-top: 0; }
+.block-title i { color: var(--color-primary); }
+
+/* --- Navigation, Error, Loader & Responsive --- */
+.chapter-navigation { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; margin-top: 50px; border-top: 1px solid var(--color-border); padding-top: 30px; }
+.nav-button { display: flex; align-items: center; gap: 15px; padding: 15px 20px; border-radius: var(--border-radius); background-color: var(--color-bg-secondary); text-decoration: none; color: var(--color-text); transition: background-color 0.2s; }
+.nav-button:hover { background-color: #eaf3e2; color: var(--color-primary-dark); }
+.nav-button.next { justify-content: flex-end; text-align: right; }
+.nav-button .nav-label { font-weight: 500; }
+.nav-button i { font-size: 1.5em; color: var(--color-primary); }
+.error-container { padding: 30px; background-color: #fff5f5; border: 1px solid #fc8181; border-radius: var(--border-radius); text-align: center; margin: 40px; }
+.error-container h3 { color: #c53030; margin-top: 0; }
+.error-details { background-color: #fed7d7; padding: 10px; border-radius: 4px; font-family: monospace; text-align: left; white-space: pre-wrap; word-break: break-all; font-size: 0.9em; color: #742a2a; }
+.loader-container { padding: 50px; text-align: center; font-size: 1.2em; color: var(--color-text-muted); }
+#reading-progress-bar { position: fixed; top: 0; left: 0; height: 4px; background-color: var(--color-primary); width: 0; z-index: 1001; transition: width 0.1s linear; }
+
+.mobile-header {
+    display: none; /* Mặc định ẩn trên desktop */
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 50px;
+    background-color: var(--color-surface);
+    border-bottom: 1px solid var(--color-border);
+    z-index: 999;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 10px;
+}
+.mobile-header-button {
+    background: none;
+    border: none;
+    font-size: 1.2em;
+    padding: 10px;
+    cursor: pointer;
+    color: var(--color-text-muted);
+}
+.mobile-header-title {
+    font-weight: 500;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+#toc-overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.5);
+    z-index: 999;
+}
+
+/* Styles cho Modal */
+.modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.6);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1000;
+}
+.modal-content {
+    background-color: var(--color-surface);
+    padding: 30px;
+    border-radius: var(--border-radius);
+    max-width: 600px;
+    width: 90%;
+    text-align: center;
+    position: relative;
+}
+.modal-close {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    background: none;
+    border: none;
+    font-size: 1.5em;
+    cursor: pointer;
+    color: var(--color-text-muted);
+}
+.modal-actions {
+    margin-top: 20px;
+    display: flex;
+    gap: 15px;
+    justify-content: center;
+}
+.button, a.button {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: var(--color-primary);
+    color: white;
+    border: none;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: 500;
+    cursor: pointer;
+}
+a.button-secondary {
+    background-color: var(--color-bg-secondary);
+    color: var(--color-text);
+    border: 1px solid var(--color-border);
+}
+
+/* ==========================================================================
+   X. AUTHENTICATION PAGES (login.html, register.html)
+   ========================================================================== */
+.auth-page {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    background-color: var(--color-bg);
+}
+
+.auth-container {
+    background-color: var(--color-surface);
+    padding: 40px;
+    border-radius: var(--border-radius);
+    box-shadow: 0 10px 30px rgba(0,0,0,0.07);
+    width: 100%;
+    max-width: 420px;
+    text-align: center;
+}
+.auth-logo {
+    display: inline-block;
+    margin-bottom: 20px;
+    font-size: 1.5em;
+    font-weight: 700;
+    text-decoration: none;
+    color: var(--color-primary);
+}
+.auth-container h2 {
+    font-family: var(--font-heading);
+    margin: 0 0 10px 0;
+}
+.auth-subtitle {
+    margin: 0 0 30px 0;
+    color: var(--color-text-muted);
+}
+.form-group {
+    text-align: left;
+    margin-bottom: 20px;
+}
+.form-group label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: 500;
+}
+.form-group input {
+    width: 100%;
+    padding: 12px 15px;
+    border: 1px solid var(--color-border);
+    border-radius: 5px;
+    font-size: 1em;
+    font-family: var(--font-body);
+}
+.form-group input:focus {
+    outline: none;
+    border-color: var(--color-primary);
+    box-shadow: 0 0 0 3px rgba(85, 107, 47, 0.1);
+}
+.auth-message {
+    min-height: 20px;
+    margin-bottom: 15px;
+    font-weight: 500;
+}
+.auth-message.error { color: var(--color-error); }
+.auth-message.success { color: #2f855a; }
+.auth-button {
+    width: 100%;
+    padding: 15px;
+    font-size: 1.1em;
+    margin-bottom: 20px;
+}
+.auth-switch {
+    border-top: 1px solid var(--color-border);
+    padding-top: 20px;
+    color: var(--color-text-muted);
+}
+.auth-switch a {
+    color: var(--color-primary);
+    font-weight: 500;
+    text-decoration: none;
+}
+.auth-switch a:hover {
+    text-decoration: underline;
+}
+
+
+/* ==========================================================================
+   Y. SITE HEADER (index.html)
+   ========================================================================== */
+.site-header {
+    background-color: var(--color-surface);
+    border-bottom: 1px solid var(--color-border);
+}
+.site-header.sticky {
+    position: sticky;
+    top: 0;
+    z-index: 998;
+}
+.header-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 70px;
+}
+.logo {
+    font-size: 1.4em;
+    font-weight: 700;
+    text-decoration: none;
+    color: var(--color-primary-dark);
+}
+.main-nav {
+    display: flex;
+    gap: 30px;
+}
+.main-nav a {
+    text-decoration: none;
+    color: var(--color-text-muted);
+    font-weight: 500;
+    transition: color 0.2s;
+}
+.main-nav a:hover {
+    color: var(--color-primary);
+}
+.header-actions {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+.search-bar {
+    position: relative;
+}
+.search-bar input {
+    padding: 8px 15px 8px 35px;
+    border: 1px solid var(--color-border);
+    border-radius: 20px;
+    width: 200px;
+    transition: width 0.3s;
+}
+.search-bar input:focus {
+    width: 250px;
+    outline: none;
+    border-color: var(--color-primary);
+}
+.search-bar i {
+    position: absolute;
+    left: 15px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: var(--color-text-muted);
+}
+#user-info-container {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+.user-email {
+    font-weight: 500;
+}
+.mobile-menu-toggle {
+    display: none; /* Ẩn trên desktop */
+    background: none;
+    border: none;
+    font-size: 1.5em;
+    cursor: pointer;
+}
+.mobile-nav-menu {
+    position: fixed;
+    top: 0;
+    left: -320px; /* Ẩn ngoài màn hình */
+    width: 300px;
+    height: 100vh;
+    background-color: var(--color-surface);
+    box-shadow: 5px 0 15px rgba(0,0,0,0.2);
+    z-index: 1000;
+    transition: left 0.3s ease-in-out;
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+}
+body.mobile-nav-open .mobile-nav-menu {
+    left: 0; /* Hiện menu */
+}
+.close-mobile-nav {
+    background: none;
+    border: none;
+    font-size: 2em;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    cursor: pointer;
+    color: var(--color-text-muted);
+}
+
+.mobile-main-nav a, .mobile-auth-actions a, .mobile-auth-actions button {
+    display: block;
+    padding: 12px 0;
+    text-decoration: none;
+    color: var(--color-text);
+    font-weight: 500;
+    border-bottom: 1px solid var(--color-border);
+}
+
+.mobile-main-nav a:last-child, .mobile-auth-actions button:last-child {
+    border-bottom: none;
+}
+.mobile-auth-actions {
+    margin-top: 20px;
+    padding-top: 20px;
+    border-top: 1px solid var(--color-border);
+}
+.mobile-auth-actions .button {
+    width: 100%;
+    margin-bottom: 10px;
+}
+
+.mobile-nav-overlay {
+    display: none; /* Mặc định ẩn */
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.5);
+    z-index: 999;
+}
+
+body.mobile-nav-open .mobile-nav-overlay {
+    display: block; /* Hiện overlay khi menu mở */
+}
+
+
+@media (max-width: 900px) {
+    /* Hide the desktop navigation on smaller screens */
+    .main-nav { display: none; }
+    /* Hide header action items (login, user email and dark mode) on mobile. They are now provided inside the mobile menu. */
+    .header-actions { display: none; }
+    .mobile-menu-toggle { display: block; }
+}
+
+/*
+ * Mobile controls that live inside the slide‑out navigation. This includes
+ * the dark mode toggle now that header actions are hidden on small screens.
+ */
+.mobile-controls {
+    margin-top: 20px;
+    padding-top: 20px;
+    border-top: 1px solid var(--color-border);
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+.mobile-controls .dark-mode-toggle {
+    background: none;
+    border: none;
+    font-size: 1.3em;
+    cursor: pointer;
+    color: var(--color-text);
+}
+
+
+/* ==========================================================================
+   Z. HERO SECTION & MODAL STYLES (index.html)
+   ========================================================================== */
+.hero-section {
+    padding: 80px 0;
+    text-align: center;
+    background-color: #eaf3e2; /* Màu nền nhẹ nhàng */
+}
+.hero-section h1 {
+    font-size: 3em;
+    font-family: var(--font-heading);
+    color: var(--color-primary-dark);
+}
+.hero-section p {
+    font-size: 1.2em;
+    max-width: 600px;
+    margin: 20px auto 30px auto;
+    color: var(--color-text-muted);
+}
+.button.button-hero {
+    padding: 15px 30px;
+    font-size: 1.1em;
+}
+
+/* Thêm max-width lớn hơn cho modal bảng giá */
+#pricing-modal .modal-content {
+    max-width: 800px;
+}
+
+/* --- Pricing Grid Styles --- */
+.pricing-grid {
+    display: grid;
+    /* Tự động tạo các cột có chiều rộng tối thiểu 250px. 
+       Nếu đủ không gian, các cột sẽ tự động dãn ra bằng nhau. */
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px; /* Khoảng cách giữa các cột */
+    margin-top: 20px;
+    text-align: left;
+}
+
+.pricing-card {
+    border: 1px solid var(--color-border);
+    border-radius: var(--border-radius);
+    padding: 25px;
+    display: flex;
+    flex-direction: column;
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.pricing-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.08);
+}
+
+/* Style cho gói nổi bật (Featured) */
+.pricing-card.featured {
+    border-width: 2px;
+    border-color: var(--color-primary);
+    position: relative;
+    overflow: hidden;
+}
+
+/* Thêm một dải băng "Phổ biến" */
+.pricing-card.featured::before {
+    content: "Phổ biến";
+    position: absolute;
+    top: 15px;
+    right: -30px;
+    background-color: var(--color-primary);
+    color: white;
+    padding: 5px 30px;
+    font-size: 0.8em;
+    font-weight: bold;
+    transform: rotate(45deg);
+    text-align: center;
+}
+
+.pricing-card h4 {
+    font-family: var(--font-heading);
+    margin-top: 0;
+    font-size: 1.3em;
+    color: var(--color-primary-dark);
+}
+
+.pricing-card .price {
+    font-size: 2em;
+    font-weight: 700;
+    margin: 0 0 10px 0;
+}
+
+.pricing-card p {
+    color: var(--color-text-muted);
+    flex-grow: 1; /* Đẩy nút bấm xuống dưới cùng */
+}
+
+.pricing-card ul {
+    list-style: none;
+    padding: 0;
+    margin: 20px 0;
+}
+
+.pricing-card ul li {
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+    margin-bottom: 10px;
+}
+
+.pricing-card ul li::before {
+    content: "\f00c"; /* Font Awesome check icon */
+    font-family: "Font Awesome 6 Free";
+    font-weight: 900;
+    color: var(--color-primary);
+    margin-top: 4px;
+}
+
+.pricing-card .button {
+    width: 100%;
+    text-align: center;
+    padding: 12px;
+}
+
+/* Styles cho Modal Mua sách */
+.purchase-modal-header {
+    display: flex;
+    align-items: flex-start;
+    gap: 20px;
+    margin-bottom: 20px;
+    text-align: left;
+}
+.purchase-modal-cover {
+    width: 80px;
+    height: auto;
+    border-radius: 4px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+.purchase-modal-header h3 {
+    margin: 0 0 5px 0;
+}
+.purchase-modal-price {
+    font-size: 1.4em;
+    font-weight: bold;
+    color: var(--color-primary);
+    margin: 0;
+}
+.purchase-instructions {
+    text-align: left;
+    background-color: var(--color-bg-secondary);
+    padding: 15px;
+    border-radius: var(--border-radius);
+    margin: 20px 0;
+}
+.purchase-instructions h4 {
+    margin-top: 0;
+}
+.bank-info {
+    line-height: 1.8;
+    margin: 10px 0;
+}
+.bank-info code {
+    background-color: #e9ecef;
+    padding: 2px 6px;
+    border-radius: 4px;
+    font-family: monospace;
+}
+.confirmation-note {
+    font-size: 0.9em;
+    font-style: italic;
+    color: var(--color-text-muted);
+}
+
+/* Quiz Block */
+.quiz-block {
+    background-color: #ebf8ff; /* Nền xanh nhạt */
+    border-color: #3182ce; /* Viền xanh */
+}
+.quiz-description {
+    font-style: italic;
+    color: var(--color-text-muted);
+    margin-bottom: 25px;
+}
+.quiz-question-card {
+    background-color: var(--color-surface);
+    border: 1px solid var(--color-border);
+    border-radius: var(--border-radius);
+    padding: 20px;
+    margin-bottom: 20px;
+}
+.quiz-question-card .question-text {
+    font-size: 1.1em;
+    margin-bottom: 15px;
+}
+.quiz-options {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+.quiz-option {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 10px 15px;
+    border: 1px solid var(--color-border);
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.2s, border-color 0.2s;
+}
+.quiz-option:hover {
+    background-color: var(--color-bg-secondary);
+}
+.quiz-option input[type="radio"] {
+    accent-color: var(--color-primary); /* Màu radio button */
+}
+
+/* Feedback sau khi trả lời */
+.quiz-feedback {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-top: 15px;
+    padding: 10px 15px;
+    border-radius: 5px;
+}
+.quiz-feedback.correct {
+    background-color: #f0fff4;
+    color: #2f855a;
+    border: 1px solid #38a169;
+}
+.quiz-feedback.incorrect {
+    background-color: #fff5f5;
+    color: #c53030;
+    border: 1px solid #e53e3e;
+}
+.quiz-feedback .feedback-icon {
+    font-size: 1.2em;
+}
+.quiz-feedback.correct .feedback-icon::before { content: "\f058"; /* check-circle */ font-family: "Font Awesome 6 Free"; font-weight: 900; }
+.quiz-feedback.incorrect .feedback-icon::before { content: "\f057"; /* times-circle */ font-family: "Font Awesome 6 Free"; font-weight: 900; }
+.quiz-feedback .explanation-text {
+    margin-top: 10px;
+    font-style: italic;
+    color: var(--color-text-muted);
+    font-size: 0.95em;
+    padding-left: 30px; /* Thụt vào để phân biệt */
+    border-left: 2px solid var(--color-border);
+}
+
+.quiz-submit-btn {
+    margin-top: 20px;
+    width: 100%;
+}
+.quiz-result {
+    text-align: center;
+    margin-top: 30px;
+    padding: 30px;
+    background-color: var(--color-bg-secondary);
+    border-radius: var(--border-radius);
+    font-size: 1.2em;
+    font-weight: 600;
+}
+.quiz-result h3 {
+    font-family: var(--font-heading);
+    color: var(--color-primary-dark);
+    margin-bottom: 15px;
+}
+.quiz-result-actions {
+    display: flex;
+    flex-wrap: wrap; /* Cho phép xuống dòng trên mobile */
+    justify-content: center;
+    gap: 15px;
+    margin-top: 25px;
+}
+.quiz-result-actions .button {
+    flex-grow: 1;
+    min-width: 150px;
+}
+.quiz-result-actions .quiz-review-btn {
+    background-color: var(--color-primary);
+    color: white;
+}
+.quiz-result-actions .quiz-retake-btn,
+.quiz-result-actions .quiz-continue-reading-btn {
+    background-color: var(--color-surface);
+    color: var(--color-text);
+    border: 1px solid var(--color-border);
+}
+.quiz-result-actions .quiz-retake-btn:hover,
+.quiz-result-actions .quiz-continue-reading-btn:hover {
+    background-color: var(--color-bg-secondary);
+}
+/* Review Mode specific styles */
+.quiz-block.review-mode .quiz-question-card {
+    margin-bottom: 30px; /* Thêm khoảng cách giữa các câu khi review */
+}
+.quiz-block.review-mode .quiz-submit-btn {
+    display: none; /* Ẩn nút khi đang review */
+}
+/* Container cho nút làm lại bài trong review mode */
+.quiz-review-actions {
+    text-align: center;
+    margin-top: 30px;
+}
+.quiz-review-actions .button {
+    min-width: 200px; /* Đảm bảo nút đủ rộng */
+}
+/* Quiz Option selected */
+.quiz-option.selected-option {
+    background-color: var(--color-bg-secondary); /* Nền nhạt hơn khi được chọn */
+    border-color: var(--color-primary); /* Viền màu chính */
+}
+/* Thêm cho nút "Nộp bài" cuối cùng */
+.quiz-submit-btn {
+    font-size: 1.1em;
+    font-weight: 600;
+}
+/* Review Mode Highlights */
+.quiz-question-card .quiz-options label.correct-option-highlight {
+    background-color: #d4edda; /* Xanh lá nhạt */
+    border-color: #28a745; /* Xanh lá đậm */
+}
+.quiz-question-card .quiz-options label.incorrect-option-highlight {
+    background-color: #f8d7da; /* Đỏ nhạt */
+    border-color: #dc3545; /* Đỏ đậm */
+}
+
+/* Review Mode styles */
+.quiz-question-card.answered .quiz-options label {
+    cursor: default; /* Không cho click khi đã trả lời */
+}
+.quiz-question-card.answered input[type="radio"] {
+    cursor: default;
+}
+
+/* Mobile Responsive for Reader */
+@media (max-width: 900px) {
+    /* Collapse sidebars on mobile: show only main content */
+    .reader-layout { grid-template-columns: 1fr; }
+    .reader-main { padding-top: 50px; } /* Tạo không gian cho header mobile */
+    /* Both sidebars become offcanvas panels */
+    #reader-toc-sidebar,
+    #reader-notes-sidebar {
+        position: fixed;
+        top: 0;
+        width: 280px;
+        height: 100vh;
+        z-index: 1000;
+        box-shadow: 5px 0 15px rgba(0,0,0,0.1);
+        transition: transform 0.3s ease-in-out;
+        background-color: var(--color-surface);
+        overflow-y: auto;
+    }
+    /* Place TOC to the left */
+    #reader-toc-sidebar {
+        left: 0;
+        transform: translateX(-100%);
+        border-right: 1px solid var(--color-border);
+    }
+    /* Place notes panel to the right */
+    #reader-notes-sidebar {
+        right: 0;
+        transform: translateX(100%);
+        border-left: 1px solid var(--color-border);
+    }
+    /* When body.toc-open: show toc */
+    body.toc-open #reader-toc-sidebar {
+        transform: translateX(0);
+    }
+    /* When body.notes-open: show notes */
+    body.notes-open #reader-notes-sidebar {
+        transform: translateX(0);
+    }
+    /* Display overlay when any sidebar is open */
+    body.toc-open #toc-overlay,
+    body.notes-open #toc-overlay {
+        display: block;
+    }
+    .mobile-header { display: flex; }
+    .chapter-container { margin: 20px auto; padding: 20px; }
+}
+
+body.dark-mode .mythbuster-block { background-color: #35263a; border-color: #e874e7; }
+body.dark-mode .exercise-block { background-color: #223d2d; border-color: #61e38e; }
+body.dark-mode .alert-block-info { background-color: #233040; border-color: #5db4e6; }
+body.dark-mode .alert-block-warning { background-color: #4a3c16; border-color: #ffe17c; color: #fbe39c; }
+body.dark-mode .quiz-block { background-color: #1c3442; border-color: #5db4e6; }
+body.dark-mode .quiz-feedback.correct { background-color: #1f3828; color: #95f3a5; border-color: #61e38e; }
+body.dark-mode .quiz-feedback.incorrect { background-color: #402728; color: #ffaaaa; border-color: #e87474; }
+body.dark-mode .toc-chapter-item.active a { background-color: #22304a; border-left-color: var(--color-primary); color: #fff; }
+body.dark-mode .toc-chapter-item.active .chapter-icon { color: var(--color-primary); }
+body.dark-mode .chapter-toolbar .reader-controls button { color: var(--color-primary); }
+
+/* ==== SEPIA MODE: BLOCKS, ALERTS, QUIZ, TOC ACTIVE ==== */
+body.sepia-mode .mythbuster-block {
+    background-color: #f9efea;   /* Vàng nhạt, ngà */
+    border-color: #b98b5a;       /* Nâu cam nhạt */
+}
+body.sepia-mode .exercise-block {
+    background-color: #f3efe6;   /* Be, vàng nhạt */
+    border-color: #b3a471;       /* Vàng sậm nhẹ */
+}
+body.sepia-mode .alert-block-info {
+    background-color: #f5f1e8;   /* Kem nhạt */
+    border-color: #a8956d;       /* Nâu sáng */
+    color: #695539;
+}
+body.sepia-mode .alert-block-warning {
+    background-color: #faedd3;   /* Vàng nhạt */
+    border-color: #e4c575;       /* Vàng đậm */
+    color: #8b7118;
+}
+body.sepia-mode .content-block.action-alert-block,
+body.sepia-mode .alert-block {
+    background-color: #f6efe2;   /* Kem ngà */
+    border-color: #b98b5a;
+    color: #674c23;
+}
+body.sepia-mode .quiz-block {
+    background-color: #f5f1e8;
+    border-color: #b98b5a;
+}
+body.sepia-mode .quiz-feedback.correct {
+    background-color: #f4f8ed;
+    color: #5a6a41;
+    border-color: #b3a471;
+}
+body.sepia-mode .quiz-feedback.incorrect {
+    background-color: #f9e7e6;
+    color: #a34d32;
+    border-color: #ce7b6b;
+}
+/* TOC active in sepia mode */
+body.sepia-mode .toc-chapter-item.active a {
+    background-color: #f3e5be; /* vàng kem nổi bật dịu */
+    border-left-color: var(--color-primary);
+    color: #6b4e1a;
+}
+body.sepia-mode .toc-chapter-item.active .chapter-icon {
+    color: var(--color-primary);
+}
+
+/* Notification bell styling */
+/* Notification bell styling (desktop header) */
+.notification-bell {
+    position: relative;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.2rem;
+    color: var(--color-primary);
+    margin-right: 0.5rem;
+    cursor: pointer;
+    transition: color 0.2s ease;
+}
+.notification-bell:hover {
+    color: var(--color-primary-dark);
+}
+.notification-bell i {
+    pointer-events: none;
+}
+.notification-bell .notif-badge {
+    position: absolute;
+    top: -4px;
+    right: -6px;
+    background-color: var(--color-error);
+    color: #fff;
+    border-radius: 50%;
+    padding: 2px 5px;
+    font-size: 0.6rem;
+    line-height: 1;
+}
+
+/* Badges for user entitlements in admin */
+.entitlement-badge {
+    display: inline-block;
+    border-radius: 4px;
+    padding: 2px 6px;
+    margin: 0 2px 2px 0;
+    font-size: 0.75rem;
+    color: #fff;
+    white-space: nowrap;
+}
+.entitlement-badge.book-badge {
+    background-color: var(--color-primary);
+}
+.entitlement-badge.package-badge {
+    background-color: var(--color-accent);
+}
+
+/* Remove cross inside entitlement badge */
+.entitlement-badge .remove-ent {
+    display: inline-block;
+    margin-left: 4px;
+    font-weight: bold;
+    cursor: pointer;
+    color: inherit;
+}
+.entitlement-badge .remove-ent:hover {
+    opacity: 0.8;
+}

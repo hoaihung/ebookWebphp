@@ -1,0 +1,154 @@
+{
+  "chapterNumber": 8,
+  "chapterTitle": "Material UX: Trải nghiệm của Làn da với Cotton, Lụa và Polyester",
+  "coverImage": {
+    "url": null,
+    "alt": "Hình ảnh ghép cận cảnh nhiều loại vải khác nhau: sự mềm mại của cotton, sự bóng bẩy của lụa, sự thô mộc của linen và cấu trúc của len."
+  },
+  "readingTimeInMinutes": 18,
+  "difficulty": "Trung bình",
+  "learningObjectives": {
+    "title": "1. Mục tiêu Chương",
+    "objectives": [
+      "Hiểu rằng chất liệu là một phần cốt lõi của trải nghiệm người mặc (Material UX), quyết định sự thoải mái và chức năng.",
+      "So sánh các 'cá tính' và trải nghiệm đặc trưng của các loại vải phổ biến (độ thoáng khí, cảm giác trên da, khả năng giữ phom...).",
+      "Học cách đọc vị nhãn mác và chọn chất liệu phù hợp với hoạt động, khí hậu và nhu cầu cá nhân."
+    ]
+  },
+  "mythBuster": {
+    "title": "2. Lầm tưởng cần phá bỏ",
+    "myth": "Chất liệu 'xịn' (như lụa, cashmere) luôn luôn tốt hơn chất liệu 'thường'. Vải 100% tự nhiên luôn tốt hơn vải nhân tạo.",
+    "truth": "'Tốt hơn' là một khái niệm phụ thuộc hoàn toàn vào ngữ cảnh. Một chiếc áo phông polyester có thể là thảm họa trong ngày hè oi ả nhưng lại là 'người hùng' trong phòng gym vì khả năng thấm hút mồ hôi và khô nhanh. Mỗi chất liệu có một 'sứ mệnh' và một 'sân khấu' riêng để tỏa sáng."
+  },
+  "mainContent": {
+    "title": "3. Nội dung chính",
+    "blocks": [
+      {
+        "type": "quote",
+        "content": "Kiến trúc bắt đầu khi bạn cẩn thận đặt hai viên gạch cạnh nhau. Thời trang cũng vậy, nó bắt đầu khi bạn chọn một sợi chỉ.",
+        "author": "Phỏng theo Ludwig Mies van der Rohe"
+      },
+      {
+        "type": "paragraph",
+        "content": "Nếu ở chương trước, chúng ta là những kiến trúc sư, sắp xếp các đường cắt để tạo ra không gian cho chuyển động, thì ở chương này, chúng ta sẽ là những nhà địa chất, những người chuyên gia vật liệu. Bởi vì bạn có thể có một bản thiết kế nhà hoàn hảo, nhưng nếu xây bằng gạch yếu và vữa kém chất lượng, ngôi nhà đó sẽ không thể che chở cho bạn. Trong thời trang, chất liệu chính là 'vật liệu xây dựng' đó. Nó quyết định cảm giác, chức năng, độ bền và cả 'hơi thở' của bộ trang phục."
+      },
+      {
+        "type": "paragraph",
+        "content": "Chào mừng bạn đến với **Material UX** - trải nghiệm người dùng ở cấp độ vi mô, nơi cuộc đối thoại thực sự diễn ra giữa hàng tỷ sợi vải và hàng triệu tế bào thần kinh trên da bạn."
+      },
+      {
+        "type": "subheading",
+        "content": "Bảng so sánh trải nghiệm các 'Ngôi sao' chất liệu"
+      },
+      {
+        "type": "paragraph",
+        "content": "Mỗi loại vải đều có một 'cá tính' riêng. Hãy cùng làm quen với một vài 'ngôi sao' quen thuộc trong tủ đồ của chúng ta, không phải qua các thông số kỹ thuật, mà qua chính trải nghiệm chúng mang lại."
+      },
+      {
+        "type": "table",
+        "headers": ["Chất liệu", "Trải nghiệm Tốt 👍 (Sứ mệnh của nó)", "Trải nghiệm Tồi 👎 (Khi bị đặt sai chỗ)"],
+        "rows": [
+          ["**Cotton**<br>_Người bạn thân thiện_", "Thoáng khí, mềm mại, thấm hút mồ hôi tốt. Cảm giác 'thật' và an toàn trên da. Hoàn hảo cho trang phục hàng ngày, áo phông, đồ ngủ.", "Khi bị ướt (do mưa hoặc mồ hôi nhiều), nó trở nên nặng trịch, lạnh và rất lâu khô. Không phải lựa chọn tốt cho việc tập luyện cường độ cao."],
+          ["**Linen (Vải lanh)**<br>_Vẻ đẹp không hoàn hảo_", "Cực kỳ thoáng mát, thấm hút tốt và khô nhanh hơn cotton. Càng giặt càng mềm. Vẻ ngoài có những nếp nhăn tự nhiên, đầy phóng khoáng. Lý tưởng cho những ngày hè nóng bức.", "Những nếp nhăn của nó có thể bị coi là luộm thuộm trong môi trường công sở nghiêm túc. Cảm giác ban đầu có thể hơi thô ráp trước khi được giặt nhiều lần."],
+          ["**Wool (Len)**<br>_Nhà điều nhiệt tài ba_", "Giữ ấm tuyệt vời ngay cả khi bị ẩm. Nhưng đồng thời cũng rất thoáng khí, giúp điều hòa nhiệt độ. Chống nhăn tự nhiên, khử mùi tốt. Hoàn hảo cho áo khoác, áo len, đồ vest.", "Một số loại len có thể gây ngứa ngáy cho da nhạy cảm. Cần giặt giũ cẩn thận để tránh bị co rút và biến dạng."],
+          ["**Silk (Lụa)**<br>_Sự sang trọng mỏng manh_", "Cảm giác siêu mềm, mịn và sang trọng không gì sánh được trên da. Nhẹ và có độ rủ tuyệt đẹp. Mang lại cảm giác được nâng niu.", "Rất mỏng manh, dễ bị xước, dễ bị ố bởi mồ hôi và nước. Thường đòi hỏi giặt khô, làm tăng chi phí và công sức bảo quản (tải nhận thức cao)."],
+          ["**Polyester & Nylon**<br>_Những vận động viên bền bỉ_", "Cực kỳ bền, chống nhăn, giữ màu tốt, khô siêu nhanh và thấm hút mồ hôi (wicking) ra khỏi cơ thể. Xuất sắc cho đồ thể thao, đồ bơi, áo khoác gió.", "Hoàn toàn không thoáng khí. Mặc hàng ngày có thể gây bí, giữ mùi cơ thể và tạo cảm giác 'nhân tạo', dính dấp trên da."]
+        ]
+      },
+      {
+        "type": "subheading",
+        "content": "Hãy trở thành một 'thám tử' nhãn mác"
+      },
+      {
+        "type": "paragraph",
+        "content": "Chiếc nhãn nhỏ xíu (tag) khâu bên trong sườn áo không chỉ là nơi chứa logo. Nó là một 'bảng thành phần' đầy quyền năng, tiết lộ toàn bộ sự thật về thứ bạn sắp cho tiếp xúc với làn da mình. Hãy tập thói quen đọc nó. Một chiếc áo có thể trông giống 100% cotton, nhưng nhãn mác lại ghi '60% Cotton, 40% Polyester'. Sự khác biệt 40% đó sẽ quyết định liệu bạn có cảm thấy mát mẻ hay bí bách sau vài giờ mặc."
+      },
+      {
+        "type": "alert",
+        "level": "info",
+        "content": "**Khoảnh khắc 'À há!' thứ bảy:** Một tỷ lệ nhỏ có thể tạo ra sự khác biệt lớn. Chỉ cần 2-5% Spandex/Elastane (sợi co giãn) được pha vào cotton hay len, món đồ đó ngay lập tức được 'nâng cấp' về mặt công thái học, mang lại sự tự do chuyển động mà không làm thay đổi quá nhiều cảm giác của chất liệu chính. Đó là lý do tại sao những chiếc quần jeans co giãn lại thoải mái đến vậy."
+      }
+    ]
+  },
+  "marketersToolkit": {
+    "title": "4. Marketer's Toolkit",
+    "tools": [
+      {
+        "term": "Material UX (UX Chất liệu)",
+        "definition": "Toàn bộ trải nghiệm mà một chất liệu vải mang lại, bao gồm cảm giác trên da (hand-feel), các đặc tính vật lý (thoáng khí, co giãn) và chức năng (chống nhăn, thấm hút)."
+      },
+      {
+        "term": "Hand-feel (Cảm giác khi sờ)",
+        "definition": "Chỉ cảm nhận của bàn tay và làn da khi tiếp xúc với vải. Đây là một trong những yếu tố đầu tiên và quan trọng nhất quyết định sự thoải mái và cảm nhận về chất lượng."
+      },
+      {
+        "term": "Wicking (Thấm hút ẩm)",
+        "definition": "Khả năng của một loại vải (thường là sợi tổng hợp) trong việc kéo mồ hôi từ bề mặt da ra lớp ngoài của vải để bay hơi nhanh hơn. Nó khác với 'Absorbent' (thấm) của cotton, vốn chỉ giữ lại hơi ẩm."
+      }
+    ]
+  },
+  "mindsetCorner": {
+    "title": "5. Góc nhìn của Người sành sỏi",
+    "insight": "Hãy ngừng suy nghĩ 'chất liệu nào tốt nhất' và bắt đầu hỏi 'chất liệu nào phù hợp nhất?'. Hãy chọn chất liệu dựa trên kịch bản sử dụng của bạn. Mặc cotton đi làm hằng ngày. Mặc polyester đi tập gym. Mặc linen đi biển. Mặc len cho ngày đông. Việc chọn đúng chất liệu cho đúng hoàn cảnh là đỉnh cao của việc mặc đồ thông minh và thấu cảm."
+  },
+  "projectExercise": {
+    "title": "7. Bài tập 'Tủ Đồ Tỉnh Thức'",
+    "description": "Trở thành 'nhà phê bình chất liệu'.",
+    "instruction": "Chọn 1 món đồ làm từ sợi tự nhiên (100% cotton, linen, len) và 1 món đồ làm từ sợi nhân tạo (polyester, acrylic, nylon). Mặc thử mỗi món và đi lại trong phòng trong 5 phút. Hãy mô tả sự khác biệt về: 1. Cảm giác trên da. 2. Độ 'thở' của vải (bạn có cảm thấy không khí lưu thông không?). 3. Âm thanh nó tạo ra khi bạn di chuyển.",
+    "example": "Áo phông 100% cotton: Mát, mềm, cảm giác 'thở' được, gần như im lặng khi di chuyển. Áo khoác gió 100% nylon: Cảm giác trơn, hơi sột soạt khi di chuyển, và cảm thấy hơi bí chỉ sau vài phút.",
+    "resources": []
+  },
+  "summary": {
+    "title": "8. Tóm tắt & Key Takeaways",
+    "takeaways": [
+      "Chất liệu là nền tảng của trải nghiệm trang phục, quyết định sự thoải mái và chức năng.",
+      "Không có chất liệu nào là 'tốt nhất' cho mọi tình huống, chỉ có 'phù hợp nhất' với từng ngữ cảnh cụ thể.",
+      "Hiểu về các đặc tính như thoáng khí, thấm hút ẩm, chống nhăn giúp bạn lựa chọn thông minh hơn.",
+      "Hãy biến việc đọc nhãn mác thành một thói quen. Đó là cách bạn thực sự biết mình đang mặc gì."
+    ]
+  },
+  "quiz": {
+    "title": "Kiểm tra Nhanh: Ngôn ngữ của các Loại vải",
+    "description": "Cùng kiểm tra lại kiến thức về thế giới chất liệu nhé!",
+    "questions": [
+      {
+        "questionText": "Bạn cần một chiếc áo để mặc trong một ngày hè nóng ẩm và phải đi bộ nhiều. Dựa trên kiến thức về Material UX, lựa chọn nào sau đây là tốt nhất?",
+        "options": [
+          "A. Áo sơ mi 100% Polyester vì nó nhẹ.",
+          "B. Áo len Merino mỏng vì nó khử mùi tốt.",
+          "C. Áo phông 100% Vải lanh (Linen) vì nó siêu thoáng khí.",
+          "D. Áo lụa vì nó mềm mại."
+        ],
+        "correctAnswer": "C",
+        "explanation": "Trong điều kiện nóng ẩm, độ thoáng khí là vua. Vải lanh (Linen) là một trong những chất liệu thoáng khí và khô nhanh nhất, giúp không khí lưu thông và làm mát cơ thể."
+      },
+      {
+        "questionText": "Tại sao một chiếc áo thun thể thao thường được làm từ Polyester thay vì Cotton?",
+        "options": [
+          "A. Vì Polyester rẻ hơn.",
+          "B. Vì Polyester có khả năng 'wicking' (thấm hút ẩm ra bề mặt), giúp cơ thể khô ráo hơn, trong khi Cotton chỉ thấm và giữ lại mồ hôi.",
+          "C. Vì Polyester có nhiều màu sắc sặc sỡ hơn.",
+          "D. Vì Cotton quá nặng."
+        ],
+        "correctAnswer": "B",
+        "explanation": "Chức năng 'wicking' là điểm ưu việt của Polyester trong thể thao. Nó chủ động di chuyển mồ hôi ra xa cơ thể, trong khi cotton ướt sũng sẽ trở nên nặng và lạnh, ảnh hưởng đến hiệu suất."
+      },
+      {
+        "questionText": "Bạn thấy một chiếc quần tây ghi thành phần '97% Cotton, 3% Elastane'. Con số 3% Elastane đó có ý nghĩa gì về mặt UX?",
+        "options": [
+          "A. Nó giúp chiếc quần ấm hơn.",
+          "B. Nó giúp chiếc quần có độ co giãn nhẹ, tăng cường công thái học và sự thoải mái khi di chuyển.",
+          "C. Nó làm cho chiếc quần có giá cao hơn.",
+          "D. Nó giúp chiếc quần chống nước tốt hơn."
+        ],
+        "correctAnswer": "B",
+        "explanation": "Một tỷ lệ nhỏ sợi co giãn (Elastane/Spandex) có thể cải thiện đáng kể sự thoải mái và phạm vi chuyển động của một sản phẩm may mặc mà không làm mất đi các đặc tính của chất liệu chính."
+      }
+    ]
+  },
+  "teaser": "Chúng ta đã nói về cấu trúc, chuyển động, và giờ là chất liệu. Nhưng còn một trải nghiệm quan trọng nữa mà chúng ta thường bỏ qua: khoảnh khắc 'giao tiếp' đầu tiên và cuối cùng với quần áo mỗi ngày. Chương tiếp theo, 'Wearability', sẽ phân tích tại sao có những bộ đồ mặc vào dễ như ăn kẹo, trong khi có những bộ lại là một cuộc vật lộn.",
+  "navigation": {
+    "previousChapter": 7,
+    "nextChapter": 9
+  }
+}

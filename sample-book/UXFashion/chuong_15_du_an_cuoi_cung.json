@@ -1,0 +1,129 @@
+{
+  "chapterNumber": 15,
+  "chapterTitle": "DỰ ÁN CUỐI CÙNG: Xây dựng \"Bản Tuyên ngôn Phong cách & Trải nghiệm\" của riêng bạn",
+  "coverImage": {
+    "url": null,
+    "alt": "Một cuốn sổ tay được mở ra, trên đó có ghi những từ khóa về phong cách, những gạch đầu dòng về các nguyên tắc trải nghiệm và những hình ảnh mood board."
+  },
+  "readingTimeInMinutes": 15,
+  "difficulty": "Nâng cao",
+  "learningObjectives": {
+    "title": "1. Mục tiêu Chương",
+    "objectives": [
+      "Tổng hợp và chắt lọc toàn bộ kiến thức, hiểu biết từ cuốn sách thành một tài liệu cá nhân.",
+      "Xây dựng một bộ quy tắc và nguyên tắc rõ ràng, có ý thức cho việc mua sắm và ăn mặc.",
+      "Tạo ra một 'kim chỉ nam' hữu ích để định hướng cho các quyết định thời trang trong tương lai, giúp tiết kiệm thời gian, tiền bạc và năng lượng tinh thần."
+    ]
+  },
+  "mythBuster": {
+    "title": "2. Lầm tưởng cần phá bỏ",
+    "myth": "Phong cách cá nhân là phải cố định và không bao giờ thay đổi. Một khi đã định hình là phải theo nó mãi mãi.",
+    "truth": "Phong cách cá nhân là một thực thể sống, nó phát triển và biến đổi cùng với con người bạn, công việc của bạn, và cuộc sống của bạn. Bản tuyên ngôn này không phải là một bộ luật khắc trên đá, mà là một tấm bản đồ linh hoạt. Nó ghi lại con người bạn ở thời điểm hiện tại, và bạn hoàn toàn có quyền cập nhật nó sau một, hai, hoặc năm năm nữa."
+  },
+  "mainContent": {
+    "title": "3. Nội dung chính",
+    "blocks": [
+      {
+        "type": "quote",
+        "content": "Biết người khác là thông minh. Biết chính mình mới là sự giác ngộ thực sự.",
+        "author": "Lão Tử"
+      },
+      {
+        "type": "paragraph",
+        "content": "Đây là khoảnh khắc tốt nghiệp của bạn. Chúng ta đã cùng nhau phân tích, mổ xẻ, kiểm toán, tái thiết kế và thử nghiệm. Giờ là lúc tổng hợp tất cả những hiểu biết đó lại thành một tài liệu mang dấu ấn cá nhân sâu sắc: **Bản Tuyên ngôn Phong cách và Trải nghiệm**. Đây không chỉ là một bài tập, đây là hành động tự khẳng định. Nó là 'Hiến pháp' cho tủ đồ của bạn, là một lời tuyên bố rõ ràng về việc bạn là ai, bạn coi trọng điều gì, và quan trọng không kém, bạn sẽ không chấp nhận những gì từ quần áo của mình."
+      },
+      {
+        "type": "paragraph",
+        "content": "Bản tuyên ngôn này sẽ là người cố vấn thầm lặng của bạn. Khi bạn đứng trước một món đồ giảm giá hấp dẫn, nó sẽ hỏi: 'Món này có thực sự phù hợp với những gì chúng ta đã thống nhất không?'. Khi bạn dọn dẹp tủ đồ, nó sẽ giúp bạn quyết định nên giữ lại thứ gì và nên chia tay thứ gì. Nó là công cụ giúp bạn mua ít hơn, nhưng tốt hơn."
+      }
+    ]
+  },
+  "mindsetCorner": {
+    "title": "5. Góc nhìn của Người sành sỏi",
+    "insight": "Việc viết những điều này ra giấy có một sức mạnh to lớn. Nó biến những suy nghĩ và cảm xúc mơ hồ thành những nguyên tắc rõ ràng, có thể hành động được. Nó mang lại sự tự tin và quyết đoán. Bạn không còn là một người mua sắm bị động, bị dẫn dắt bởi xu hướng và các chiến dịch quảng cáo. Bạn trở thành một vị giám tuyển có ý thức cho cuộc sống và tủ đồ của chính mình."
+  },
+  "projectExercise": {
+    "title": "7. Bài tập: Viết Bản Tuyên ngôn của bạn",
+    "description": "Hãy dành thời gian cho bài tập này. Tìm một không gian yên tĩnh, pha một tách trà hoặc cà phê. Đây là một cuộc đối thoại với chính bạn. Hãy thành thật và đừng phán xét. Đây là tài liệu cho riêng bạn.",
+    "instruction": "Hoàn thành 4 phần của Bản tuyên ngôn dưới đây. Bạn có thể viết trong sổ tay, trên máy tính, hoặc tạo một bảng mood board trên Pinterest.",
+    "resources": [
+      {
+        "name": "Tải về Mẫu Bản Tuyên ngôn (PDF)",
+        "url": "/downloads/fashion-ux-manifesto-template.pdf"
+      }
+    ],
+    "blocks": [
+      {
+        "type": "subheading",
+        "content": "Phần 1: DNA Phong cách của tôi (My Style DNA)"
+      },
+      {
+        "type": "questionList",
+        "title": "Đây là phần về 'Thẩm mỹ'. Hãy trả lời các câu hỏi:",
+        "questions": [
+          "**Ba đến năm từ khóa** mô tả phong cách tôi hướng tới là gì? (Ví dụ: Thanh lịch, Tối giản, Thoải mái, Cổ điển, Năng động, Lãng mạn...)",
+          "**Bảng màu chủ đạo** của tôi là gì? (Ví dụ: Trung tính - đen, trắng, be, xanh navy; điểm nhấn - xanh cổ vịt, đỏ rượu, vàng mù tạt...)",
+          "**Những kiểu dáng/phom đồ** nào luôn khiến tôi cảm thấy tự tin và là chính mình nhất? (Ví dụ: Quần cạp cao ống đứng, váy chữ A qua gối, áo khoác blazer vai đứng, áo len cổ lọ...)",
+          "**Hình mẫu phong cách** của tôi là ai (nếu có)? Tôi học hỏi được điều gì từ họ?"
+        ]
+      },
+      {
+        "type": "subheading",
+        "content": "Phần 2: Những Điều Bất khả Xâm phạm về Trải nghiệm (My UX Non-Negotiables)"
+      },
+      {
+        "type": "paragraph",
+        "content": "Đây là phần về 'Trải nghiệm', là trái tim của cuốn sách này. Dựa trên tất cả những gì đã học, hãy viết ra danh sách những quy tắc VÀNG của bạn. Đây là những giới hạn bạn sẽ không bao giờ vượt qua, dù món đồ có đẹp đến đâu."
+      },
+      {
+        "type": "checklist",
+        "title": "Hãy bắt đầu bằng 'TÔI SẼ LUÔN...' và 'TÔI SẼ KHÔNG BAO GIỜ...'. Ví dụ:",
+        "items": [
+          "TÔI SẼ LUÔN ưu tiên chất liệu tự nhiên, thoáng khí.",
+          "TÔI SẼ LUÔN kiểm tra khả năng vận động (giơ tay, ngồi xuống) trước khi mua.",
+          "TÔI SẼ KHÔNG BAO GIỜ mua quần áo có túi giả.",
+          "TÔI SẼ KHÔNG BAO GIỜ mua bất cứ thứ gì có nhãn 'chỉ giặt khô' trừ khi nó là một món đồ đầu tư thực sự đặc biệt (như áo khoác vest).",
+          "TÔI SẼ KHÔNG BAO GIỜ mua giày dép mà tôi không thể đi bộ thoải mái trong ít nhất 15 phút."
+        ]
+      },
+      {
+        "type": "subheading",
+        "content": "Phần 3: Danh sách 'Đưa vào danh sách đen' (My 'Blacklist')"
+      },
+      {
+        "type": "paragraph",
+        "content": "Dựa trên kinh nghiệm và các bài tập đã làm, hãy liệt kê những món đồ hoặc kiểu dáng cụ thể không phù hợp với cơ thể, lối sống, hoặc trải nghiệm của bạn, dù chúng có hợp mốt đến đâu. Việc này giúp bạn tránh lặp lại những sai lầm trong quá khứ."
+      },
+      {
+        "type": "paragraph",
+        "content": "*Ví dụ: Quần skinny jeans (vì không thoải mái), áo crop-top (vì không phù hợp lối sống), bất cứ thứ gì làm từ vải acrylic (vì gây tĩnh điện và bí), váy có khóa kéo sau lưng...*"
+      },
+      {
+        "type": "subheading",
+        "content": "Phần 4: Câu thần chú Phong cách (My Style Mantra)"
+      },
+      {
+        "type": "paragraph",
+        "content": "Cuối cùng, hãy đúc kết toàn bộ triết lý của bạn thành một câu ngắn gọn, súc tích và dễ nhớ. Đây sẽ là câu thần chú bạn có thể tự nhủ mỗi khi mua sắm hoặc chọn đồ."
+      },
+      {
+        "type": "paragraph",
+        "content": "*Ví dụ: 'Mặc để cảm thấy tốt, không chỉ để trông đẹp.' | 'Sự thoải mái là nền tảng của sự tự tin.' | 'Ít hơn nhưng tốt hơn.' | 'Cuộc sống quá ngắn để mặc những bộ đồ gây khó chịu.'*"
+      }
+    ]
+  },
+  "summary": {
+    "title": "8. Tóm tắt & Key Takeaways",
+    "takeaways": [
+      "Bạn đã hoàn thành dự án quan trọng nhất: tạo ra một kim chỉ nam rõ ràng cho các quyết định thời trang của mình.",
+      "Bản tuyên ngôn này giúp chuyển hóa kiến thức thành các quy tắc hành động cụ thể và mang đậm dấu ấn cá nhân.",
+      "Việc xác định rõ ràng những gì bạn muốn và không muốn sẽ giúp bạn xây dựng một tủ đồ có chủ đích, tiết kiệm tiền bạc, thời gian và năng lượng tinh thần.",
+      "Bạn giờ đây không chỉ là người tiêu dùng, mà là một Giám đốc Trải nghiệm có tầm nhìn cho cuộc sống và tủ đồ của chính mình."
+    ]
+  },
+  "teaser": "Xin chúc mừng! Bạn đã đi đến cuối cuộc hành trình khám phá và xây dựng. Bạn đã có trong tay một công cụ mạnh mẽ để định hình thế giới thời trang của riêng mình. Chương cuối cùng sẽ là một lời tổng kết ngắn gọn, nhìn lại những gì đã học và hướng tới tương lai của một người mặc đồ có ý thức - một người hiểu rằng những gì họ mặc không chỉ định hình vẻ ngoài, mà còn định hình cả cuộc sống của họ.",
+  "navigation": {
+    "previousChapter": 14,
+    "nextChapter": 16
+  }
+}

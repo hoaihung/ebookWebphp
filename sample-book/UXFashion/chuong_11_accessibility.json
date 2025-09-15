@@ -1,0 +1,168 @@
+{
+  "chapterNumber": 11,
+  "chapterTitle": "Accessibility: Thời trang cho Mọi cơ thể, Mọi hoàn cảnh",
+  "coverImage": {
+    "url": null,
+    "alt": "Hình ảnh một người dùng xe lăn đang mặc một chiếc áo khoác được thiết kế đặc biệt để dễ mặc khi ngồi, bên cạnh là một người có bàn tay khuyết tật đang dễ dàng cài khuy áo nam châm."
+  },
+  "readingTimeInMinutes": 18,
+  "difficulty": "Trung bình",
+  "learningObjectives": {
+    "title": "1. Mục tiêu Chương",
+    "objectives": [
+      "Hiểu khái niệm 'Accessibility' (Khả năng tiếp cận) và 'Inclusive Design' (Thiết kế cho mọi người) trong thời trang.",
+      "Nhận biết những rào cản vô hình mà người khuyết tật, người có thân hình khác biệt, và người ở các giai đoạn sống đặc biệt gặp phải với thời trang thông thường.",
+      "Khám phá các giải pháp thiết kế thích ứng (adaptive design) đầy sáng tạo và nhân văn."
+    ]
+  },
+  "mythBuster": {
+    "title": "2. Lầm tưởng cần phá bỏ",
+    "myth": "Thiết kế thời trang thích ứng (adaptive fashion) chỉ dành cho một nhóm rất nhỏ, trông giống đồ y tế và không có tính thẩm mỹ.",
+    "truth": "Thực tế, có hàng trăm triệu người trên thế giới gặp khó khăn với quần áo thông thường. Hơn nữa, những giải pháp thiết kế cho người khuyết tật thường dẫn đến những sản phẩm tốt hơn cho tất cả mọi người (ví dụ: giày không cần buộc dây). Thời trang thích ứng hiện đại đang chứng minh rằng chức năng và phong cách hoàn toàn có thể song hành."
+  },
+  "mainContent": {
+    "title": "3. Nội dung chính",
+    "blocks": [
+      {
+        "type": "quote",
+        "content": "Hành động đầu tiên của việc thiết kế có thấu cảm là nhận ra những điểm mù của chính chúng ta.",
+        "author": "Kat Holmes, tác giả sách 'Mismatch'"
+      },
+      {
+        "type": "paragraph",
+        "content": "Chúng ta đã nói nhiều về trải nghiệm cá nhân. Nhưng giờ là lúc mở rộng góc nhìn. Một thiết kế chỉ thực sự tốt khi nó không loại trừ bất kỳ ai. **Accessibility**, hay Khả năng tiếp cận, trong thời trang chính là việc chủ động phá bỏ những rào cản, đảm bảo rằng mọi người, bất kể khả năng thể chất, hình dáng cơ thể, hay hoàn cảnh sống, đều có quyền được tiếp cận với những bộ trang phục giúp họ thể hiện bản thân, sống một cách độc lập và đầy tự tin."
+      },
+      {
+        "type": "paragraph",
+        "content": "Đây không phải là một vấn đề 'ngách'. Đây là một vấn đề về nhân văn. Bởi vì thời trang thông thường, một cách vô thức, thường được thiết kế cho một 'cơ thể tiêu chuẩn' không thực sự tồn tại, và trong quá trình đó, nó đã vô tình dựng lên những bức tường."
+      },
+      {
+        "type": "subheading",
+        "content": "Khi tủ đồ trở thành một chướng ngại vật"
+      },
+      {
+        "type": "paragraph",
+        "content": "Đối với nhiều người trong chúng ta, việc mặc quần áo là một hành động tự động. Nhưng hãy thử một giây đặt mình vào vị trí của người khác và tưởng tượng:"
+      },
+      {
+        "type": "questionList",
+        "title": "Những thách thức bạn có thể chưa từng nghĩ tới:",
+        "questions": [
+          "Làm thế nào bạn có thể cài những chiếc khuy áo sơ mi nhỏ xíu nếu bạn bị viêm khớp dạng thấp, khiến các ngón tay đau và cứng?",
+          "Làm thế nào bạn có thể mặc một chiếc quần jeans bó sát và cởi nó ra một cách dễ dàng nếu bạn phải ngồi xe lăn cả ngày?",
+          "Làm thế nào một người khiếm thị có thể phân biệt chiếc áo màu xanh và chiếc áo màu đen nếu chúng có cùng chất liệu?",
+          "Làm thế nào một người mẹ vừa sinh con có thể cho con bú một cách kín đáo nếu mặc một chiếc váy không có thiết kế mở ở ngực?",
+          "Làm thế nào một người có tay chân giả (prosthetic limb) có thể mặc những chiếc quần ống quá hẹp hay những chiếc áo tay dài bó sát?"
+        ]
+      },
+      {
+        "type": "paragraph",
+        "content": "Đây không phải là những tình huống giả định. Đây là thực tế hàng ngày của hàng triệu người. Khi đó, quần áo không chỉ là 'khó chịu', nó trở thành một rào cản thực sự đối với sự độc lập và hòa nhập."
+      },
+      {
+        "type": "alert",
+        "level": "info",
+        "content": "Một insight sâu sắc từ lĩnh vực thiết kế toàn diện là: **Khuyết tật không nằm ở con người, mà nằm ở sự tương tác.** Một người không thể đi không phải là vấn đề, vấn đề là một tòa nhà không có đường dốc cho xe lăn. Tương tự, một người không thể cài khuy không phải là vấn đề, vấn đề là chiếc áo chỉ có duy nhất lựa chọn là khuy cài."
+      },
+      {
+        "type": "subheading",
+        "content": "Thiết kế Thích ứng: Những giải pháp đầy thấu cảm"
+      },
+      {
+        "type": "paragraph",
+        "content": "Rất may, ngày càng có nhiều nhà thiết kế và thương hiệu đang trả lời những thách thức này bằng các giải pháp sáng tạo, biến thời trang thành một công cụ giải phóng thay vì giam hãm."
+      },
+      {
+        "type": "analogy",
+        "title": "Các phát minh thay đổi cuộc chơi:",
+        "items": [
+          { "term": "Khuy nam châm và Khóa dán (Velcro)", "description": "Được giấu một cách khéo léo sau hàng khuy trang trí, chúng cho phép người có vận động tinh kém (bàn tay yếu, run do Parkinson) có thể tự mặc đồ một cách nhanh chóng và độc lập." },
+          { "term": "Quần cho người ngồi xe lăn", "description": "Được thiết kế với sự thấu cảm sâu sắc: có lưng quần cao hơn ở phía sau để không bị hở khi ngồi, đũng quần phẳng hơn và ít đường may hơn để giảm áp lực, và đôi khi có khóa kéo dài ở hai bên hông để dễ mặc." },
+          { "term": "Giày dép dễ xỏ (Easy-on/off shoes)", "description": "Các thương hiệu như Nike (với dòng Go FlyEase) đã tạo ra những đôi giày có thể xỏ vào và cởi ra mà không cần dùng tay. Thiết kế này ban đầu dành cho người khuyết tật, nhưng giờ đây lại được tất cả mọi người yêu thích vì sự tiện lợi của nó." },
+          { "term": "Thiết kế cho người nhạy cảm cảm giác", "description": "Dành cho người tự kỷ hoặc có rối loạn xử lý cảm giác. Quần áo được làm từ chất liệu siêu mềm, không có nhãn mác, và các đường may được làm phẳng hoặc đưa ra ngoài để không gây cọ xát." }
+        ]
+      }
+    ]
+  },
+  "marketersToolkit": {
+    "title": "4. Marketer's Toolkit",
+    "tools": [
+      {
+        "term": "Accessibility (Khả năng tiếp cận)",
+        "definition": "Việc thiết kế sản phẩm thời trang để người có các khả năng, hoàn cảnh và cơ thể khác nhau đều có thể sử dụng một cách dễ dàng, độc lập và đầy tự tin."
+      },
+      {
+        "term": "Adaptive Fashion (Thời trang Thích ứng)",
+        "definition": "Quần áo được điều chỉnh hoặc thiết kế đặc biệt để đáp ứng nhu cầu của người khuyết tật, nhưng ngày càng được tích hợp vào thời trang chính thống."
+      },
+      {
+        "term": "Inclusive Design (Thiết kế Toàn diện)",
+        "definition": "Một triết lý thiết kế rộng hơn, không chỉ giải quyết vấn đề cho một nhóm cụ thể, mà còn tạo ra những sản phẩm tốt hơn cho tất cả mọi người bằng cách học hỏi từ sự đa dạng của con người."
+      }
+    ]
+  },
+  "mindsetCorner": {
+    "title": "5. Góc nhìn của Người sành sỏi",
+    "insight": "Sự thấu cảm là cốt lõi của một nhà thiết kế vĩ đại, và cũng là của một người tiêu dùng có ý thức. Hãy bắt đầu tìm hiểu và ủng hộ các thương hiệu ưu tiên tính toàn diện. Lựa chọn của bạn không chỉ giúp bạn có một sản phẩm tốt hơn, mà còn góp phần xây dựng một ngành công nghiệp thời trang nhân văn và tử tế hơn."
+  },
+  "projectExercise": {
+    "title": "7. Bài tập 'Tủ Đồ Tỉnh Thức'",
+    "description": "Bài tập tư duy thấu cảm.",
+    "instruction": "Hãy thử thực hiện một hành động đơn giản: chỉ dùng một tay để mặc và cài khuy một chiếc áo sơ mi. Bạn gặp phải khó khăn gì? Quá trình này khiến bạn cảm thấy thế nào? Bài tập nhỏ này giúp chúng ta cảm nhận được một phần rất nhỏ những thách thức mà người khác có thể phải đối mặt hàng ngày.",
+    "example": "Kết quả: Gần như không thể cài được khuy. Việc giữ hai mép áo bằng nhau trong khi cố gắng luồn khuy qua lỗ bằng một tay rất khó. Cảm thấy bất lực và bực bội. Điều này giúp tôi hiểu tại sao khuy nam châm lại là một phát minh tuyệt vời.",
+    "resources": []
+  },
+  "summary": {
+    "title": "8. Tóm tắt & Key Takeaways",
+    "takeaways": [
+      "Accessibility trong thời trang là việc thiết kế cho sự đa dạng của con người, không loại trừ ai.",
+      "Thời trang thông thường có thể vô tình tạo ra nhiều rào cản cho người khuyết tật và người có cơ thể khác biệt.",
+      "Thiết kế thích ứng mang lại các giải pháp sáng tạo như khuy nam châm, quần áo cho người ngồi xe lăn, và thường dẫn đến những sản phẩm tốt hơn cho tất cả mọi người.",
+      "Ủng hộ các thương hiệu toàn diện là bạn đang 'bỏ phiếu' cho một tương lai thời trang tử tế và nhân văn hơn."
+    ]
+  },
+  "quiz": {
+    "title": "Kiểm tra Nhanh: Thời trang cho Mọi người",
+    "description": "Cùng kiểm tra lại kiến thức về một chủ đề quan trọng nhé!",
+    "questions": [
+      {
+        "questionText": "Triết lý thiết kế các sản phẩm để có thể được sử dụng bởi tất cả mọi người, ở mức độ lớn nhất có thể, mà không cần đến sự điều chỉnh hay thiết kế chuyên biệt được gọi là gì?",
+        "options": [
+          "A. Ergonomics",
+          "B. Universal Design (Thiết kế Phổ quát) / Inclusive Design",
+          "C. Material UX",
+          "D. Wearability"
+        ],
+        "correctAnswer": "B",
+        "explanation": "Universal Design (Thiết kế Phổ quát) hay Inclusive Design (Thiết kế Toàn diện) là triết lý cốt lõi đằng sau accessibility, với mục tiêu tạo ra những sản phẩm vốn đã tốt cho tất cả mọi người ngay từ đầu."
+      },
+      {
+        "questionText": "Một chiếc áo sơ mi sử dụng khuy nam châm được giấu sau hàng khuy thường là một giải pháp thiết kế cho vấn đề nào sau đây?",
+        "options": [
+          "A. Giúp áo trông đắt tiền hơn.",
+          "B. Giúp người có vận động tinh kém (ví dụ: bị viêm khớp, run tay) có thể tự mặc đồ.",
+          "C. Giúp áo chống nhăn tốt hơn.",
+          "D. Giúp áo nhanh khô hơn."
+        ],
+        "correctAnswer": "B",
+        "explanation": "Đây là một giải pháp thời trang thích ứng kinh điển, trực tiếp giải quyết rào cản mà những người gặp khó khăn trong việc thực hiện các động tác khéo léo của ngón tay."
+      },
+      {
+        "questionText": "Quan điểm 'Khuyết tật không nằm ở con người, mà nằm ở sự tương tác' có ý nghĩa gì trong thiết kế thời trang?",
+        "options": [
+          "A. Người khuyết tật nên tránh mặc đồ thời trang.",
+          "B. Các nhà thiết kế không cần quan tâm đến người khuyết tật.",
+          "C. Lỗi không phải ở khả năng của người dùng, mà ở việc sản phẩm không được thiết kế để phù hợp với sự đa dạng của các khả năng đó.",
+          "D. Quần áo chỉ nên có một kích cỡ duy nhất."
+        ],
+        "correctAnswer": "C",
+        "explanation": "Đây là một sự thay đổi tư duy mang tính cách mạng, chuyển trách nhiệm từ người dùng sang nhà thiết kế, thúc đẩy việc tạo ra các giải pháp linh hoạt và toàn diện hơn."
+      }
+    ]
+  },
+  "teaser": "Bạn đã được trang bị một bộ công cụ phân tích cực kỳ mạnh mẽ, từ công thái học, chất liệu, tính năng cho đến khả năng tiếp cận. Giờ là lúc biến kiến thức thành hành động. Dự án nhỏ tiếp theo sẽ thử thách bạn trở thành một nhà thiết kế, 'tái sinh' một món đồ gây khó chịu trong tủ đồ của chính bạn.",
+  "navigation": {
+    "previousChapter": 10,
+    "nextChapter": 12
+  }
+}

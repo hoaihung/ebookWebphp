@@ -1,0 +1,75 @@
+<!-- file: reader.html (VERSION 3.0 - FULL & FIXED) -->
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Đang đọc...</title>
+    <!-- Use relative path for favicon to avoid 404 on file protocol -->
+    <link rel="icon" href="assets/images/favicon.svg" type="image/svg+xml">
+    <link rel="icon" href="assets/images/favicon.ico" sizes="any">
+    <link rel="apple-touch-icon" href="assets/images/favicon.png">
+    <link rel="shortcut icon" href="assets/images/favicon.png">
+    <meta property="og:image" content="https://your-domain.com/assets/images/social-thumbnail.png">
+    <meta property="twitter:card" content="summary_large_image">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/handlebars@latest/dist/handlebars.min.js"></script>
+</head>
+<body>
+    <!-- THÊM CÁC THÀNH PHẦN CÒN THIẾU -->
+    <div id="reading-progress-bar"></div>
+    <header class="mobile-header">
+        <button id="mobile-toc-toggle" class="mobile-header-button">
+            <i class="fas fa-bars"></i>
+        </button>
+        <div id="mobile-chapter-title" class="mobile-header-title"></div>
+        <a href="index.html" id="mobile-back-button" class="mobile-header-button" title="Về Thư viện">
+            <i class="fas fa-th-large"></i>
+        </a>
+
+        <!-- Button to toggle notes panel on mobile -->
+        <button id="mobile-notes-toggle" class="mobile-header-button" title="Ghi chú & Đánh dấu">
+            <i class="fas fa-bookmark"></i>
+        </button>
+    </header>
+    <!-- KẾT THÚC PHẦN THÊM MỚI -->
+
+    <div class="reader-layout">
+        <aside id="reader-toc-sidebar" class="reader-sidebar">
+            <div class="sidebar-header">
+                <a href="index.html" class="back-to-library"><i class="fas fa-arrow-left"></i> Về Thư viện</a>
+                <!-- <h3 id="ebook-title-in-toc"></h3> -->
+                <!-- Removed dark mode toggle from the sidebar. The toggle now lives in the top toolbar for better accessibility. -->
+            </div>
+            <div id="toc-container" class="sidebar-content">
+                <p>Đang tải mục lục...</p>
+            </div>
+        </aside>
+
+        <main id="main-content-area" class="reader-main">
+            <!-- Nội dung sẽ được render ở đây -->
+        </main>
+
+        <!-- Notes & Highlights panel (right sidebar) -->
+        <aside id="reader-notes-sidebar" class="reader-sidebar notes-sidebar">
+            <div class="notes-header">
+                <h3>Ghi chú & Đánh dấu</h3>
+                <button id="close-notes-button" class="close-notes" title="Đóng">
+                    <i class="fas fa-times"></i>
+                </button>
+            </div>
+            <div id="notes-content" class="notes-content">
+                <p>Chưa có ghi chú. Bôi chọn văn bản để thêm ghi chú!</p>
+            </div>
+        </aside>
+    </div>
+    
+    <div id="toc-overlay"></div>
+    
+    <script type="module" src="assets/js/dynamic-loader.js"></script>
+    <script type="module" src="assets/js/reader.js"></script>
+    <!-- Dark mode support -->
+    <script type="module" src="assets/js/theme.js"></script>
+</body>
+</html>

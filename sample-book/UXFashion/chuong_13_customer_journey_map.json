@@ -1,0 +1,142 @@
+{
+  "chapterNumber": 13,
+  "chapterTitle": "Customer Journey Map: Hành trình của một chiếc váy từ cửa hàng về nhà",
+  "coverImage": {
+    "url": null,
+    "alt": "Một sơ đồ mô tả các bước trong hành trình của một món đồ: từ lúc nhìn thấy trên Instagram, đến phòng thử đồ, đến lúc mặc, giặt và cuối cùng là cất vào tủ."
+  },
+  "readingTimeInMinutes": 18,
+  "difficulty": "Nâng cao",
+  "learningObjectives": {
+    "title": "1. Mục tiêu Chương",
+    "objectives": [
+      "Hiểu Customer Journey Map (CJM - Bản đồ Hành trình Khách hàng) là gì và cách áp dụng nó cho vòng đời của một sản phẩm thời trang.",
+      "Phân tích các giai đoạn khác nhau trong mối quan hệ của bạn với một món đồ: từ lúc 'phải lòng' đến khi 'chia tay'.",
+      "Nhận diện các 'điểm chạm' (touchpoints) và các 'điểm đau' (pain points) có thể xảy ra ở mọi giai đoạn, không chỉ lúc mặc."
+    ]
+  },
+  "mythBuster": {
+    "title": "2. Lầm tưởng cần phá bỏ",
+    "myth": "Trải nghiệm của tôi với một món đồ chỉ diễn ra khi tôi mặc nó. Việc mua sắm hay giặt giũ chỉ là những việc phải làm.",
+    "truth": "Trải nghiệm của bạn là một bộ phim dài, không phải một khoảnh khắc. Nó bắt đầu từ rất lâu trước khi bạn mặc món đồ (khi bạn thấy quảng cáo, vào website) và kéo dài rất lâu sau đó (khi bạn giặt ủi, sửa chữa, hay quyết định cho đi). Một trải nghiệm 5 sao phải tuyệt vời ở mọi 'cảnh quay'."
+  },
+  "mainContent": {
+    "title": "3. Nội dung chính",
+    "blocks": [
+      {
+        "type": "quote",
+        "content": "Để hiểu được khu rừng, bạn không thể chỉ nhìn vào một cái cây.",
+        "author": "Tục ngữ"
+      },
+      {
+        "type": "paragraph",
+        "content": "Chào mừng bạn đến với Giai đoạn 3, nơi chúng ta học cách tư duy như một chiến lược gia. Từ đầu sách đến giờ, chúng ta đã làm rất tốt việc 'nhìn vào từng cái cây' - phân tích chi tiết một sản phẩm đơn lẻ. Bây giờ, chúng ta sẽ lùi lại một bước để ngắm nhìn toàn bộ 'khu rừng'. Công cụ để làm việc đó có tên là **Customer Journey Map (CJM)**, hay Bản đồ Hành trình Khách hàng. Đây là một công cụ UX/Marketing quyền năng giúp trực quan hóa toàn bộ câu chuyện về mối quan hệ của bạn với một sản phẩm, từ lúc bắt đầu cho đến khi kết thúc."
+      },
+      {
+        "type": "subheading",
+        "content": "5 Giai đoạn trong Vòng đời của một chiếc Váy"
+      },
+      {
+        "type": "paragraph",
+        "content": "Hãy tưởng tượng bạn vừa mua một chiếc váy mới. Hành trình của nó không bắt đầu từ lúc bạn mặc nó lần đầu tiên. Nó phức tạp và thú vị hơn nhiều. Hãy cùng vẽ ra bản đồ cho hành trình đó:"
+      },
+      {
+        "type": "stepByStep",
+        "title": "Hành trình tiêu biểu và các 'Điểm chạm' quan trọng:",
+        "steps": [
+          { "stepNumber": 1, "description": "**Giai đoạn 1: Khám phá (Discovery) - 'Tình yêu sét đánh'**\nĐây là lúc bạn lần đầu tiên biết đến sự tồn tại của chiếc váy. \n*Điểm chạm:* Bạn thấy nó trên quảng cáo Instagram, một fashion blogger mặc nó, bạn bè giới thiệu, hoặc tình cờ lướt thấy trên website. \n*Suy nghĩ & Cảm xúc:* Tò mò, hứng thú, 'Trông đẹp quá!', 'Liệu mình mặc có hợp không?'." },
+          { "stepNumber": 2, "description": "**Giai đoạn 2: Cân nhắc & Mua sắm (Consideration & Purchase) - 'Giai đoạn tìm hiểu'**\nBạn bắt đầu nghiên cứu. \n*Điểm chạm:* Bạn vào website xem ảnh chi tiết, đọc mô tả chất liệu, xem review của người mua trước, đến cửa hàng để sờ và thử. Trải nghiệm phòng thử đồ (ánh sáng, không gian, gương), thái độ của nhân viên, và sự dễ dàng của quy trình thanh toán đều là những điểm chạm cực kỳ quan trọng. \n*Suy nghĩ & Cảm xúc:* Hy vọng, lo lắng, 'Chất vải này có ổn không?', 'Phòng thử này tối quá', vui vẻ, phấn khích khi quyết định mua." },
+          { "stepNumber": 3, "description": "**Giai đoạn 3: Sử dụng (Usage) - 'Giai đoạn chung sống'**\nĐây là giai đoạn cốt lõi, nơi tất cả kiến thức của chúng ta ở Giai đoạn 1 & 2 được kiểm chứng. Bạn mặc nó đi làm, đi tiệc. \n*Điểm chạm:* Cảm giác của vải trên da, sự thoải mái khi di chuyển, sự tiện lợi của túi (nếu có), phản ứng của mọi người. \n*Suy nghĩ & Cảm xúc:* Tự tin, thoải mái, quyền lực, hoặc ngược lại, khó chịu, hối hận, 'Biết thế đã không mua'." },
+          { "stepNumber": 4, "description": "**Giai đoạn 4: Sở hữu & Bảo quản (Ownership) - 'Những thói quen đời thường'**\nTrải nghiệm không kết thúc khi bạn cởi váy ra. \n*Điểm chạm:* Nhãn giặt ủi (có dễ hiểu không?), quá trình giặt (có phai màu, co rút không?), việc ủi (có dễ phẳng không?), và cách nó được cất giữ trong tủ. \n*Suy nghĩ & Cảm xúc:* Yên tâm, dễ dàng, hoặc bực bội, 'Lại phải giặt khô, tốn kém quá!', thất vọng, 'Mới giặt một lần đã xù lông'." },
+          { "stepNumber": 5, "description": "**Giai đoạn 5: Kết thúc & Vòng lặp mới (End-of-life & Advocacy) - 'Ngã rẽ cuối cùng'**\nKhông có gì là mãi mãi. Bạn chán nó, nó hỏng, hoặc không còn vừa nữa. \n*Điểm chạm:* Quyết định sửa nó, cho đi, ký gửi, bán lại hay vứt đi. Trải nghiệm tổng thể của bạn với chiếc váy và thương hiệu sẽ quyết định liệu bạn có trở thành người ủng hộ (advocate), giới thiệu cho bạn bè và quay lại mua hàng (vòng lặp mới) hay không. \n*Suy nghĩ & Cảm xúc:* Hoài niệm, trách nhiệm, sự trung thành, hoặc sự thất vọng hoàn toàn." }
+        ]
+      },
+      {
+        "type": "alert",
+        "level": "info",
+        "content": "Một insight quan trọng từ bản đồ này là: **Một trải nghiệm tồi ở bất kỳ giai đoạn nào cũng có thể phá hỏng toàn bộ hành trình.** Một chiếc váy đẹp đến mấy nhưng nếu việc giặt ủi là một cơn ác mộng (Giai đoạn 4), bạn cũng sẽ ngần ngại mặc nó. Một thương hiệu có sản phẩm tốt nhưng website quá tệ (Giai đoạn 2) cũng sẽ mất khách hàng."
+      }
+    ]
+  },
+  "marketersToolkit": {
+    "title": "4. Marketer's Toolkit",
+    "tools": [
+      {
+        "term": "Customer Journey Map (CJM)",
+        "definition": "Một sơ đồ trực quan mô tả các giai đoạn, điểm chạm, hành động, suy nghĩ và cảm xúc của một người khi tương tác với một sản phẩm hoặc thương hiệu theo thời gian."
+      },
+      {
+        "term": "Touchpoint (Điểm chạm)",
+        "definition": "Bất kỳ thời điểm nào mà khách hàng (người dùng) tiếp xúc với thương hiệu/sản phẩm. Mỗi điểm chạm là một cơ hội để tạo ra trải nghiệm tốt hoặc tồi."
+      },
+      {
+        "term": "Pain Point (Điểm đau)",
+        "definition": "Một vấn đề, sự khó chịu, hay rào cản mà khách hàng gặp phải trong hành trình của họ. Nhiệm vụ của nhà thiết kế tốt là xác định và loại bỏ các điểm đau này."
+      }
+    ]
+  },
+  "mindsetCorner": {
+    "title": "5. Góc nhìn của Người sành sỏi",
+    "insight": "Hãy trở thành một người mua sắm có tư duy toàn cảnh. Khi bạn định mua một món đồ, đừng chỉ nghĩ về Giai đoạn 3 (lúc mặc). Hãy lướt nhanh qua các giai đoạn khác trong đầu: 'Website của hãng này có chuyên nghiệp không?', 'Chính sách đổi trả thế nào?', 'Cái nhãn giặt ghi gì?'. Việc này sẽ giúp bạn đưa ra những quyết định sáng suốt hơn và tránh được những hối tiếc về sau."
+  },
+  "projectExercise": {
+    "title": "7. Bài tập 'Tủ Đồ Tỉnh Thức'",
+    "description": "Vẽ bản đồ hành trình của một món đồ bạn sở hữu.",
+    "instruction": "Hãy chọn một món đồ mà bạn có một câu chuyện thú vị để kể (một món đồ bạn rất yêu, một món đồ gây thất vọng, hoặc một món đồ mua online). Thử vẽ ra 5 giai đoạn trong hành trình của nó, từ lúc bạn biết đến nó cho đến bây giờ. Ở mỗi giai đoạn, ghi lại một 'điểm chạm' chính và cảm xúc của bạn lúc đó. Có 'điểm đau' (pain point) nào đã xuất hiện không?",
+    "example": "Món đồ: Áo khoác da mua online.\n1. **Khám phá:** Thấy quảng cáo trên Facebook, ảnh rất đẹp -> Cảm xúc: Hứng thú.\n2. **Mua sắm:** Website chuyên nghiệp, nhưng không có video sản phẩm -> Cảm xúc: Hơi lo lắng về chất liệu thật.\n3. **Sử dụng:** Mặc lên phom rất đẹp, da mềm -> Cảm xúc: Rất hài lòng, tự tin.\n4. **Sở hữu:** **Pain Point!** Áo có mùi da hơi hắc, và nhãn ghi 'không giặt, không sấy, không ủi' -> Cảm xúc: Bối rối, không biết làm sao để làm sạch.\n5. **Kết thúc:** Vẫn đang mặc nhưng luôn e ngại vì vấn đề bảo quản.",
+    "resources": []
+  },
+  "summary": {
+    "title": "8. Tóm tắt & Key Takeaways",
+    "takeaways": [
+      "Trải nghiệm thời trang là một hành trình dài, không phải một điểm đến.",
+      "Hành trình này bao gồm 5 giai đoạn chính: Khám phá, Mua sắm, Sử dụng, Sở hữu & Bảo quản, và Kết thúc.",
+      "Các thương hiệu xuất sắc sẽ cố gắng tối ưu hóa trải nghiệm ở mọi 'điểm chạm', từ website đến nhãn giặt.",
+      "Tư duy về cả vòng đời sản phẩm giúp bạn mua sắm bền vững, có ý thức và thông minh hơn."
+    ]
+  },
+  "quiz": {
+    "title": "Kiểm tra Nhanh: Tư duy Toàn cảnh",
+    "description": "Cùng kiểm tra lại kiến thức về Bản đồ Hành trình nhé!",
+    "questions": [
+      {
+        "questionText": "Việc một chiếc áo len bị xù lông chỉ sau vài lần giặt (dù đã giặt đúng cách) là một 'Pain Point' xảy ra ở giai đoạn nào của Customer Journey Map?",
+        "options": [
+          "A. Giai đoạn Khám phá (Discovery)",
+          "B. Giai đoạn Mua sắm (Purchase)",
+          "C. Giai đoạn Sở hữu & Bảo quản (Ownership)",
+          "D. Giai đoạn Sử dụng (Usage)"
+        ],
+        "correctAnswer": "C",
+        "explanation": "Vấn đề này bộc lộ trong quá trình sở hữu và bảo quản lâu dài, ảnh hưởng đến trải nghiệm sau khi mua và giá trị của sản phẩm theo thời gian."
+      },
+      {
+        "questionText": "Trải nghiệm của khách hàng trong phòng thử đồ (ánh sáng, không gian, gương soi) thuộc giai đoạn nào?",
+        "options": [
+          "A. Giai đoạn Khám phá",
+          "B. Giai đoạn Cân nhắc & Mua sắm",
+          "C. Giai đoạn Sử dụng",
+          "D. Giai đoạn Sở hữu"
+        ],
+        "correctAnswer": "B",
+        "explanation": "Phòng thử đồ là một 'điểm chạm' cực kỳ quan trọng trong giai đoạn khách hàng đang cân nhắc và đưa ra quyết định mua hàng. Một trải nghiệm tồi ở đây có thể khiến họ từ bỏ sản phẩm."
+      },
+      {
+        "questionText": "Tại sao việc phân tích cả hành trình lại quan trọng đối với việc xây dựng một tủ đồ tốt hơn?",
+        "options": [
+          "A. Vì nó giúp chúng ta mua được nhiều quần áo hơn.",
+          "B. Vì nó giúp chúng ta nhận ra những vấn đề tiềm ẩn ngoài việc mặc (như khó bảo quản, chính sách đổi trả kém), từ đó đưa ra quyết định mua hàng thông minh hơn.",
+          "C. Vì nó giúp chúng ta chỉ mua đồ của các thương hiệu nổi tiếng.",
+          "D. Vì nó không quan trọng, chỉ cần mặc đẹp là đủ."
+        ],
+        "correctAnswer": "B",
+        "explanation": "Tư duy CJM giúp chúng ta đánh giá một sản phẩm một cách toàn diện, lường trước các vấn đề có thể phát sinh trong tương lai, từ đó chọn những món đồ không chỉ đẹp mà còn dễ 'chung sống' lâu dài."
+      }
+    ]
+  },
+  "teaser": "Bạn đã biết cách phân tích cả một hành trình. Giờ hãy học cách tối ưu hóa nó. Làm thế nào để biết một phong cách có thực sự hợp với mình hay không, thay vì chỉ đoán mò? Chương tiếp theo sẽ giới thiệu một khái niệm từ thế giới công nghệ và áp dụng nó vào tủ đồ của bạn một cách cực kỳ thú vị: 'A/B Testing Phong cách'.",
+  "navigation": {
+    "previousChapter": 12,
+    "nextChapter": 14
+  }
+}

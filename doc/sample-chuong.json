@@ -1,0 +1,83 @@
+{
+  "chapterNumber": 0,
+  "chapterTitle": "[Tiêu đề của Chương]",
+  "coverImage": {
+    "url": null,
+    "alt": "[Mô tả hình ảnh (alt text)]"
+  },
+  "readingTimeInMinutes": 0,
+  "difficulty": "[Cơ bản / Trung bình / Nâng cao]",
+  "learningObjectives": {
+    "title": "1. Mục tiêu Chương",
+    "objectives": [ "[Mục tiêu 1]", "[Mục tiêu 2]" ]
+  },
+  "mythBuster": {
+    "title": "2. Lầm tưởng cần phá bỏ",
+    "myth": "[Nội dung lầm tưởng]",
+    "truth": "[Sự thật để phá bỏ lầm tưởng]"
+  },
+  "mainContent": {
+    "title": "3. Nội dung chính",
+    "blocks": [
+      { "type": "quote", "content": "[...]", "author": "[...]" },
+      { "type": "subheading", "content": "[...]" },
+      { "type": "paragraph", "content": "[...]" },
+      { "type": "questionList", "title": "[...]", "questions": [ "[...]" ] },
+      { "type": "roleDescription", "roles": [ { "role": "[...]", "analogy": "[...]", "description": "[...]" } ] },
+      { "type": "analogy", "title": "[...]", "items": [ { "term": "[...]", "description": "[...]" } ] },
+      { "type": "alert", "level": "[info/warning]", "content": "[...]" },
+      
+      { "type": "table", "headers": ["[...]", "[...]"], "rows": [ ["[...]", "[...]"] ] },
+      { "type": "checklist", "title": "[...]", "items": [ "[...]" ] },
+      { "type": "stepByStep", "title": "[...]", "steps": [ { "stepNumber": 1, "description": "[...]" } ] },
+      { "type": "codeBlock", "language": "[html/css/js]", "code": "[...]" },
+      { "type": "formula", "name": "[...]", "formula": "[...]" }
+    ]
+  },
+  "marketersToolkit": {
+    "title": "4. Marketer's Toolkit",
+    "tools": [ { "term": "[...]", "definition": "[...]" } ]
+  },
+  "mindsetCorner": {
+    "title": "5. Góc nhìn của Marketer",
+    "insight": "[...]"
+  },
+  "theBigPicture": {
+    "title": "6. The Big Picture: Your Role in the Orchestra",
+    "sections": [
+      { "header": "Tôi CẦN gì từ ai? (Input)", "points": ["[...]"] },
+      { "header": "Ai CẦN gì từ tôi? (Output)", "points": ["[...]"] },
+      { "header": "Vai trò của tôi trong 'Dàn nhạc'?", "points": ["[...]"] }
+    ]
+  },
+  "projectExercise": {
+    "title": "7. Bài tập 'Mầm Cây'",
+    "description": "[...]",
+    "instruction": "[...]",
+    "example": "[...]",
+    "resources": [
+      { "name": "[Tên tài nguyên]", "url": "[Đường dẫn file]" }
+    ]
+  },
+  "summary": {
+    "title": "8. Tóm tắt & Key Takeaways",
+    "takeaways": [ "[...]" ]
+  },
+  "quiz": {
+    "title": "[Tiêu đề bài trắc nghiệm]",
+    "description": "[Mô tả bài trắc nghiệm]",
+    "questions": [
+      {
+        "questionText": "[Nội dung câu hỏi]",
+        "options": [ "[Đáp án A]", "[Đáp án B]", "[Đáp án C]", "[Đáp án D]" ],
+        "correctAnswer": "[A/B/C/D]",
+        "explanation": "[Giải thích đáp án]"
+      }
+    ]
+  },
+  "teaser": "[...]",
+  "navigation": {
+    "previousChapter": null,
+    "nextChapter": 1
+  }
+}

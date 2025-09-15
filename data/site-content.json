@@ -1,0 +1,78 @@
+{
+  "site": {
+    "logoText": "EbookLib",
+    "title": "Thư viện Sách EbookLib",
+    "description": "Khám phá bộ sưu tập sách chuyên sâu về AI, Marketing...",
+    "footerText": "© 2025 EbookLib. All Rights Reserved."
+  },
+  "navigation": {
+    "library": "Thư viện",
+    "pricing": "Bảng giá",
+    "about": "Về chúng tôi"
+  },
+  "hero": {
+    "title": "Làm chủ Kiến thức từ Tư duy đến Thực thi",
+    "subtitle": "Khám phá thư viện sách được thiết kế để dẫn dắt bạn từng bước trên hành trình chinh phục các kỹ năng chuyên môn. Nội dung được biên soạn bởi Hoài Hưng với sự hỗ trợ từ AI",
+    "ctaButton": "Khám phá Thư viện"
+  },
+  "librarySection": {
+    "title": "Tất cả Sách",
+    "searchPlaceholder": "Tìm kiếm sách...",
+    "filterAll": "Tất cả"
+  },
+  "auth": {
+    "loginButton": "Đăng nhập",
+    "logoutButton": "Đăng xuất",
+    "registerButton": "Đăng ký miễn phí",
+    "modalTitle": "Yêu cầu Đăng nhập",
+    "modalText": "Để truy cập nội dung này, vui lòng đăng nhập hoặc tạo tài khoản mới."
+  },
+  "purchase_instructions": {
+    "title": "Thông tin Thanh toán",
+    "content": "Để sở hữu cuốn sách này, bạn vui lòng chuyển khoản theo thông tin bên dưới:",
+    "bank_info": "<strong>Ngân hàng:</strong> Vietcombank<br><strong>Số tài khoản:</strong> 0721000560543<br><strong>Chủ tài khoản:</strong> TRAN HOAI HUNG",
+    "transfer_note": "<strong>Nội dung chuyển khoản:</strong><code>TEN EBOOK [Email của bạn]</code>",
+    "confirmation_note": "Sau khi chuyển khoản, chúng tôi sẽ kích hoạt quyền truy cập cho tài khoản của bạn trong vòng vài giờ làm việc. Cảm ơn bạn đã ủng hộ!"
+  },
+  "modals": {
+    "about": {
+      "title": "Về EbookLib",
+      "content": "<p>EbookLib là một dự án cá nhân được tạo ra với mục đích chia sẻ kiến thức và xây dựng một nền tảng học tập hiện đại. Tất cả các cuốn sách ở đây đều do chính tác giả biên soạn, chắt lọc từ kinh nghiệm thực tế và sự hỗ trợ từ AI.</p>"
+    },
+    "pricing": {
+      "title": "Bảng giá & Các Gói",
+      "packages": [
+        {
+          "name": "Mua lẻ",
+          "price": "Từ 99.000đ",
+          "description": "Sở hữu vĩnh viễn cuốn sách bạn cần.",
+          "features": [
+            "Truy cập trọn đời nội dung sách đã mua",
+            "Đọc trên mọi thiết bị",
+            "Nhận các bản cập nhật của sách"
+          ],
+          "ctaButton": {
+            "text": "Chọn sách",
+            "link": "#book-grid-section"
+          }
+        },
+        {
+          "name": "Gói Sáng lập",
+          "price": "499.000đ",
+          "description": "Truy cập TOÀN BỘ thư viện hiện tại và tương lai.",
+          "features": [
+            "<strong>Tất cả quyền lợi của Mua lẻ</strong>",
+            "Đọc không giới hạn tất cả sách",
+            "Ưu tiên truy cập các sách mới nhất",
+            "Tham gia cộng đồng riêng"
+          ],
+          "ctaButton": {
+            "text": "Trở thành Sáng lập viên",
+            "link": "https://m.me/hoaihung"
+          },
+          "isFeatured": true
+        }
+      ]
+    }
+  }
+}

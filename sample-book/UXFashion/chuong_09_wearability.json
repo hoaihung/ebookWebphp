@@ -1,0 +1,149 @@
+{
+  "chapterNumber": 9,
+  "chapterTitle": "Wearability: Trải nghiệm Mặc vào & Cởi ra (Don/Doff Experience)",
+  "coverImage": {
+    "url": null,
+    "alt": "Một người đang vật lộn để kéo khóa một chiếc váy sau lưng, biểu cảm đầy khó khăn và bất lực."
+  },
+  "readingTimeInMinutes": 16,
+  "difficulty": "Trung bình",
+  "learningObjectives": {
+    "title": "1. Mục tiêu Chương",
+    "objectives": [
+      "Hiểu tầm quan trọng của 'Wearability' - trải nghiệm mặc vào (donning) và cởi ra (doffing) - như một phần không thể thiếu của UX thời trang.",
+      "Nhận diện các yếu tố thiết kế giúp tăng hoặc giảm tính dễ mặc của trang phục (vị trí khóa kéo, độ co giãn, độ rộng cổ áo...).",
+      "Phân tích 'cơn ác mộng UX' kinh điển: bộ jumpsuit khi cần đi vệ sinh, và hiểu được sự đánh đổi giữa thẩm mỹ và tiện ích."
+    ]
+  },
+  "mythBuster": {
+    "title": "2. Lầm tưởng cần phá bỏ",
+    "myth": "Quần áo khó mặc vào thì chứng tỏ nó vừa vặn và ôm dáng. Một chút vất vả là cái giá phải trả cho một phom dáng đẹp.",
+    "truth": "Thiết kế tốt có thể ôm dáng hoàn hảo mà không cần bạn phải 'biểu diễn xiếc' mỗi khi mặc vào hay cởi ra. Sự dễ dàng trong thao tác là một dấu hiệu của thiết kế thông minh và thấu cảm, không phải của một phom dáng lỏng lẻo. Đừng nhầm lẫn sự khó khăn với sự cao cấp."
+  },
+  "mainContent": {
+    "title": "3. Nội dung chính",
+    "blocks": [
+      {
+        "type": "quote",
+        "content": "Ấn tượng đầu tiên và ấn tượng cuối cùng là những thứ tồn tại lâu nhất. Trong thời trang, đó chính là khoảnh khắc bạn mặc một thứ gì đó vào và khoảnh khắc bạn cởi nó ra.",
+        "author": "Khuyết danh"
+      },
+      {
+        "type": "paragraph",
+        "content": "Hãy tưởng tượng một món quà được gói trong một chiếc hộp tuyệt đẹp, nhưng lại được dán kín bằng loại keo siêu dính không cách nào mở được. Dù món quà bên trong có giá trị đến đâu, trải nghiệm của bạn đã bị hủy hoại ngay từ đầu. Trong thời trang cũng vậy. Một bộ đồ có thể có chất liệu tuyệt vời, công thái học hoàn hảo, nhưng nếu quá trình 'mở hộp' - tức là mặc nó vào - là một cực hình, thì toàn bộ trải nghiệm đã bị tổn hại. Đây là lúc chúng ta nói về **Wearability**, hay nói một cách chuyên môn hơn là **Don/Doff Experience** (Trải nghiệm Mặc vào/Cởi ra)."
+      },
+      {
+        "type": "subheading",
+        "content": "Những người hùng và tội đồ của phòng thay đồ"
+      },
+      {
+        "type": "paragraph",
+        "content": "Một thiết kế có Wearability tốt sẽ khiến quá trình mặc/cởi trở nên nhanh chóng, mượt mà và gần như vô hình. Ngược lại, một thiết kế tồi sẽ biến nó thành một cuộc vật lộn."
+      },
+      {
+        "type": "table",
+        "headers": ["Người hùng giúp mặc dễ 👍", "Tội đồ gây khó khăn 👎"],
+        "rows": [
+          ["**Chất liệu có pha co giãn (Elastane):** Người bạn tốt nhất của Wearability. Nó cho phép vải 'tha thứ' và căng ra ở những điểm hẹp nhất như vai, hông.", "**Vải không co giãn ở những vị trí quan trọng:** Một chiếc áo sơ mi vải poplin cứng, ôm sát và không co giãn là một thử thách cho đôi vai."],
+          ["**Khóa kéo bên hông hoặc phía trước:** Được đặt ở vị trí trong tầm tay và tầm mắt, giúp bạn hoàn toàn chủ động.", "**Khóa kéo sau lưng:** Kẻ thù không đội trời chung của những người sống một mình hoặc có khớp vai không linh hoạt. Nó tạo ra sự phụ thuộc và bất lực."],
+          ["**Cổ áo đủ rộng hoặc có khuy cài:** Được thiết kế với sự tôn trọng dành cho mái tóc và lớp trang điểm của bạn.", "**Cổ áo chui đầu quá nhỏ:** Biến việc mặc áo thành một cuộc chiến, có nguy cơ làm hỏng cả công sức làm đẹp của bạn."],
+          ["**Quần lưng chun hoặc có độ co giãn nhẹ:** Thích ứng với cơ thể bạn, dễ dàng kéo qua hông.", "**Quần cạp cứng, không co giãn:** Đòi hỏi bạn phải hóp bụng và 'luồn lách' mới có thể mặc vừa."]
+        ]
+      },
+      {
+        "type": "subheading",
+        "content": "Nghiên cứu điển hình: Bộ Jumpsuit - Vẻ đẹp của sự bất tiện"
+      },
+      {
+        "type": "paragraph",
+        "content": "Không có ví dụ nào minh họa cho sự đánh đổi giữa thẩm mỹ và Wearability tốt hơn bộ jumpsuit. Về mặt thẩm mỹ, nó thật tuyệt vời: một bộ trang phục liền mạch, sành điệu, kéo dài cơ thể và tạo ra một tuyên ngôn thời trang mạnh mẽ. Trải nghiệm khi mặc nó và đứng trước gương có thể là 10/10."
+      },
+      {
+        "type": "paragraph",
+        "content": "Nhưng 'cơn ác mộng UX' chỉ thực sự bắt đầu khi bạn cần đi vệ sinh. Đây là một 'Pain Point' kinh điển. Bạn phải cởi gần như toàn bộ phần trên của cơ thể, run rẩy trong một không gian công cộng có thể không mấy sạch sẽ, và sau đó lại phải thực hiện lại toàn bộ quá trình mặc vào. Đây không chỉ là một vấn đề về Don/Doff Experience, nó còn là một vấn đề về Cognitive Load (bạn phải lên kế hoạch trước cho việc đi vệ sinh) và cả cảm giác dễ bị tổn thương."
+      },
+      {
+        "type": "alert",
+        "level": "info",
+        "content": "**Khoảnh khắc 'À há!' thứ tám:** Wearability không chỉ là về việc mặc vào lúc bắt đầu ngày mới. Nó là về tất cả các lần bạn có thể phải cởi ra và mặc lại trong ngày. Một thiết kế tốt sẽ tính đến cả những kịch bản 'khó xử' nhất của cuộc sống thực."
+      }
+    ]
+  },
+  "marketersToolkit": {
+    "title": "4. Marketer's Toolkit",
+    "tools": [
+      {
+        "term": "Wearability (Tính dễ mặc)",
+        "definition": "Chỉ mức độ dễ dàng, nhanh chóng và thoải mái khi người dùng thực hiện các thao tác mặc vào (donning) và cởi ra (doffing) một món đồ."
+      },
+      {
+        "term": "Don/Doff Experience",
+        "definition": "Là toàn bộ trải nghiệm, bao gồm cả nỗ lực thể chất và tinh thần, trong quá trình mặc và cởi trang phục. Đây là ấn tượng đầu tiên và cuối cùng của người dùng với sản phẩm trong một lần sử dụng."
+      }
+    ]
+  },
+  "mindsetCorner": {
+    "title": "5. Góc nhìn của Người sành sỏi",
+    "insight": "Khi thử đồ, đừng chỉ đứng yên và ngắm mình trong gương. Hãy thực hiện 'bài kiểm tra Don/Doff': thử tự mình cởi nó ra và mặc lại một lần nữa ngay trong phòng thử. Nếu quá trình đó khiến bạn bực bội hoặc khó khăn, hãy cân nhắc thật kỹ. Vẻ đẹp của nó có đáng để đánh đổi lấy sự phiền phức đó mỗi ngày không?"
+  },
+  "projectExercise": {
+    "title": "7. Bài tập 'Tủ Đồ Tỉnh Thức'",
+    "description": "Thực hiện 'bài kiểm tra tốc độ và nỗ lực'.",
+    "instruction": "Chọn món đồ bạn mặc vào nhanh nhất, dễ dàng nhất và món đồ tốn thời gian, công sức nhất. Hãy thử mặc và cởi từng món. Ghi lại: 1. Thời gian thực hiện. 2. Điểm nào trong thiết kế đã khiến món đồ 'chậm' trở nên khó khăn (nhiều khuy nhỏ, khóa kéo khó, vải không co giãn...)?",
+    "example": "Nhanh nhất: Váy suông vải thun (5 giây). Tốn sức nhất: Áo sơ mi lụa cài khuy sau lưng (gần 2 phút). Lý do: phải với tay ra sau, các khuy lụa nhỏ và trơn rất khó cài, phải nhờ người khác kiểm tra lại xem đã thẳng thớm chưa.",
+    "resources": []
+  },
+  "summary": {
+    "title": "8. Tóm tắt & Key Takeaways",
+    "takeaways": [
+      "Wearability (tính dễ mặc/cởi) là ấn tượng đầu tiên và cuối cùng của bạn với một bộ trang phục, và nó cực kỳ quan trọng.",
+      "Các yếu tố như vị trí khóa kéo, độ co giãn của vải và độ rộng cổ áo ảnh hưởng lớn đến trải nghiệm Don/Doff.",
+      "Jumpsuit là một ví dụ kinh điển về thiết kế ưu tiên thẩm mỹ hơn là sự tiện lợi trong các kịch bản sử dụng thực tế.",
+      "Hãy luôn kiểm tra trải nghiệm mặc/cởi trước khi quyết định mua một món đồ."
+    ]
+  },
+  "quiz": {
+    "title": "Kiểm tra Nhanh: Trải nghiệm Mặc & Cởi",
+    "description": "Cùng kiểm tra lại kiến thức về tính dễ mặc nhé!",
+    "questions": [
+      {
+        "questionText": "Nhà thiết kế muốn cải thiện 'Don/Doff Experience' cho một chiếc váy ôm sát, không co giãn. Giải pháp nào sau đây là tốt nhất về mặt UX?",
+        "options": [
+          "A. Giữ nguyên thiết kế nhưng bán kèm một dụng cụ kéo khóa dài.",
+          "B. Thêm một hàng khuy trang trí ở phía trước.",
+          "C. Thay khóa kéo sau lưng bằng một khóa kéo dài và ẩn ở bên hông.",
+          "D. Khuyên khách hàng nên mua lớn hơn một size."
+        ],
+        "correctAnswer": "C",
+        "explanation": "Khóa kéo bên hông cho phép người mặc tự thao tác một cách dễ dàng mà không cần sự trợ giúp hay sự dẻo dai phi thường, trực tiếp cải thiện trải nghiệm mặc vào và cởi ra."
+      },
+      {
+        "questionText": "Vấn đề UX chính của bộ jumpsuit truyền thống là gì?",
+        "options": [
+          "A. Nó không đủ ấm.",
+          "B. Nó tạo ra trải nghiệm cởi/mặc lại rất bất tiện khi đi vệ sinh.",
+          "C. Nó thường được làm từ chất liệu không tốt.",
+          "D. Nó khó phối đồ với các phụ kiện khác."
+        ],
+        "correctAnswer": "B",
+        "explanation": "Đây là 'pain point' lớn nhất và phổ biến nhất của jumpsuit, một vấn đề về wearability trong quá trình sử dụng chứ không chỉ ở lúc bắt đầu mặc."
+      },
+      {
+        "questionText": "Yếu tố nào sau đây có ảnh hưởng tích cực lớn nhất đến Wearability của một chiếc áo chui đầu?",
+        "options": [
+          "A. Cổ áo được làm từ vải co giãn hoặc có thiết kế đủ rộng.",
+          "B. Áo có màu sắc tươi sáng.",
+          "C. Áo có in một hình ảnh đẹp.",
+          "D. Áo có nhãn mác làm từ lụa."
+        ],
+        "correctAnswer": "A",
+        "explanation": "Đối với áo chui đầu, điểm 'nút cổ chai' của trải nghiệm chính là việc đưa đầu qua cổ áo. Một cổ áo co giãn hoặc rộng rãi sẽ giải quyết trực tiếp vấn đề này, giúp quá trình mặc trở nên mượt mà."
+      }
+    ]
+  },
+  "teaser": "Bạn đã mặc được nó vào một cách dễ dàng. Tuyệt vời! Nhưng nó có thể làm gì cho bạn? Chương tiếp theo sẽ khơi mào một cuộc tranh luận muôn thuở, một nỗi niềm chung của rất nhiều người: 'Functionality' - cuộc chiến không hồi kết giữa túi thật và túi giả.",
+  "navigation": {
+    "previousChapter": 8,
+    "nextChapter": 10
+  }
+}

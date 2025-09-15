@@ -1,0 +1,46 @@
+{
+  "ebookTitle": "UX Trong Thời Trang: Vì Sao Bộ Đồ Của Bạn (Không) \"Biết Sống\" Cùng Bạn?",
+  "totalChapters": 16,
+  "phases": [
+    {
+      "phaseId": "giai_doan_1",
+      "phaseTitle": "GIAI ĐOẠN 1: NHẬP MÔN \"TỦ ĐỒ THẤU CẢM\"",
+      "phaseDescription": "Xây dựng lăng kính mới để nhìn nhận quần áo không chỉ là \"vải vóc\" mà là một \"giao diện\" tương tác trực tiếp với cơ thể và cuộc sống của bạn.",
+      "badgeEarned": "Fashion Empath",
+      "chapters": [
+        { "chapterNumber": 1, "chapterTitle": "Thời Trang cũng cần \"UX\"? Bộ đồ đang \"giải phóng\" hay \"giam hãm\" bạn?", "jsonFile": "chuong_01_thoi_trang_can_ux.json", "type": "lesson", "week": 1 },
+        { "chapterNumber": 2, "chapterTitle": "Affordance & Signifiers: Cái Túi 'Mời Gọi' và Cái Nút 'Giả Vờ'", "jsonFile": "chuong_02_affordance_signifiers.json", "type": "lesson", "week": 1 },
+        { "chapterNumber": 3, "chapterTitle": "Feedback: Tiếng \"sột soạt\" của Vải và Vết hằn của Chun quần", "jsonFile": "chuong_03_feedback.json", "type": "lesson", "week": 1 },
+        { "chapterNumber": 4, "chapterTitle": "Cognitive Load: Mặc một chiếc áo phông so với \"đánh vật\" cùng váy dạ hội", "jsonFile": "chuong_04_cognitive_load.json", "type": "lesson", "week": 2 },
+        { "chapterNumber": 5, "chapterTitle": "Consistency: Tại sao mọi chiếc quần Jeans đều có túi nhỏ bí ẩn đó?", "jsonFile": "chuong_05_consistency.json", "type": "lesson", "week": 2 },
+        { "chapterNumber": 6, "chapterTitle": "DỰ ÁN NHỎ #1: \"Kiểm toán\" Trải nghiệm một Bộ đồ bạn Yêu và Ghét", "jsonFile": "chuong_06_du_an_nho_1.json", "type": "project", "week": 2 }
+      ]
+    },
+    {
+      "phaseId": "giai_doan_2",
+      "phaseTitle": "GIAI ĐOẠN 2: GIẢI PHẪU MỘT BỘ TRANG PHỤC \"BIẾT SỐNG\"",
+      "phaseDescription": "Phân tích sâu từng yếu tố cấu thành nên một trải nghiệm trang phục tuyệt vời, từ chất liệu, đường may cho đến những chiếc khuy cài nhỏ nhất.",
+      "badgeEarned": "Wardrobe Architect",
+      "chapters": [
+        { "chapterNumber": 7, "chapterTitle": "Ergonomics (Công thái học): Khi Trang phục \"Hòa hợp\" với từng Chuyển động", "jsonFile": "chuong_07_ergonomics.json", "type": "lesson", "week": 3 },
+        { "chapterNumber": 8, "chapterTitle": "Material UX: Trải nghiệm của Làn da với Cotton, Lụa và Polyester", "jsonFile": "chuong_08_material_ux.json", "type": "lesson", "week": 3 },
+        { "chapterNumber": 9, "chapterTitle": "Wearability: Trải nghiệm Mặc vào & Cởi ra (Don/Doff Experience)", "jsonFile": "chuong_09_wearability.json", "type": "lesson", "week": 4 },
+        { "chapterNumber": 10, "chapterTitle": "Functionality: Cuộc chiến không hồi kết giữa Túi thật và Túi giả", "jsonFile": "chuong_10_functionality.json", "type": "lesson", "week": 4 },
+        { "chapterNumber": 11, "chapterTitle": "Accessibility: Thời trang cho Mọi cơ thể, Mọi hoàn cảnh", "jsonFile": "chuong_11_accessibility.json", "type": "lesson", "week": 4 },
+        { "chapterNumber": 12, "chapterTitle": "DỰ ÁN NHỎ #2: \"Tái thiết kế\" một Món đồ Gây khó chịu trong Tủ", "jsonFile": "chuong_12_du_an_nho_2.json", "type": "project", "week": 4 }
+      ]
+    },
+    {
+      "phaseId": "giai_doan_3",
+      "phaseTitle": "GIAI ĐOẠN 3: TRỞ THÀNH GIÁM ĐỐC TRẢI NGHIỆM CHO TỦ ĐỒ",
+      "phaseDescription": "Trang bị tư duy và công cụ để bạn có thể chủ động xây dựng một tủ đồ không chỉ đẹp về thẩm mỹ mà còn xuất sắc về trải nghiệm người mặc.",
+      "badgeEarned": "Chief Wardrobe Officer",
+      "chapters": [
+        { "chapterNumber": 13, "chapterTitle": "Customer Journey Map: Hành trình của một chiếc váy từ cửa hàng về nhà", "jsonFile": "chuong_13_customer_journey_map.json", "type": "lesson", "week": 5 },
+        { "chapterNumber": 14, "chapterTitle": "A/B Testing Phong cách: Tìm ra \"phiên bản\" trang phục tốt nhất cho bạn", "jsonFile": "chuong_14_ab_testing.json", "type": "lesson", "week": 5 },
+        { "chapterNumber": 15, "chapterTitle": "DỰ ÁN CUỐI CÙNG: Xây dựng \"Bản Tuyên ngôn Phong cách & Trải nghiệm\" của riêng bạn", "jsonFile": "chuong_15_du_an_cuoi_cung.json", "type": "project", "week": 6 },
+        { "chapterNumber": 16, "chapterTitle": "TỔNG KẾT: Tủ đồ \"biết sống\" và Tương lai của Thời trang Thấu cảm", "jsonFile": "chuong_16_tong_ket.json", "type": "review", "week": 6 }
+      ]
+    }
+  ]
+}

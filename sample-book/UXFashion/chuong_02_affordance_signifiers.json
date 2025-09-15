@@ -1,0 +1,178 @@
+{
+  "chapterNumber": 2,
+  "chapterTitle": "Affordance & Signifiers: Cái Túi 'Mời Gọi' và Cái Nút 'Giả Vờ'",
+  "coverImage": {
+    "url": null,
+    "alt": "Hình ảnh cận cảnh bàn tay đang dễ dàng cho vào một chiếc túi áo khoác có miệng túi rõ ràng, bên cạnh là hình một chiếc túi giả được may kín."
+  },
+  "readingTimeInMinutes": 16,
+  "difficulty": "Cơ bản",
+  "learningObjectives": {
+    "title": "1. Mục tiêu Chương",
+    "objectives": [
+      "Định nghĩa được Affordance (Khả năng sử dụng) và Signifiers (Dấu hiệu chỉ dẫn) trong bối cảnh thời trang.",
+      "Phân biệt được sự khác nhau giữa hai khái niệm này qua các ví dụ về quần áo, phụ kiện.",
+      "Nhận diện được các 'dấu hiệu giả' (false signifiers) trong thời trang và hiểu tại sao chúng lại gây bực bội."
+    ]
+  },
+  "mythBuster": {
+    "title": "2. Lầm tưởng cần phá bỏ",
+    "myth": "Các chi tiết trên quần áo như khuy, khóa kéo, đường may chỉ để trang trí.",
+    "truth": "Mỗi chi tiết trên một thiết kế tốt đều mang một mục đích. Chúng là những 'biển chỉ dẫn' im lặng, nói cho bạn biết cách tương tác với bộ trang phục một cách hiệu quả và bản năng nhất."
+  },
+  "mainContent": {
+    "title": "3. Nội dung chính",
+    "blocks": [
+      {
+        "type": "quote",
+        "content": "Thiết kế tốt là khi người dùng có thể sử dụng mà không cần đọc hướng dẫn sử dụng. Thiết kế xuất sắc là khi người dùng thậm chí không nhận ra là mình đang được 'hướng dẫn'.",
+        "author": "Phỏng theo Donald Norman (cha đẻ của thuật ngữ UX)"
+      },
+      {
+        "type": "paragraph",
+        "content": "Bạn có bao giờ thắc mắc tại sao khi nhìn vào một cái ấm trà, bạn tự biết phải cầm vào quai và rót bằng vòi không? Hay tại sao bạn tự biết phải đẩy một cánh cửa có tấm bảng kim loại và kéo một cánh cửa có tay nắm? Đó không phải là phép thuật, đó là kết quả của một thiết kế thông minh, nơi Affordance và Signifiers phối hợp nhịp nhàng với nhau. Và tin tôi đi, bộ đôi quyền lực này đang âm thầm điều khiển cách bạn tương tác với quần áo mỗi ngày."
+      },
+      {
+        "type": "subheading",
+        "content": "Affordance: Khả năng tiềm ẩn của vạn vật"
+      },
+      {
+        "type": "paragraph",
+        "content": "Hãy bắt đầu với khái niệm trừu tượng hơn một chút. **Affordance** là tất cả những hành động mà một vật thể **cho phép (affords)** bạn thực hiện, bất kể bạn có nhận ra chúng hay không. Nó là thuộc tính cố hữu, là mối quan hệ giữa vật thể và người có khả năng hành động. Nghe có vẻ phức tạp, nhưng thực ra rất đơn giản:"
+      },
+      {
+        "type": "checklist",
+        "title": "Ví dụ về Affordance trong thế giới xung quanh:",
+        "items": [
+          "Một cái ghế **cho phép** việc ngồi.",
+          "Một bậc thang **cho phép** việc bước lên hoặc bước xuống.",
+          "Một quả táo **cho phép** việc cầm, nắm, cắn, và ăn."
+        ]
+      },
+      {
+        "type": "paragraph",
+        "content": "Tương tự trong thời trang, một chiếc áo khoác **cho phép** việc mặc vào để giữ ấm, một chiếc mũ **cho phép** việc đội lên để che nắng, và một chiếc túi quần **cho phép** việc chứa đựng đồ vật. Affordance luôn tồn tại ở đó, như một tiềm năng. Vấn đề là, làm sao chúng ta biết được những tiềm năng đó? Làm sao chúng ta biết cái ghế này là để ngồi chứ không phải để ném đi? Đó là lúc 'người trợ lý' Signifier xuất hiện."
+      },
+      {
+        "type": "subheading",
+        "content": "Signifiers: Những 'dấu hiệu' chỉ đường thân thiện"
+      },
+      {
+        "type": "paragraph",
+        "content": "**Signifiers** là những dấu hiệu, những gợi ý thị giác (hoặc cảm giác) mà nhà thiết kế cố tình đặt vào để 'bật mí' cho chúng ta biết Affordance ở đâu và cách sử dụng nó. Chúng là những 'biển báo giao thông' trên bộ trang phục của bạn, giúp bạn 'lái' một cách an toàn và dễ dàng."
+      },
+      {
+        "type": "table",
+        "headers": ["Vật thể (có Affordance tiềm ẩn)", "Signifier (Dấu hiệu mà nhà thiết kế thêm vào)"],
+        "rows": [
+          ["Áo khoác (cho phép đóng/mở)", "Hàng khuy chạy dọc thân áo, hoặc con trượt (zip-puller) của khóa kéo."],
+          ["Túi quần (cho phép đựng đồ)", "Đường may viền rõ ràng ở miệng túi, hoặc một chiếc nắp túi có khuy cài."],
+          ["Giày (cho phép xỏ vào và cố định)", "Những lỗ xỏ dây giày, những miếng quai dán (Velcro), hoặc khóa kéo bên hông."],
+          ["Thắt lưng (cho phép điều chỉnh độ rộng)", "Những lỗ đục sẵn trên dây lưng và cái chốt của khóa cài."]
+        ]
+      },
+      {
+        "type": "paragraph",
+        "content": "Khi Affordance và Signifier làm việc ăn ý với nhau, phép màu sẽ xảy ra. Bạn không cần suy nghĩ. Tay bạn tự động tìm đến con trượt khóa kéo, ngón tay bạn tự biết cách cài khuy. Đó là thiết kế trực quan đỉnh cao. Nhưng khi chúng 'cãi nhau', sự bực bội sẽ xuất hiện."
+      },
+      {
+        "type": "alert",
+        "level": "warning",
+        "content": "**Khoảnh khắc 'À há!' thứ hai: CÚ LỪA KINH ĐIỂN MANG TÊN TÚI GIẢ!** Bây giờ bạn đã có thể lý giải một cách chuyên môn tại sao túi giả lại gây khó chịu đến vậy. Nó không chỉ là sự bất tiện. Về mặt UX, đó là một 'tội ác' thiết kế. Nhà thiết kế đã tạo ra một **Signifier** rất mạnh (nắp túi, đường may viền) để báo hiệu một **Affordance** (khả năng đựng đồ), nhưng Affordance đó lại không hề tồn tại. Đó là một biển báo chỉ đến một con đường cụt. Nó phá vỡ lòng tin của người dùng và tạo ra một trải nghiệm tiêu cực."
+      },
+      {
+        "type": "subheading",
+        "content": "Những 'Dấu hiệu giả' và 'Dấu hiệu yếu' khác"
+      },
+      {
+        "type": "paragraph",
+        "content": "Túi giả là ví dụ điển hình nhất, nhưng 'họ hàng' của nó cũng tồn tại ở khắp nơi:"
+      },
+      {
+        "type": "checklist",
+        "title": null,
+        "items": [
+          "**Khuy áo chỉ để trang trí:** Một hàng khuy đẹp đẽ trên cổ tay áo khoác nhưng thực ra chúng được may chết, không thể mở ra để xắn tay áo. Một Signifier giả mạo khác.",
+          "**Dây rút 'giả vờ':** Một sợi dây rút ở mũ áo hoodie hoặc lưng quần jogger nhưng thực ra nó chỉ được may vào hai đầu để làm cảnh, không có khả năng thắt chặt. Nó trông giống một tính năng nhưng không phải.",
+          "**Khóa kéo với con trượt quá nhỏ:** Đây là một 'dấu hiệu yếu' (weak signifier). Về lý thuyết, nó vẫn chỉ dẫn đúng Affordance, nhưng nó quá nhỏ và trơn, khiến việc cầm nắm để kéo trở nên khó khăn. Thiết kế tốt là phải có Signifier mạnh mẽ, rõ ràng."
+        ]
+      }
+    ]
+  },
+  "marketersToolkit": {
+    "title": "4. Fashionista's Toolkit",
+    "tools": [
+      {
+        "term": "Affordance (Khả năng sử dụng)",
+        "definition": "Chỉ những hành động mà một sản phẩm thời trang cho phép người mặc thực hiện (ví dụ: một chiếc áo cho phép mặc vào, một cái túi cho phép đựng đồ)."
+      },
+      {
+        "term": "Signifier (Dấu hiệu chỉ dẫn)",
+        "definition": "Là những tín hiệu (hình ảnh, cảm giác, âm thanh) mà nhà thiết kế thêm vào để người mặc biết nơi để thực hiện hành động và cách thực hiện nó (ví dụ: khóa kéo để đóng/mở áo)."
+      },
+      {
+        "term": "False Signifier (Dấu hiệu giả)",
+        "definition": "Một dấu hiệu chỉ dẫn một hành động không thể thực hiện được, gây nhầm lẫn và khó chịu (ví dụ: khuy áo chỉ để trang trí, túi giả)."
+      }
+    ]
+  },
+  "mindsetCorner": {
+    "title": "5. Góc nhìn của Người sành sỏi",
+    "insight": "Một bộ trang phục được thiết kế tốt sẽ không bắt bạn phải 'suy nghĩ'. Các Signifiers rõ ràng sẽ dẫn lối cho bạn tương tác với nó một cách bản năng. Lần tới khi mua đồ, hãy đóng vai một thám tử. Hãy tự hỏi: 'Dấu hiệu này đang muốn nói với mình điều gì? Và nó có nói thật không?'"
+  },
+  "theBigPicture": {
+    "title": "6. The Big Picture: Vai trò của bạn",
+    "sections": [
+      {
+        "header": "Bạn CẦN gì từ trang phục? (Input)",
+        "points": ["Cần những chỉ dẫn rõ ràng, trung thực và dễ dàng để biết cách mặc vào, cởi ra, đóng mở, và sử dụng các tính năng của nó."]
+      },
+      {
+        "header": "Trang phục MANG LẠI gì cho bạn? (Output)",
+        "points": ["Những dấu hiệu rõ ràng (good signifiers) giúp bạn sử dụng dễ dàng, hoặc những dấu hiệu gây nhiễu, giả mạo (bad/false signifiers) khiến bạn bối rối và bực bội."]
+      },
+      {
+        "header": "Vai trò của bạn trong 'Show diễn' này?",
+        "points": ["Là người 'đọc' các dấu hiệu mà nhà thiết kế để lại và kiểm chứng xem chúng có hoạt động đúng như mong đợi và có đáng tin cậy hay không."]
+      }
+    ]
+  },
+  "projectExercise": {
+    "title": "7. Bài tập 'Tủ Đồ Tỉnh Thức'",
+    "description": "Tiếp tục với dự án cá nhân của chúng ta, hãy đi săn những dấu hiệu.",
+    "instruction": "Chọn một món đồ phức tạp trong tủ của bạn (áo khoác nhiều túi, một chiếc váy có dây buộc, một đôi bốt...). Liệt kê ra: \n1. Một Affordance của nó (nó cho phép làm gì?). \n2. Signifier tương ứng với Affordance đó là gì? Dấu hiệu đó 'mạnh' hay 'yếu'? \n3. Món đồ đó có 'Dấu hiệu giả' (False Signifier) nào không?",
+    "example": "Món đồ: Áo khoác trench coat. \n1. Affordance: Cho phép thắt chặt ở eo. \n2. Signifier: Một chiếc đai lưng vải có khóa cài. Đây là một dấu hiệu 'mạnh', rất rõ ràng. \n3. Dấu hiệu giả: Có, chiếc khuy cài trên cầu vai (epaulette) trông có vẻ có chức năng gì đó (giữ quai túi?) nhưng thực tế hầu như chỉ để trang trí.",
+    "resources": []
+  },
+  "summary": {
+    "title": "8. Tóm tắt & Key Takeaways",
+    "takeaways": [
+      "Affordance là khả năng tiềm ẩn của một món đồ (áo để mặc, túi để đựng).",
+      "Signifiers là những dấu hiệu trực quan mà nhà thiết kế thêm vào để giúp ta nhận ra và sử dụng Affordance (khóa kéo, miệng túi).",
+      "Thiết kế thời trang tốt là khi Signifiers chỉ dẫn rõ ràng và trung thực đến Affordance có thật.",
+      "Túi giả là một trải nghiệm tồi tệ vì nó là một 'dấu hiệu giả' - một lời hứa bị phá vỡ về mặt thiết kế."
+    ]
+  },
+  "quiz": {
+    "title": "Trắc nghiệm nhanh",
+    "description": "Cùng kiểm tra lại kiến thức vừa học nhé!",
+    "questions": [
+      {
+        "questionText": "Dây kéo (zip-puller) trên một chiếc áo khoác là một ví dụ về...?",
+        "options": [
+          "A. Affordance",
+          "B. Signifier",
+          "C. Cả hai",
+          "D. Không phải cái nào ở trên"
+        ],
+        "correctAnswer": "B",
+        "explanation": "Dây kéo là 'dấu hiệu' (Signifier) cho bạn biết rằng bạn có thể cầm vào đó để kéo, nhằm thực hiện hành động đóng/mở áo (Affordance)."
+      }
+    ]
+  },
+  "teaser": "Nếu Signifiers là những gì bạn 'thấy', thì chương tiếp theo sẽ nói về những gì bạn 'cảm nhận'. Chúng ta sẽ lặn sâu vào thế giới của 'Feedback'. Hãy cùng khám phá tại sao có những chất vải chạm vào da là thấy 'yêu', và tại sao vết hằn của chun quần lại là một 'thông báo lỗi' mà không ai mong muốn.",
+  "navigation": {
+    "previousChapter": 1,
+    "nextChapter": 3
+  }
+}

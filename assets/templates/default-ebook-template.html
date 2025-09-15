@@ -1,0 +1,269 @@
+<!-- file: /templates/uxmastery-template.html (VERSION 2.0 - FULL) -->
+
+<!-- ==================================================================== -->
+<!-- == KHUÔN MẪU CHÍNH (MAIN TEMPLATE)                                 == -->
+<!-- ==================================================================== -->
+<script id="chapter-template" type="text/x-handlebars-template">
+    <div class="chapter-container">
+        <header class="chapter-header">
+            {{#if coverImage.url}}
+                <img src="{{coverImage.url}}" alt="{{coverImage.alt}}" class="chapter-cover-image">
+            {{/if}}
+            <h1 class="chapter-title">{{chapterTitle}}</h1>
+            <p class="chapter-meta">
+                <i class="fas fa-clock"></i> {{readingTimeInMinutes}} phút đọc | <i class="fas fa-brain"></i> Độ khó: {{difficulty}}
+            </p>
+        </header>
+        <div class="chapter-body">
+            <!-- Tự động render các block tuần tự -->
+            {{> blockRenderer data=this}}
+        </div>
+        <footer class="chapter-navigation">
+            {{#if navigation.previousChapter}}
+                <!-- SỬA LỖI Ở ĐÂY: Dùng navigation.bookId -->
+                <a href="?book_id={{navigation.bookId}}&chapter={{navigation.previousChapter}}" class="nav-button prev">
+                    <i class="fas fa-arrow-left"></i>
+                    <div>
+                        <span class="nav-label">Chương Trước</span>
+                    </div>
+                </a>
+            {{else}}
+                <div></div> <!-- Placeholder for grid layout -->
+            {{/if}}
+
+            {{#if navigation.nextChapter}}
+                 <!-- SỬA LỖI Ở ĐÂY: Dùng navigation.bookId -->
+                <a href="?book_id={{navigation.bookId}}&chapter={{navigation.nextChapter}}" class="nav-button next">
+                    <div>
+                        <span class="nav-label">Chương Tiếp Theo</span>
+                    </div>
+                    <i class="fas fa-arrow-right"></i>
+                </a>
+            {{/if}}
+        </footer>
+    </div>
+</script>
+
+<!-- ==================================================================== -->
+<!-- == KHUÔN MẪU CON ĐA NĂNG (SMART PARTIAL)                           == -->
+<!-- ==================================================================== -->
+<script id="blockRenderer-partial" type="text/x-handlebars-template">
+    {{#if data.learningObjectives}} {{> learningObjectivesBlock data.learningObjectives}} {{/if}}
+    {{#if data.mythBuster}} {{> mythBusterBlock data.mythBuster}} {{/if}}
+    {{#if data.mainContent}} {{> mainContentBlock data.mainContent}} {{/if}}
+    {{#if data.marketersToolkit}} {{> marketersToolkitBlock data.marketersToolkit}} {{/if}}
+    {{#if data.mindsetCorner}} {{> mindsetCornerBlock data.mindsetCorner}} {{/if}}
+    {{#if data.theBigPicture}} {{> theBigPictureBlock data.theBigPicture}} {{/if}}
+    {{#if data.projectExercise}} {{> projectExerciseBlock data.projectExercise}} {{/if}}
+    {{#if data.summary}} {{> summaryBlock data.summary}} {{/if}}
+    {{#if data.quiz}} {{> quizBlock data.quiz}} {{/if}}
+    {{#if data.teaser}} {{> teaserBlock data.teaser}} {{/if}}
+</script>
+
+<!-- ==================================================================== -->
+<!-- == CÁC KHUÔN MẪU CON CHI TIẾT (DETAIL PARTIALS)                   == -->
+<!-- ==================================================================== -->
+
+<script id="learningObjectivesBlock-partial" type="text/x-handlebars-template">
+    <div class="content-block annotation-block objectives-block">
+        <h3 class="block-title"><i class="fas fa-bullseye"></i> {{title}}</h3>
+        <ul>
+            {{#each objectives}}<li>{{{this}}}</li>{{/each}}
+        </ul>
+    </div>
+</script>
+
+<script id="mythBusterBlock-partial" type="text/x-handlebars-template">
+    <div class="content-block action-alert-block mythbuster-block">
+        <h3 class="block-title"><i class="fas fa-hammer"></i> {{title}}</h3>
+        <p><strong>Lầm tưởng:</strong> "{{myth}}"</p>
+        <p><strong>Sự thật:</strong> {{truth}}</p>
+    </div>
+</script>
+
+<script id="mainContentBlock-partial" type="text/x-handlebars-template">
+    <div class="content-block main-content-block">
+        {{#if title}}<h3 class="block-title"><i class="fas fa-book-reader"></i> {{title}}</h3>{{/if}}
+        {{#each blocks}}
+            {{!-- Subheading --}}
+            {{#if (eq type 'subheading')}} <h2 class="subheading">{{content}}</h2> {{/if}}
+            {{!-- Paragraph --}}
+            {{#if (eq type 'paragraph')}} <p class="paragraph-content">{{{content}}}</p> {{/if}}
+            {{!-- Quote --}}
+            {{#if (eq type 'quote')}} <blockquote class="quote-block">{{content}}<span class="author">- {{author}}</span></blockquote> {{/if}}
+            {{!-- Analogy --}}
+            {{#if (eq type 'analogy')}} <div class="analogy-block"><h4><i class="fas fa-home"></i> {{title}}</h4><dl>{{#each items}}<dt>{{term}}</dt><dd>{{description}}</dd>{{/each}}</dl></div>{{/if}}
+            {{!-- Alert --}}
+            {{#if (eq type 'alert')}} <div class="alert-block alert-block-{{level}}"><i class="fas fa-info-circle"></i> {{{content}}}</div> {{/if}}
+            
+            {{!-- Question List --}}
+            {{#if (eq type 'questionList')}}
+                <div class="question-list-block">
+                    <h4><i class="fas fa-question-circle"></i> {{title}}</h4>
+                    <ul class="question-list">{{#each questions}}<li>{{{this}}}</li>{{/each}}</ul>
+                </div>
+            {{/if}}
+
+            {{!-- Role Description --}}
+            {{#if (eq type 'roleDescription')}}
+                <div class="role-description-block">
+                    {{#each roles}}
+                        <div class="role-card">
+                            <div class="role-header"><strong>{{role}}</strong> ({{analogy}})</div>
+                            <div class="role-body">{{{description}}}</div>
+                        </div>
+                    {{/each}}
+                </div>
+            {{/if}}
+
+            {{!-- Table --}}
+            {{#if (eq type 'table')}}
+                <div class="table-container">
+                    <table>
+                        <thead><tr>{{#each headers}}<th>{{{this}}}</th>{{/each}}</tr></thead>
+                        <tbody>{{#each rows}}<tr>{{#each this}}<td>{{{this}}}</td>{{/each}}</tr>{{/each}}</tbody>
+                    </table>
+                </div>
+            {{/if}}
+
+            {{!-- Checklist --}}
+            {{#if (eq type 'checklist')}}
+                <div class="checklist-block">
+                    <h4><i class="fas fa-tasks"></i> {{title}}</h4>
+                    <ul class="checklist">{{#each items}}<li><i class="far fa-square"></i><div class="checklist-text">{{{this}}}</div></li>{{/each}}</ul>
+                </div>
+            {{/if}}
+
+            {{!-- Step-by-Step --}}
+            {{#if (eq type 'stepByStep')}}
+                <div class="step-by-step-block">
+                    <h4><i class="fas fa-shoe-prints"></i> {{title}}</h4>
+                    <!-- removed inline step style; using external style.css -->
+<!--{counter-reset:step;list-style:none;margin:0;padding:0}
+.chapter-container .step-item{display:flex;gap:.75rem;align-items:flex-start;padding:.75rem 1rem;border:1px solid #e5e7eb;border-radius:12px;margin:.5rem 0;background:#fff}
+.chapter-container .step-index{min-width:2rem;height:2rem;border-radius:999px;display:flex;align-items:center;justify-content:center;font-weight:600;border:1px solid #e5e7eb}
+.chapter-container .step-content :where(p,ul,ol){margin:.25rem 0}
+@media (prefers-color-scheme: dark){.chapter-container .step-item{background:#111827;border-color:#374151}.chapter-container .step-index{border-color:#374151}}
+-->
+<ol class="step-list">
+  {{#each steps}}
+  <li>
+    <div class="step-content">{{{description}}}</div>
+  </li>
+  {{/each}}
+</ol>
+                </div>
+            {{/if}}
+
+            {{!-- Code Block --}}
+            {{#if (eq type 'codeBlock')}}
+                <div class="code-block-container">
+                    <div class="code-block-header">{{language}}</div>
+                    <pre><code class="language-{{language}}">{{code}}</code></pre>
+                </div>
+            {{/if}}
+
+            {{!-- Formula --}}
+            {{#if (eq type 'formula')}}
+                <div class="formula-block">
+                    <div class="formula-name">{{name}}</div>
+                    <div class="formula-content">$$ {{formula}} $$</div>
+                </div>
+            {{/if}}
+        {{/each}}
+    </div>
+</script>
+
+<script id="marketersToolkitBlock-partial" type="text/x-handlebars-template">
+    <div class="content-block annotation-block marketers-toolkit-block">
+        <h3 class="block-title"><i class="fas fa-toolbox"></i> {{title}}</h3>
+        <div class="toolkit-grid">
+            {{#each tools}}
+            <div class="toolkit-card">
+                <p class="toolkit-term">{{term}}</p>
+                <p class="toolkit-definition">{{definition}}</p>
+            </div>
+            {{/each}}
+        </div>
+    </div>
+</script>
+
+<script id="mindsetCornerBlock-partial" type="text/x-handlebars-template">
+    <div class="content-block annotation-block mindset-block">
+        <h3 class="block-title"><i class="fas fa-lightbulb"></i> {{title}}</h3>
+        <p class="insight-text">"{{insight}}"</p>
+    </div>
+</script>
+
+<script id="theBigPictureBlock-partial" type="text/x-handlebars-template">
+    <div class="content-block annotation-block teamwork-block">
+        <h3 class="block-title"><i class="fas fa-users"></i> {{title}}</h3>
+        {{#each sections}}
+            <h4>{{header}}</h4>
+            <ul>{{#each points}}<li>{{{this}}}</li>{{/each}}</ul>
+        {{/each}}
+    </div>
+</script>
+
+<script id="projectExerciseBlock-partial" type="text/x-handlebars-template">
+    <div class="content-block action-alert-block exercise-block">
+        <h3 class="block-title"><i class="fas fa-seedling"></i> {{title}}</h3>
+        <p>{{{description}}}</p>
+        <p class="instruction"><strong>Yêu cầu:</strong> {{{instruction}}}</p>
+        <p class="example"><em>{{{example}}}</em></p>
+    </div>
+</script>
+
+<script id="summaryBlock-partial" type="text/x-handlebars-template">
+    <div class="content-block annotation-block summary-block">
+        <h3 class="block-title"><i class="fas fa-clipboard-list"></i> {{title}}</h3>
+        <ul class="takeaways-list">
+            {{#each takeaways}}
+                <li><i class="fas fa-check-circle"></i> {{{this}}}</li>
+            {{/each}}
+        </ul>
+    </div>
+</script>
+
+<script id="quizBlock-partial" type="text/x-handlebars-template">
+    <div class="content-block action-alert-block quiz-block">
+        <h3 class="block-title"><i class="fas fa-question-circle"></i> {{title}}</h3>
+        <p class="quiz-description">{{{description}}}</p>
+        
+        <div class="quiz-questions-container">
+            {{#each questions}}
+                <div class="quiz-question-card" data-question-index="{{@index}}">
+                    <p class="question-text"><strong>Câu {{add @index 1}}:</strong> {{{questionText}}}</p>
+                    <div class="quiz-options">
+                        {{#each options}}
+                            <label class="quiz-option">
+                                <input type="radio" name="question_{{questionIndex}}" value="{{@index}}"> 
+                                <span>{{{this}}}</span>
+                            </label>
+                        {{/each}}
+                    </div>
+                    <div class="quiz-feedback" style="display:none;">
+                        <span class="feedback-icon"></span>
+                        <span class="feedback-text"></span>
+                        <p class="explanation-text" style="display:none;">{{{explanation}}}</p>
+                    </div>
+                </div>
+            {{/each}}
+        </div>
+        <button class="button quiz-submit-btn">Nộp bài / Tiếp tục</button>
+        <div class="quiz-result" style="display:none;">
+            <!-- NỘI DUNG KẾT QUẢ CUỐI CÙNG -->
+            <div class="final-score"></div>
+            <div class="quiz-result-actions">
+                <button class="button button-secondary" id="review-quiz-btn">Xem lại đáp án</button>
+                <button class="button" id="retake-quiz-btn">Làm lại bài</button>
+            </div>
+        </div>
+    </div>
+</script>
+
+<script id="teaserBlock-partial" type="text/x-handlebars-template">
+    <div class="content-block teaser-block">
+        <p>{{{content}}}</p>
+    </div>
+</script>

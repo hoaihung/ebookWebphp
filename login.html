@@ -1,0 +1,71 @@
+<!-- file: /login.html -->
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Đăng nhập - [Tên Nền tảng của bạn]</title>
+    <link rel="stylesheet" href="assets/css/style.css">
+    <!-- Font Awesome for icons in header/footer -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body class="auth-page">
+    <!-- Site header -->
+    <header class="site-header sticky">
+        <div class="container header-container">
+            <a href="index.html" class="logo" id="site-logo">EbookLib</a>
+            <nav class="main-nav" id="main-nav-container"></nav>
+            <div class="header-actions">
+                <div id="user-info-container"></div>
+                <button id="dark-mode-toggle" class="dark-mode-toggle" title="Chuyển chế độ sáng/tối">
+                    <i class="fas fa-moon"></i>
+                </button>
+            </div>
+            <button id="mobile-menu-toggle" class="mobile-menu-toggle"><i class="fas fa-bars"></i></button>
+        </div>
+    </header>
+    <!-- Mobile navigation elements -->
+    <div id="mobile-nav-menu" class="mobile-nav-menu">
+        <button id="close-mobile-nav" class="close-mobile-nav">×</button>
+        <nav class="mobile-main-nav"></nav>
+        <div class="mobile-controls">
+            <button id="dark-mode-toggle-mobile" class="dark-mode-toggle" title="Chuyển chế độ sáng/tối">
+                <i class="fas fa-moon"></i>
+            </button>
+        </div>
+        <div class="mobile-auth-actions"></div>
+    </div>
+    <div id="mobile-nav-overlay" class="mobile-nav-overlay"></div>
+    <main class="container">
+        <div class="auth-container">
+        <a href="index.html" class="auth-logo">EbookLib</a>
+        <h2>Chào mừng trở lại!</h2>
+        <p class="auth-subtitle">Đăng nhập để tiếp tục hành trình kiến thức của bạn.</p>
+        
+        <form id="login-form">
+            <div class="form-group">
+                <label for="login-email">Email</label>
+                <input type="email" id="login-email" placeholder="you@example.com" required>
+            </div>
+            <div class="form-group">
+                <label for="login-password">Mật khẩu</label>
+                <input type="password" id="login-password" placeholder="••••••••" required>
+            </div>
+            <p id="auth-message" class="auth-message"></p>
+            <button type="submit" class="button auth-button">Đăng nhập</button>
+        </form>
+        
+        <div class="auth-switch">
+            <p>Chưa có tài khoản? <a href="register.html">Đăng ký ngay</a></p>
+        </div>
+        </div>
+    </main>
+    <!-- Site footer -->
+    <footer class="site-footer">
+        <div class="container" id="footer-content"></div>
+    </footer>
+
+    <script type="module" src="assets/js/notify.js"></script>
+    <script type="module" src="assets/js/auth.js"></script>
+</body>
+</html>

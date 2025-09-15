@@ -1,0 +1,96 @@
+{
+  "chapterNumber": 12,
+  "chapterTitle": "DỰ ÁN NHỎ #2: \"Tái thiết kế\" một Món đồ Gây khó chịu trong Tủ",
+  "coverImage": {
+    "url": null,
+    "alt": "Một bản phác thảo thời trang, với các ghi chú và mũi tên chỉ vào các chi tiết được cải tiến như thêm túi, thay đổi khóa kéo, điều chỉnh đường cắt."
+  },
+  "readingTimeInMinutes": 15,
+  "difficulty": "Trung bình",
+  "learningObjectives": {
+    "title": "1. Mục tiêu Chương",
+    "objectives": [
+      "Tổng hợp và áp dụng các kiến thức của Giai đoạn 2 (Ergonomics, Material, Wearability, Functionality, Accessibility) vào một bài tập thực tế.",
+      "Thực hành tư duy giải quyết vấn đề bằng cách xác định các 'điểm đau' và đề xuất các giải pháp cải tiến cụ thể.",
+      "Phát triển sự tự tin trong việc đánh giá và yêu cầu những thiết kế tốt hơn, không chỉ chấp nhận những gì có sẵn."
+    ]
+  },
+  "mythBuster": {
+    "title": "2. Lầm tưởng cần phá bỏ",
+    "myth": "Mình không phải nhà thiết kế, mình không có chuyên môn để biết cách làm cho một bộ đồ tốt hơn. Việc này là của các chuyên gia.",
+    "truth": "Bạn chính là chuyên gia về trải nghiệm của chính bạn. Không ai hiểu những 'điểm đau' của một món đồ rõ hơn người mặc nó mỗi ngày. Việc nhận ra vấn đề và tưởng tượng ra một giải pháp tốt hơn là bước đầu tiên và quan trọng nhất trong mọi quy trình thiết kế. Giọng nói của người dùng là vô giá."
+  },
+  "mainContent": {
+    "title": "3. Nội dung chính",
+    "blocks": [
+      {
+        "type": "quote",
+        "content": "Cách tốt nhất để phàn nàn là hãy làm ra một thứ gì đó.",
+        "author": "James Murphy"
+      },
+      {
+        "type": "paragraph",
+        "content": "Chào mừng bạn đến với dự án thứ hai, và cũng là bài kiểm tra tốt nghiệp cho Giai đoạn 2! Ở dự án trước, bạn là một 'kiểm toán viên', chẩn đoán những gì đúng và sai. Lần này, bạn sẽ được thăng chức. Bạn là 'Giám đốc Sáng tạo', là 'Kỹ sư Trải nghiệm'. Nhiệm vụ của bạn không chỉ là tìm ra lỗi, mà còn là đề xuất giải pháp để sửa chữa nó."
+      },
+      {
+        "type": "paragraph",
+        "content": "Chúng ta sẽ chọn ra một 'bệnh nhân' trong tủ đồ của bạn - một món đồ có tiềm năng nhưng lại gây khó chịu, một 'Kẻ phản diện' mà bạn đã xác định ở Chương 6, hoặc bất kỳ món đồ nào khác khiến bạn bực bội. Sau đó, chúng ta sẽ cùng nhau thực hiện một 'ca phẫu thuật' UX, biến nó từ một sản phẩm gây thất vọng thành một sản phẩm đáng mơ ước."
+      },
+      {
+        "type": "alert",
+        "level": "info",
+        "content": "Hãy nhớ, mục tiêu không phải là bạn phải thực sự cầm kim chỉ lên để sửa chữa (dù nếu bạn có thể thì thật tuyệt vời!). Mục tiêu là rèn luyện cơ bắp tư duy của một nhà thiết kế: phân tích vấn đề, brainstorm giải pháp và hình dung ra một phiên bản tốt hơn."
+      }
+    ]
+  },
+  "mindsetCorner": {
+    "title": "5. Góc nhìn của Người sành sỏi",
+    "insight": "Sau bài tập này, bạn sẽ bắt đầu nhìn thế giới thời trang khác đi. Bạn sẽ không chỉ nhìn vào một món đồ như nó đang là, mà còn nhìn thấy 'phiên bản tiềm năng' của nó. Bạn sẽ nhận ra sự khác biệt giữa một thiết kế 'lười biếng' và một thiết kế thực sự 'thông minh'. Năng lực phê bình của bạn sẽ được nâng lên một tầm cao mới."
+  },
+  "projectExercise": {
+    "title": "7. Bài tập: Tái thiết kế 'Kẻ phản diện'",
+    "description": "Hãy chọn một 'Kẻ phản diện' từ tủ đồ của bạn - một món đồ bạn đã mua vì nó đẹp, nhưng lại rất ít khi mặc vì những lý do gây khó chịu. Hãy thực hiện 'ca phẫu thuật' này theo 4 bước. Ghi lại câu trả lời của bạn vào sổ tay hoặc máy tính.",
+    "instruction": null,
+    "resources": [
+      {
+        "name": "Tải về Phiếu Tái thiết kế Trang phục (PDF)",
+        "url": "/downloads/fashion-ux-redesign-worksheet.pdf"
+      }
+    ],
+    "blocks": [
+      {
+        "type": "stepByStep",
+        "title": "Quy trình 'Phẫu thuật' UX",
+        "steps": [
+          { "stepNumber": 1, "description": "**CHẨN ĐOÁN (Diagnosis):** Xác định 'bệnh nhân' của bạn là gì. Sau đó, liệt kê tất cả các 'triệu chứng' khó chịu, các 'điểm đau' mà nó gây ra cho bạn. Hãy cố gắng sử dụng ngôn ngữ UX chúng ta đã học trong Giai đoạn 2 (ví dụ: 'công thái học kém ở vai', 'chất liệu gây bí', 'thiếu tính năng túi', 'khóa kéo sau lưng gây khó khăn khi mặc')." },
+          { "stepNumber": 2, "description": "**PHÂN TÍCH NGUYÊN NHÂN (Root Cause Analysis):** Với mỗi triệu chứng, hãy đào sâu hơn. Tại sao nó lại gây khó chịu? Nguyên nhân gốc rễ là gì? (Ví dụ: 'Công thái học kém ở vai' -> Nguyên nhân: 'Đường cắt may vai kiểu truyền thống, không có độ co giãn')." },
+          { "stepNumber": 3, "description": "**ĐỀ XUẤT GIẢI PHÁP (The Prescription):** Đây là phần sáng tạo nhất! Hãy brainstorm các giải pháp cải tiến để chữa trị từng triệu chứng. Đừng ngại nghĩ lớn. Nếu bạn là nhà thiết kế, bạn sẽ thay đổi điều gì? (Ví dụ: 'Thay đường cắt vai truyền thống bằng tay áo Raglan' hoặc 'Pha thêm 3% elastane vào vải')." },
+          { "stepNumber": 4, "description": "**PHÁC THẢO (Sketch - Tùy chọn):** Nếu bạn thích, hãy thử vẽ lại phiên bản cải tiến của món đồ. Không cần phải đẹp, chỉ cần thể hiện được ý tưởng của bạn. Ghi chú vào bản vẽ những thay đổi bạn đã thực hiện." }
+        ]
+      },
+      {
+        "type": "subheading",
+        "content": "VÍ DỤ THỰC HÀNH CHI TIẾT"
+      },
+      {
+        "type": "alert",
+        "level": "info",
+        "content": "**1. Chẩn đoán:**\n- *Bệnh nhân:* Áo sơ mi công sở dáng ôm, vải cotton poplin.\n- *Triệu chứng:* \n  a. Rất khó giơ tay và cử động vai (Ergonomics kém).\n  b. Mặc lâu có cảm giác hơi bí, dễ nhăn (Material UX trung bình).\n  c. Hàng khuy bị hở ở phần ngực khi ngồi (Functionality kém).\n  d. Cổ tay áo quá chật, khó xắn lên (Wearability/Functionality kém).\n\n**2. Phân tích nguyên nhân:**\n  a. Đường cắt ở vai và nách quá hẹp, vải không co giãn.\n  b. Vải cotton poplin dệt dày, không có khả năng thoát ẩm tốt.\n  c. Khoảng cách giữa các khuy quá xa ở khu vực có độ cong lớn.\n  d. Măng sét cổ tay được may quá nhỏ và không có đường xẻ phụ.\n\n**3. Đề xuất giải pháp (Prescription):**\n  a. **Giải pháp 1:** Thêm hai đường xếp ly ở sau lưng (back pleats) để tạo thêm không gian cho vai cử động. **Giải pháp 2 (tốt hơn):** Thay thế vải hiện tại bằng vải cotton pha 3-4% spandex để có sự co giãn.\n  b. Giữ nguyên cotton nhưng chọn loại dệt thoáng hơn, hoặc pha thêm Tencel/Modal để tăng độ mềm và khả năng thoát ẩm.\n  c. Thêm một chiếc khuy bấm nhỏ, ẩn giữa hai khuy ở phần ngực.\n  d. Thiết kế lại măng sét cổ tay với hai nấc khuy cài để điều chỉnh độ rộng, và thêm một đường xẻ có khuy cài (gauntlet button) ở phía trên măng sét để dễ dàng xắn tay áo."
+      }
+    ]
+  },
+  "summary": {
+    "title": "8. Tóm tắt & Key Takeaways",
+    "takeaways": [
+      "Bạn đã hoàn thành Giai đoạn 2, đi từ việc phân tích vấn đề đến đề xuất giải pháp một cách có hệ thống.",
+      "Bạn đã chứng tỏ rằng mình có khả năng nhận diện các vấn đề về công thái học, chất liệu, tính năng... và đưa ra các cải tiến cụ thể, đầy tính xây dựng.",
+      "Tư duy của một nhà thiết kế là tư duy giải quyết vấn đề, và bạn đã thực hành thành công kỹ năng đó.",
+      "Tủ đồ của bạn không chỉ là nơi chứa quần áo, mà còn là một phòng thí nghiệm để học hỏi và rèn luyện tư duy thiết kế."
+    ]
+  },
+  "teaser": "Xuất sắc! Bạn đã làm chủ việc phân tích và cải tiến một sản phẩm đơn lẻ. Nhưng trải nghiệm của chúng ta với thời trang không chỉ gói gọn trong một món đồ. Ở giaiGiai đoạn cuối cùng, chúng ta sẽ nâng tầm nhìn lên cao hơn nữa. Bạn sẽ học cách tư duy như một chiến lược gia, quản lý toàn bộ 'hệ sinh thái' tủ đồ và hành trình mua sắm của mình. Hãy bắt đầu với 'Customer Journey Map' - bản đồ hành trình đầy đủ của một chiếc váy từ trên mạng về đến nhà bạn.",
+  "navigation": {
+    "previousChapter": 11,
+    "nextChapter": 13
+  }
+}

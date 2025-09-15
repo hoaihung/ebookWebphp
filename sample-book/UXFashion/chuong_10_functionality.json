@@ -1,0 +1,153 @@
+{
+  "chapterNumber": 10,
+  "chapterTitle": "Functionality: Cuộc chiến không hồi kết giữa Túi thật và Túi giả",
+  "coverImage": {
+    "url": null,
+    "alt": "Một người phụ nữ với vẻ mặt thất vọng khi phát hiện ra chiếc túi trên quần của mình chỉ là túi giả, một biểu cảm quen thuộc với nhiều người."
+  },
+  "readingTimeInMinutes": 16,
+  "difficulty": "Cơ bản",
+  "learningObjectives": {
+    "title": "1. Mục tiêu Chương",
+    "objectives": [
+      "Định nghĩa 'Functionality' (Tính năng) trong thời trang là sự hữu dụng, là khả năng hỗ trợ cuộc sống thực của người mặc.",
+      "Hiểu tại sao túi giả lại là một 'sự phản bội' về mặt thiết kế trải nghiệm, không chỉ là sự bất tiện.",
+      "Khám phá và đánh giá cao các tính năng hữu ích khác ngoài túi, như các chi tiết có thể điều chỉnh và các giải pháp thiết kế thông minh."
+    ]
+  },
+  "mainContent": {
+    "title": "3. Nội dung chính",
+    "blocks": [
+      {
+        "type": "quote",
+        "content": "Thiết kế không chỉ là nó trông như thế nào và cảm giác ra sao. Thiết kế là cách nó hoạt động.",
+        "author": "Steve Jobs"
+      },
+      {
+        "type": "paragraph",
+        "content": "Câu nói bất hủ của Steve Jobs, dù dành cho những sản phẩm công nghệ, lại là kim chỉ nam hoàn hảo cho chương này. Sau khi đã mặc một bộ đồ vào một cách dễ dàng, câu hỏi tiếp theo và quan trọng không kém là: 'Ngoài việc che thân và trông đẹp ra, bộ đồ này có thể làm gì cho tôi?'. Đây là lúc chúng ta bàn về **Functionality** - Tính năng. Nó là về sự hữu dụng, về việc trang phục có phải là một công cụ, một người trợ lý, hay chỉ là một vật trang trí đẹp đẽ nhưng vô dụng."
+      },
+      {
+        "type": "paragraph",
+        "content": "Và không có nơi nào cuộc chiến về tính năng lại khốc liệt, gây tranh cãi và thể hiện rõ sự khác biệt trong tư duy thiết kế bằng mặt trận của những chiếc túi."
+      },
+      {
+        "type": "subheading",
+        "content": "Túi giả: Sự phản bội của một Lời hứa"
+      },
+      {
+        "type": "paragraph",
+        "content": "Hãy nhớ lại chương 2 về Signifiers. Một chiếc nắp túi hay một đường may viền là một 'dấu hiệu' (signifier) mạnh mẽ. Nó là một lời hứa, một giao kèo bất thành văn với người dùng: 'Ở đây có một không gian, bạn có thể cất giữ đồ vật'. Khi bạn đưa tay vào và chỉ chạm phải một đường may lạnh lùng, kín mít, cảm giác của bạn không chỉ là thất vọng. Đó là một sự phản bội nhỏ."
+      },
+      {
+        "type": "paragraph",
+        "content": "Lời hứa về chức năng đã bị phá vỡ. Đó là lý do tại sao chúng ta cảm thấy bực bội hơn nhiều so với việc một bộ đồ không có dấu hiệu túi nào ngay từ đầu. Một bộ đồ không có túi là một sự thật được chấp nhận (dù có thể không mong muốn). Một bộ đồ có túi giả là một lời nói dối về mặt thiết kế."
+      },
+      {
+        "type": "alert",
+        "level": "info",
+        "content": "Đây chính là một trong những insight cốt lõi của UX: **Trải nghiệm được định hình bởi kỳ vọng.** Túi giả tạo ra một kỳ vọng sai lầm, và chính sự chênh lệch giữa kỳ vọng và thực tế đó đã tạo ra cảm xúc tiêu cực. Vấn đề không nằm ở việc thiếu túi, mà là ở việc bị 'lừa' rằng có túi."
+      },
+      {
+        "type": "subheading",
+        "content": "Ngoài những chiếc túi: Đại gia đình của Tính năng thông minh"
+      },
+      {
+        "type": "paragraph",
+        "content": "Cuộc chiến chức năng không chỉ xoay quanh những chiếc túi. Một thiết kế thực sự thấu cảm sẽ cài cắm những tính năng hữu ích vào từng chi tiết nhỏ, những thứ giúp cuộc sống của bạn dễ dàng hơn một cách tinh tế."
+      },
+      {
+        "type": "analogy",
+        "title": "Những 'trợ lý' thầm lặng có thể bạn chưa để ý:",
+        "items": [
+          { "term": "Dây rút ở eo/gấu áo", "description": "Một chi tiết đơn giản nhưng mang lại khả năng tùy biến cao. Bạn có thể mặc suông cho thoải mái, hoặc thắt lại để tạo điểm nhấn ở eo và giữ ấm tốt hơn. Nó trao quyền kiểm soát cho bạn." },
+          { "term": "Khuy cài ẩn (Concealed Placket)", "description": "Hàng khuy của áo sơ mi được giấu sau một lớp vải. Về thẩm mỹ, nó tạo ra một mặt trước phẳng phiu, tối giản. Về chức năng, nó là giải pháp thiên tài để chống lại hiện tượng hở khe giữa các khuy ở phần ngực, một 'điểm đau' quen thuộc của nhiều phụ nữ." },
+          { "term": "Quai áo điều chỉnh được", "description": "Một tính năng cơ bản nhưng cực kỳ quan trọng đối với váy hai dây hay áo lót. Nó thừa nhận rằng mỗi người có độ dài thân trên khác nhau và cho phép tùy chỉnh để đạt được sự vừa vặn hoàn hảo." },
+          { "term": "Túi ẩn bên trong (Internal Pocket)", "description": "Nơi an toàn và kín đáo để cất hộ chiếu, tiền hoặc điện thoại, đặc biệt là trong áo khoác hay blazer. Đây là một biểu hiện của sự quan tâm thực sự đến nhu cầu an toàn của người mặc." },
+          { "term": "Tay áo có thể xắn và cài lại", "description": "Một chiếc khuy nhỏ và một đai vải bên trong tay áo sơ mi cho phép bạn xắn tay áo lên và cố định nó một cách gọn gàng. Nó mang lại sự linh hoạt giữa phong cách chỉn chu và năng động." }
+        ]
+      }
+    ]
+  },
+  "marketersToolkit": {
+    "title": "4. Marketer's Toolkit",
+    "tools": [
+      {
+        "term": "Functionality (Tính năng)",
+        "definition": "Những đặc điểm của một sản phẩm thời trang giúp người mặc thực hiện một công việc hoặc mang lại sự tiện lợi, giải quyết một vấn đề trong đời thực."
+      },
+      {
+        "term": "Ornamental (Trang trí)",
+        "definition": "Chỉ những chi tiết chỉ có mục đích làm đẹp, không có chức năng thực tế. Vấn đề nảy sinh khi một chi tiết trang trí lại bắt chước hình dáng của một chi tiết chức năng."
+      },
+      {
+        "term": "Use Case (Kịch bản sử dụng)",
+        "definition": "Một tình huống hoặc bối cảnh cụ thể mà người dùng sẽ sử dụng sản phẩm. Thiết kế tốt phải lường trước được nhiều kịch bản sử dụng (ví dụ: cần cất điện thoại ở đâu khi mặc váy không có túi?)."
+      }
+    ]
+  },
+  "mindsetCorner": {
+    "title": "5. Góc nhìn của Người sành sỏi",
+    "insight": "Hãy bắt đầu đòi hỏi nhiều hơn từ quần áo của bạn. Đừng chấp nhận những thiết kế lười biếng chỉ biết làm đẹp. Một bộ đồ tốt không chỉ là một bức tranh, nó còn là một công cụ được chế tác tinh xảo. Hãy tìm kiếm những 'người trợ lý' thầm lặng, chúng sẽ làm cuộc sống của bạn dễ dàng hơn rất nhiều."
+  },
+  "projectExercise": {
+    "title": "7. Bài tập 'Tủ Đồ Tỉnh Thức'",
+    "description": "Thực hiện 'cuộc tổng kiểm kê tính năng'.",
+    "instruction": "Hãy kiểm tra 3 món đồ khác nhau trong tủ của bạn (quần, áo khoác, váy). Với mỗi món, hãy trả lời: 1. Nó có bao nhiêu túi THẬT (đủ sâu để đựng vừa lòng bàn tay bạn)? 2. Nó có bao nhiêu túi GIẢ? 3. Ngoài túi, nó có bất kỳ tính năng thông minh nào khác được liệt kê ở trên không?",
+    "example": "Áo khoác blazer: 2 túi ngoài là túi giả. May mắn có 1 túi ẩn bên trong (túi thật). Không có tính năng nào khác. Quần tây: 2 túi chéo phía trước (túi thật nhưng hơi nông), 2 túi viền phía sau là túi giả. Váy liền thân: 0 túi, 0 tính năng.",
+    "resources": []
+  },
+  "summary": {
+    "title": "8. Tóm tắt & Key Takeaways",
+    "takeaways": [
+      "Tính năng là về sự hữu dụng của trang phục trong cuộc sống hàng ngày, là cách nó 'hoạt động' để hỗ trợ bạn.",
+      "Túi giả là một trải nghiệm người dùng tồi tệ vì nó tạo ra kỳ vọng sai lầm và phá vỡ lòng tin.",
+      "Ngoài túi, hãy chú ý và đánh giá cao những tính năng hữu ích khác như các chi tiết có thể điều chỉnh, khuy cài ẩn...",
+      "Hãy trở thành người tiêu dùng thông thái, người tìm kiếm những sản phẩm vừa đẹp vừa thông minh."
+    ]
+  },
+  "quiz": {
+    "title": "Kiểm tra Nhanh: Vẻ đẹp của sự Hữu dụng",
+    "description": "Cùng kiểm tra lại kiến thức về tính năng nhé!",
+    "questions": [
+      {
+        "questionText": "Về mặt tâm lý học UX, tại sao túi giả lại gây bực bội hơn là việc không có túi nào cả?",
+        "options": [
+          "A. Vì nó làm quần áo đắt hơn.",
+          "B. Vì nó tạo ra một kỳ vọng nhưng không đáp ứng, gây ra cảm giác bị 'lừa'.",
+          "C. Vì nó không hợp thời trang.",
+          "D. Vì nó khó may."
+        ],
+        "correctAnswer": "B",
+        "explanation": "Cảm xúc tiêu cực đến từ sự chênh lệch giữa kỳ vọng (được tạo ra bởi dấu hiệu của một cái túi) và thực tế (không có túi). Đây là một nguyên tắc cốt lõi của trải nghiệm người dùng."
+      },
+      {
+        "questionText": "Một chiếc áo sơ mi có hàng khuy được giấu đi (Concealed Placket) giải quyết 'điểm đau' nào sau đây?",
+        "options": [
+          "A. Giúp áo dễ ủi hơn.",
+          "B. Giúp áo ấm hơn.",
+          "C. Ngăn chặn hiện tượng hở khe giữa các khuy ở phần ngực.",
+          "D. Giúp áo rẻ hơn."
+        ],
+        "correctAnswer": "C",
+        "explanation": "Đây là một giải pháp chức năng tinh tế và hiệu quả cho một vấn đề rất phổ biến, thể hiện sự thấu cảm của nhà thiết kế đối với người mặc."
+      },
+      {
+        "questionText": "Khi một nhà thiết kế nghĩ về việc người dùng sẽ cần cất điện thoại, chìa khóa, thẻ xe ở đâu khi mặc sản phẩm của họ, nhà thiết kế đó đang tư duy về điều gì?",
+        "options": [
+          "A. Kịch bản sử dụng (Use Case)",
+          "B. Chi phí sản xuất",
+          "C. Xu hướng màu sắc",
+          "D. Chiến dịch quảng cáo"
+        ],
+        "correctAnswer": "A",
+        "explanation": "Tư duy về 'Use Case' là đặt mình vào vị trí của người dùng trong các tình huống thực tế để lường trước các nhu cầu và thiết kế các tính năng phù hợp."
+      }
+    ]
+  },
+  "teaser": "Tính năng là để phục vụ người mặc. Nhưng nếu thiết kế chỉ phục vụ cho một nhóm người 'tiêu chuẩn' và vô tình bỏ quên những người khác thì sao? Chương tiếp theo sẽ mở ra một chủ đề rộng lớn và vô cùng quan trọng: 'Accessibility' - thời trang cho mọi cơ thể, mọi hoàn cảnh.",
+  "navigation": {
+    "previousChapter": 9,
+    "nextChapter": 11
+  }
+}

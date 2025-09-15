@@ -1,0 +1,131 @@
+<!-- file: index.html (FINAL & COMPLETE - FULL CODE) -->
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title id="meta-title">Đang tải...</title>
+    <meta id="meta-description" name="description" content="Đang tải...">
+    <link rel="icon" type="image/x-icon" href="assets/images/favicon.ico">
+    <link rel="icon" type="image/png" href="assets/images/favicon.png">
+    <link rel="icon" type="image/svg+xml" href="assets/images/favicon.svg">
+
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://ebook.hoaihung.com/">
+    <meta id="og-title" property="og:title" content="Đang tải...">
+    <meta id="og-description" property="og:description" content="Đang tải...">
+    <meta property="og:image" content="https://ebook.hoaihung.com/assets/images/social-thumbnail.png">
+    <meta property="twitter:card" content="summary_large_image">
+
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- Site header -->
+    <header class="site-header sticky">
+        <div class="container header-container">
+            <a href="index.html" class="logo" id="site-logo">EbookLib</a>
+            <nav class="main-nav" id="main-nav-container"></nav>
+            <div class="header-actions">
+                <!-- User info or login/register buttons will be inserted here by JS -->
+                <div id="user-info-container"></div>
+                <!-- Dark mode toggle button -->
+                <button id="dark-mode-toggle" class="dark-mode-toggle" title="Chuyển chế độ sáng/tối">
+                    <i class="fas fa-moon"></i>
+                </button>
+            </div>
+            <button id="mobile-menu-toggle" class="mobile-menu-toggle"><i class="fas fa-bars"></i></button>
+        </div>
+    </header>
+    <!-- Mobile navigation elements -->
+    <div id="mobile-nav-menu" class="mobile-nav-menu">
+        <button id="close-mobile-nav" class="close-mobile-nav">×</button>
+        <nav class="mobile-main-nav"></nav>
+        <div class="mobile-controls">
+            <button id="dark-mode-toggle-mobile" class="dark-mode-toggle" title="Chuyển chế độ sáng/tối">
+                <i class="fas fa-moon"></i>
+            </button>
+        </div>
+        <div class="mobile-auth-actions"></div>
+    </div>
+    <div id="mobile-nav-overlay" class="mobile-nav-overlay"></div>
+
+    <!-- Mobile navigation markup is included in the shared header partial -->
+
+    <section class="hero-section">
+        <div class="container">
+            <h1 id="hero-title"></h1>
+            <p id="hero-subtitle"></p>
+            <a href="#book-grid-section" class="button button-hero" id="hero-cta"></a>
+        </div>
+    </section>
+
+    <!-- Continue Reading Section -->
+    <section id="continue-reading-section" class="continue-reading-section" style="display: none;">
+        <div class="container">
+            <h2>Tiếp tục đọc</h2>
+            <div id="continue-reading-container" class="continue-reading-grid"></div>
+        </div>
+    </section>
+    
+    <main id="book-grid-section">
+        <div class="container">
+            <div id="founder-pack-banner" class="founder-pack-banner" style="display: none;"></div>
+            <h2 id="library-section-title"></h2>
+            <!-- Enhanced controls: search bar and quick filters -->
+            <div class="filter-controls mb-3">
+                <div class="row g-2">
+                    <div class="col-md-6">
+                        <input id="search-input" type="text" class="form-control" placeholder="Tìm kiếm sách...">
+                    </div>
+                    <div class="col-md-6 d-flex flex-wrap align-items-center" id="quick-filter-container"></div>
+                </div>
+            </div>
+            <!-- Category filter if provided (kept for compatibility) -->
+            <div id="category-filter-container" class="mb-2"></div>
+            <div id="book-grid-container" class="book-grid">
+                <p class="loader-text">Đang tải thư viện...</p>
+            </div>
+            <div id="pagination-container" class="pagination"></div>
+        </div>
+    </main>
+    
+    <!-- Site footer -->
+    <footer class="site-footer">
+        <div class="container" id="footer-content"></div>
+    </footer>
+
+    <!-- Modals -->
+    <div id="auth-modal" class="modal-overlay" style="display: none;">
+        <div class="modal-content" id="auth-modal-content"></div>
+    </div>
+    <div id="pricing-modal" class="modal-overlay" style="display: none;">
+        <div class="modal-content" id="pricing-modal-content"></div>
+    </div>
+    <div id="about-modal" class="modal-overlay" style="display: none;">
+        <div class="modal-content" id="about-modal-content"></div>
+    </div>
+    <!-- Modal Mua sách (Purchase Modal) -->
+    <div id="purchase-modal" class="modal-overlay" style="display: none;">
+        <div class="modal-content" id="purchase-modal-content">
+            <!-- Nội dung sẽ được render động bởi JS -->
+        </div>
+    </div>
+
+    <!-- Modal Chi tiết sách -->
+    <div id="details-modal" class="modal-overlay" style="display: none;">
+        <div class="modal-content" id="details-modal-content">
+            <!-- Nội dung chi tiết sách sẽ được render động bởi JS -->
+        </div>
+    </div>
+    
+    <!-- API helper must be loaded before main.js because main.js imports it -->
+    <script type="module" src="assets/js/api.js"></script>
+    <script type="module" src="assets/js/config.js"></script>
+    <!-- Notification module -->
+    <script type="module" src="assets/js/notify.js"></script>
+    <script type="module" src="assets/js/main.js"></script>
+    <!-- Dark mode support -->
+    <script type="module" src="assets/js/theme.js"></script>
+</body>
+</html>
