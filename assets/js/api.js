@@ -32,29 +32,55 @@ export function clearToken() {
  * @param {object} options - Additional fetch options (method, headers, body, etc.).
  * @returns {Promise<any>} The parsed JSON response.
  */
-export async function apiFetch(path, options = {}) {
-    const headers = options.headers || {};
-    // Automatically set JSON Content-Type if we send a body
-    if (options.body && !headers['Content-Type']) {
-        headers['Content-Type'] = 'application/json';
-    }
+// assets/js/api.js
+export async function apiFetch(path, opts = {}) {
+  const { method = 'GET', body, headers = {} } = opts;
+  const url = path.startsWith('/api') ? path : `/api${path.startsWith('/') ? path : '/'+path}`;
 
-    // Attach CSRF token for state-changing requests if available. The admin
-    // page will set window.csrfToken after fetching from /admin/csrf. We use
-    // window because this module has no direct access to admin.js variables.
-    const method = (options.method || 'GET').toUpperCase();
-    if (typeof window !== 'undefined' && window.csrfToken && !['GET','OPTIONS','HEAD'].includes(method)) {
-        headers['X-CSRF-Token'] = window.csrfToken;
-    }
-    const fetchOptions = {
-        ...options,
-        headers,
-        credentials: 'include' // include cookies (PHP session)
-    };
-    const response = await fetch(`${config.URLS.API_BASE}${path}`, fetchOptions);
-    const data = await response.json().catch(() => ({}));
-    if (!response.ok) {
-        throw data;
-    }
-    return data;
+  // Lấy CSRF token từ <meta> hoặc localStorage/cookie
+  const meta = document.querySelector('meta[name="csrf-token"]');
+  // Try to find a CSRF token from multiple sources.  In order of priority:
+  //   1. A <meta name="csrf-token"> tag (allows templates to inject directly)
+  //   2. window.csrfToken (set by admin.js when fetching /admin/csrf)
+  //   3. localStorage entry (populated from the X-CSRF-Token response header)
+  //   4. The XSRF-TOKEN cookie (set by send_csrf_cookie() on the backend)
+  let csrf = null;
+  if (meta && meta.content) {
+    csrf = meta.content;
+  } else if (typeof window !== 'undefined' && window.csrfToken) {
+    csrf = window.csrfToken;
+  } else if (localStorage.getItem('csrfToken')) {
+    csrf = localStorage.getItem('csrfToken');
+  } else {
+    csrf = getCookie('XSRF-TOKEN');
+  }
+
+  const res = await fetch(url, {
+    method,
+    credentials: 'include', // <-- QUAN TRỌNG: gửi cookie phiên
+    headers: {
+      'Content-Type': 'application/json',
+      ...(csrf ? { 'X-CSRF-Token': csrf } : {}),
+      ...headers,
+    },
+    body: body ? (typeof body === 'string' ? body : JSON.stringify(body)) : undefined,
+  });
+
+  // Gợi ý: nếu server trả token mới trong header, lưu lại
+  const newCsrf = res.headers.get('X-CSRF-Token');
+  if (newCsrf) localStorage.setItem('csrfToken', newCsrf);
+
+  if (!res.ok) {
+    let detail = {};
+    try { detail = await res.json(); } catch {}
+    const err = new Error(`HTTP ${res.status}`);
+    err.detail = detail;
+    throw err;
+  }
+  return res.status === 204 ? null : res.json();
+}
+
+function getCookie(name) {
+  const m = document.cookie.match(new RegExp('(?:^|; )' + name.replace(/([$?*|{}\]\\^])/g,'\\$1') + '=([^;]*)'));
+  return m ? decodeURIComponent(m[1]) : null;
 }

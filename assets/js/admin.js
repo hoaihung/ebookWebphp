@@ -847,7 +847,7 @@ bookForm.addEventListener('submit', async (e) => {
         loadBooks();
     } catch (err) {
         console.error(err);
-        alert(err.message || 'Lỗi lưu sách');
+        alert(err.message || 'Lỗi lưu sách - CSRF');
     }
 });
 

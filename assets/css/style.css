@@ -326,6 +326,7 @@ tr.dragging {
     display: flex;
     flex-wrap: wrap;
     gap: 8px;
+    margin: 15px 0;
 }
 .filter-chip {
     background-color: var(--color-bg-secondary);
