@@ -815,13 +815,15 @@ bookForm.addEventListener('submit', async (e) => {
         let savedBookId = id ? id : null;
         if (id) {
             await apiFetch(`/admin/books/${id}`, {
-                method: 'PUT',
+                method: 'POST',
+                headers: { 'X-HTTP-Method-Override': 'PUT' },
                 body: JSON.stringify(payload)
             });
             alert('Đã cập nhật sách.');
         } else {
             const res = await apiFetch('/admin/books', {
                 method: 'POST',
+                headers: { 'X-HTTP-Method-Override': 'PUT' },
                 body: JSON.stringify(payload)
             });
             savedBookId = res.book_id;
@@ -847,7 +849,7 @@ bookForm.addEventListener('submit', async (e) => {
         loadBooks();
     } catch (err) {
         console.error(err);
-        alert(err.message || 'Lỗi lưu sách');
+        alert(err.message || 'Lỗi lưu sách - CSRF');
     }
 });
 
