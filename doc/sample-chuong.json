@@ -35,11 +35,11 @@
     ]
   },
   "marketersToolkit": {
-    "title": "4. Marketer's Toolkit",
+    "title": "4. ... Toolkit",
     "tools": [ { "term": "[...]", "definition": "[...]" } ]
   },
   "mindsetCorner": {
-    "title": "5. Góc nhìn của Marketer",
+    "title": "5. Góc nhìn của ...",
     "insight": "[...]"
   },
   "theBigPicture": {
@@ -51,7 +51,7 @@
     ]
   },
   "projectExercise": {
-    "title": "7. Bài tập 'Mầm Cây'",
+    "title": "7. Bài tập ...",
     "description": "[...]",
     "instruction": "[...]",
     "example": "[...]",

@@ -753,7 +753,7 @@ mark.search-highlight.active-highlight {
 /* Cấp 2: Block Chú giải (Nền nhạt, không viền đậm) */
 .content-block.annotation-block { padding: 25px; margin: 30px 0; border-radius: var(--border-radius); background-color: var(--color-bg-secondary); border: 1px solid var(--color-border); }
 .objectives-block ul, .summary-block .takeaways-list { list-style: none; padding-left: 0; }
-.objectives-block li, .summary-block .takeaways-list li { display: flex; align-items: flex-start; gap: 10px; margin-bottom: 12px; }
+.objectives-block li, .summary-block .takeaways-list li { /*display: flex;*/ align-items: flex-start; gap: 10px; margin-bottom: 12px; }
 .objectives-block i, .summary-block .takeaways-list i { color: var(--color-primary); margin-top: 5px; }
 /* Marketer's Toolkit (Thiết kế lại) */
 .marketers-toolkit-block .toolkit-grid {

@@ -170,63 +170,120 @@ const renderChapter = (chapterJson) => {
     // and no leftover markdown syntax.
     
 const normaliseFormatting = (obj) => {
-        // If it's a direct string, convert markdown to HTML and return it.
-        const convert = (s) => {
-            if (typeof s !== 'string') return s;
-            let newVal = s;
-            // decode entities first so "**bold**" that came through as &lt;strong&gt;... or escaped markdown can be handled predictably
-            newVal = decodeHtmlEntities(newVal);
-            // **bold** and __bold__
-            newVal = newVal.replace(/\*\*(.+?)\*\*/g, '<strong>$1</strong>');
-            newVal = newVal.replace(/__(.+?)__/g, '<strong>$1</strong>');
-            // *italic* and _italic_
-            newVal = newVal.replace(/\*(?!\*)([^\*]+)\*/g, '<em>$1</em>');
-            newVal = newVal.replace(/_(?!_)([^_]+)_/g, '<em>$1</em>');
-            // ~~strike~~
-            newVal = newVal.replace(/~~(.+?)~~/g, '<del>$1</del>');
-            // `code`
-            newVal = newVal.replace(/`([^`]+)`/g, '<code>$1</code>');
-            // [text](url)
-            newVal = newVal.replace(/\[([^\]]+)\]\(([^)]+)\)/g, '<a href="$2" target="_blank" rel="noopener noreferrer">$1</a>');
-            // <b>/<i> normalize
-            newVal = newVal.replace(/<\s*b\s*>/gi, '<strong>').replace(/<\s*\/\s*b\s*>/gi, '</strong>');
-            newVal = newVal.replace(/<\s*i\s*>/gi, '<em>').replace(/<\s*\/\s*i\s*>/gi, '</em>');
-            return newVal;
-        };
-
-        if (typeof obj === 'string') {
-            return convert(obj);
-        }
-        if (Array.isArray(obj)) {
-            for (let i = 0; i < obj.length; i++) {
-                if (typeof obj[i] === 'string') {
-                    obj[i] = convert(obj[i]);
-                } else if (obj[i] && typeof obj[i] === 'object') {
-                    normaliseFormatting(obj[i]);
-                }
-            }
-            return obj;
-        }
-        if (!obj || typeof obj !== 'object') return obj;
-
-        Object.keys(obj).forEach((key) => {
-            const value = obj[key];
-            if (typeof value === 'string') {
-                obj[key] = convert(value);
-            } else if (Array.isArray(value)) {
-                for (let i = 0; i < value.length; i++) {
-                    if (typeof value[i] === 'string') {
-                        value[i] = convert(value[i]);
-                    } else if (value[i] && typeof value[i] === 'object') {
-                        normaliseFormatting(value[i]);
-                    }
-                }
-            } else if (value && typeof value === 'object') {
-                normaliseFormatting(value);
-            }
-        });
-        return obj;
+    // Helper function to process inline formatting
+    const processInlineFormatting = (text) => {
+        // **bold** and __bold__
+        text = text.replace(/\*\*(.+?)\*\*/g, '<strong>$1</strong>');
+        text = text.replace(/__(.+?)__/g, '<strong>$1</strong>');
+        
+        // *italic* - chỉ match khi KHÔNG có space ngay sau dấu * đầu
+        // Regex này sẽ match: *word* hoặc *multi word text* nhưng không match * list
+        text = text.replace(/\*(?!\*)([^*\s][^*]*?[^*\s]|\S)\*/g, '<em>$1</em>');
+        
+        // _italic_
+        text = text.replace(/_(?!_)([^_]+)_/g, '<em>$1</em>');
+        
+        // ~~strike~~
+        text = text.replace(/~~(.+?)~~/g, '<del>$1</del>');
+        
+        // `code`
+        text = text.replace(/`([^`]+)`/g, '<code>$1</code>');
+        
+        // [text](url)
+        text = text.replace(/\[([^\]]+)\]\(([^)]+)\)/g, '<a href="$2" target="_blank" rel="noopener noreferrer">$1</a>');
+        
+        // <b>/<i> normalize
+        text = text.replace(/<\s*b\s*>/gi, '<strong>').replace(/<\s*\/\s*b\s*>/gi, '</strong>');
+        text = text.replace(/<\s*i\s*>/gi, '<em>').replace(/<\s*\/\s*i\s*>/gi, '</em>');
+        
+        return text;
     };
+
+    // Main convert function
+    const convert = (s) => {
+        if (typeof s !== 'string') return s;
+        
+        // Decode entities first
+        let newVal = decodeHtmlEntities(s);
+        
+        // Split into lines to handle list items properly
+        const lines = newVal.split('\n');
+        const processedLines = [];
+        let inList = false;
+        
+        for (const line of lines) {
+            // Check if this is a list item (starts with * followed by space)
+            const listMatch = line.match(/^(\s*)\*\s+(.+)$/);
+            
+            if (listMatch) {
+                const indent = listMatch[1];
+                const content = listMatch[2];
+                // Process inline formatting within list item content
+                const processedContent = processInlineFormatting(content);
+                
+                // Wrap in proper list structure
+                if (!inList) {
+                    processedLines.push(`${indent}<ul>`);
+                    inList = true;
+                }
+                processedLines.push(`${indent}  <li>${processedContent}</li>`);
+            } else {
+                // Close list if we were in one
+                if (inList) {
+                    const lastIndent = processedLines[processedLines.length - 1].match(/^(\s*)/)[1];
+                    processedLines.push(`${lastIndent.substring(2)}</ul>`);
+                    inList = false;
+                }
+                
+                // Process regular line with inline formatting
+                processedLines.push(processInlineFormatting(line));
+            }
+        }
+        
+        // Close list if we end while still in a list
+        if (inList) {
+            const lastIndent = processedLines[processedLines.length - 1].match(/^(\s*)/)[1];
+            processedLines.push(`${lastIndent.substring(2)}</ul>`);
+        }
+        
+        return processedLines.join('\n');
+    };
+
+    // Rest of the function remains the same
+    if (typeof obj === 'string') {
+        return convert(obj);
+    }
+    if (Array.isArray(obj)) {
+        for (let i = 0; i < obj.length; i++) {
+            if (typeof obj[i] === 'string') {
+                obj[i] = convert(obj[i]);
+            } else if (obj[i] && typeof obj[i] === 'object') {
+                normaliseFormatting(obj[i]);
+            }
+        }
+        return obj;
+    }
+    if (!obj || typeof obj !== 'object') return obj;
+    
+    Object.keys(obj).forEach((key) => {
+        const value = obj[key];
+        if (typeof value === 'string') {
+            obj[key] = convert(value);
+        } else if (Array.isArray(value)) {
+            for (let i = 0; i < value.length; i++) {
+                if (typeof value[i] === 'string') {
+                    value[i] = convert(value[i]);
+                } else if (value[i] && typeof value[i] === 'object') {
+                    normaliseFormatting(value[i]);
+                }
+            }
+        } else if (value && typeof value === 'object') {
+            normaliseFormatting(value);
+        }
+    });
+    return obj;
+};
+
 
 
     // Basic HTML sanitizer (whitelist-based) to avoid XSS when rendering with triple mustache.
