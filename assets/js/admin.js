@@ -515,6 +515,7 @@ async function editChapter(chapterId) {
         // Populate chapter number
         if (chapterNumberInput) {
             chapterNumberInput.value = ch.chapter_number !== undefined ? ch.chapter_number : '';
+            chapterNumberInput.dataset.originalNumber = (ch.chapter_number ?? '') + '';
         }
         // Populate sort key from content.meta.sort_key if exists
         if (chapterSortInput) {
@@ -588,6 +589,13 @@ if (saveChapterBtn) {
         // Normalise meta keys to ensure frontend can load: fill missing keys
         // Determine chapter number from input
         const numVal = chapterNumberInput && chapterNumberInput.value !== '' ? parseInt(chapterNumberInput.value) : null;
+        let numForSend = numVal;
+        if (id && chapterNumberInput) {
+          const original = chapterNumberInput.dataset.originalNumber;
+          if (original !== undefined && original !== '' && Number(original) === numVal) {
+            numForSend = null; // không gửi nếu không đổi
+          }
+        }
         // Set chapterNumber fields if missing
         if (numVal !== null && !isNaN(numVal)) {
             // At root
@@ -646,9 +654,7 @@ if (saveChapterBtn) {
             if (id) {
                 // Update existing chapter
                 const body = { title, content };
-                if (numVal !== null) {
-                    body.chapter_number = numVal;
-                }
+                if (numForSend !== null) { body.chapter_number = numForSend; }
                 res = await apiFetch(`/admin/chapters/${id}`, {
                     method: 'PUT',
                     body: JSON.stringify(body)
@@ -656,9 +662,7 @@ if (saveChapterBtn) {
             } else {
                 // Create new chapter for current book
                 const body = { title, content };
-                if (numVal !== null) {
-                    body.chapter_number = numVal;
-                }
+                if (numForSend !== null) { body.chapter_number = numForSend; }
                 res = await apiFetch(`/admin/books/${currentBookId}/chapters`, {
                     method: 'POST',
                     body: JSON.stringify(body)
@@ -812,18 +816,16 @@ bookForm.addEventListener('submit', async (e) => {
         payload.cover_image_url = coverUrl;
     }
     try {
-        let savedBookId = id ? id : null;
+        let savedBookId = (id && Number(id) > 0) ? Number(id) : null;
         if (id) {
             await apiFetch(`/admin/books/${id}`, {
-                method: 'POST',
-                headers: { 'X-HTTP-Method-Override': 'PUT' },
+                method: 'PUT',
                 body: JSON.stringify(payload)
             });
             alert('Đã cập nhật sách.');
         } else {
             const res = await apiFetch('/admin/books', {
                 method: 'POST',
-                headers: { 'X-HTTP-Method-Override': 'PUT' },
                 body: JSON.stringify(payload)
             });
             savedBookId = res.book_id;
@@ -1278,6 +1280,8 @@ if (loadNotifsBtn) loadNotifsBtn.addEventListener('click', loadNotifs);
 // Optionally auto-load lists on page load
 document.addEventListener('DOMContentLoaded', () => {
     // Load books and users automatically when admin page opens
+    // Đưa form về trạng thái "thêm mới" ngay từ đầu
+    try { resetBookForm(); } catch(e) {}
     loadBooks();
     loadUsers();
     loadPackages();

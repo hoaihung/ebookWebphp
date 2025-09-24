@@ -187,6 +187,7 @@ const normaliseFormatting = (obj) => {
         text = text.replace(/~~(.+?)~~/g, '<del>$1</del>');
         
         // `code`
+        text = text.replace('```', '`');
         text = text.replace(/`([^`]+)`/g, '<code>$1</code>');
         
         // [text](url)

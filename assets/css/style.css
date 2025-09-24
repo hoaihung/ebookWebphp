@@ -886,10 +886,13 @@ mark.search-highlight.active-highlight {
 /* Và <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/11.7.0/highlight.min.js"></script> */
 .code-block-container {
     border-radius: var(--border-radius);
-    border: 1px solid var(--color-border);
+    border: 0px solid var(--color-border);
     overflow: hidden;
-    background-color: #2d2d2d;
+    background-color: #efefef;
+    /*color: #e5e5e5;*/
+    font-family: monospace;
 }
+
 .code-block-header {
     background-color: #444;
     color: #eee;
@@ -898,7 +901,7 @@ mark.search-highlight.active-highlight {
     text-transform: uppercase;
 }
 .code-block-container pre { margin: 0; }
-.code-block-container pre code { padding: 20px !important; }
+.code-block-container pre code { padding: 20px !important; color: #e5e5e5;}
 
 /* Formula Block */
 /* Bạn cần thêm thư viện MathJax hoặc KaTeX để render công thức */
@@ -932,7 +935,7 @@ mark.search-highlight.active-highlight {
     border-bottom: 2px solid var(--color-border); /* Và một đường kẻ ngang phía dưới */
     border-left: none; /* Bỏ viền trái */
     border-right: none;
-    text-align: center; /* Căn giữa */
+    /*text-align: center;*/ /* Căn giữa */
 }
 
 .teaser-block p {
@@ -1704,6 +1707,7 @@ body.dark-mode .quiz-feedback.incorrect { background-color: #402728; color: #ffa
 body.dark-mode .toc-chapter-item.active a { background-color: #22304a; border-left-color: var(--color-primary); color: #fff; }
 body.dark-mode .toc-chapter-item.active .chapter-icon { color: var(--color-primary); }
 body.dark-mode .chapter-toolbar .reader-controls button { color: var(--color-primary); }
+body.dark-mode .code-block-container { background-color: #364252;  }
 
 /* ==== SEPIA MODE: BLOCKS, ALERTS, QUIZ, TOC ACTIVE ==== */
 body.sepia-mode .mythbuster-block {

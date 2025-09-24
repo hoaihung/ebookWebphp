@@ -99,7 +99,7 @@
             {{!-- Question List --}}
             {{#if (eq type 'questionList')}}
                 <div class="question-list-block">
-                    <h4><i class="fas fa-question-circle"></i> {{title}}</h4>
+                    <i class="fas fa-question-circle"></i> {{{title}}}
                     <ul class="question-list">{{#each questions}}<li>{{{this}}}</li>{{/each}}</ul>
                 </div>
             {{/if}}
@@ -159,7 +159,7 @@
             {{#if (eq type 'codeBlock')}}
                 <div class="code-block-container">
                     <div class="code-block-header">{{language}}</div>
-                    <pre><code class="language-{{language}}">{{code}}</code></pre>
+                    <div style="padding: 15px;">{{{code}}}</div>
                 </div>
             {{/if}}
 
@@ -191,7 +191,7 @@
 <script id="mindsetCornerBlock-partial" type="text/x-handlebars-template">
     <div class="content-block annotation-block mindset-block">
         <h3 class="block-title"><i class="fas fa-lightbulb"></i> {{title}}</h3>
-        <p class="insight-text">"{{insight}}"</p>
+        <p class="insight-text">"{{{insight}}}"</p>
     </div>
 </script>
 

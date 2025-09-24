@@ -80,14 +80,19 @@ function verify_csrf_token() {
 // already taken for the given book, it increments until a free slot is found.
 // Returns an array [finalNumber, warnings] where warnings is an array of
 // strings describing any adjustments made.
-function find_unique_chapter_number(PDO $db, int $bookId, ?int $desired): array {
+function find_unique_chapter_number(PDO $db, int $bookId, ?int $desired, ?int $excludeId = null): array {
     $warnings = [];
     // If no desired number provided or invalid, default to 1
     $num = ($desired && $desired > 0) ? $desired : 1;
     // Check for existence and increment until unique
     while (true) {
-        $stmt = $db->prepare('SELECT id FROM chapters WHERE book_id = ? AND chapter_number = ?');
-        $stmt->execute([$bookId, $num]);
+        if ($excludeId !== null) {
+           $stmt = $db->prepare('SELECT id FROM chapters WHERE book_id = ? AND chapter_number = ? AND id <> ?');
+           $stmt->execute([$bookId, $num, $excludeId]);
+       } else {
+           $stmt = $db->prepare('SELECT id FROM chapters WHERE book_id = ? AND chapter_number = ?');
+           $stmt->execute([$bookId, $num]);
+       }
         $existing = $stmt->fetch(PDO::FETCH_ASSOC);
         if (!$existing) {
             // Found free slot
@@ -1553,9 +1558,14 @@ try {
         $warnings = [];
         $finalNumber = null;
         if ($chapterNumber !== null) {
-            [$uniqueNum, $w] = find_unique_chapter_number($db, $bookId, $chapterNumber);
-            $finalNumber = $uniqueNum;
-            $warnings = array_merge($warnings, $w);
+             // Không đổi số thì bỏ qua
+             if ((int)$chapterNumber === (int)$current['chapter_number']) {
+                 $finalNumber = null;
+             } else {
+                 [$uniqueNum, $w] = find_unique_chapter_number($db, $bookId, $chapterNumber, $cid);
+                 $finalNumber = $uniqueNum;
+                 $warnings = array_merge($warnings, $w);
+             }
         }
         if ($title !== null) { $updates[] = 'title = ?'; $params[] = $title; }
         if ($content !== null) { $updates[] = 'content = ?'; $params[] = json_encode($content, JSON_UNESCAPED_UNICODE); }
